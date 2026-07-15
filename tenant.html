@@ -36,6 +36,8 @@
   .foot { padding:22px 28px; text-align:center; }
   .badges span { display:inline-block; margin:5px 6px; padding:8px 14px; border:1.5px solid #070B97; border-radius:20px; color:#070B97; font-size:11px; font-weight:bold; }
   .legal { color:#9aa3b2; font-size:12px; margin-top:14px; }
+  .video-facade{ position:relative; cursor:pointer; display:block; }
+  .video-facade img{ width:100%; display:block; }
   @media (max-width:520px){ h1{font-size:24px;} .topbar{padding:16px 18px;} .hero,.points,.cta,.foot,.stats{padding-left:18px;padding-right:18px;} .video-frame{margin:0 18px;} }
 </style>
 </head>
@@ -56,10 +58,9 @@
       </div>
 
       <div class="video-frame">
-        <video controls playsinline preload="metadata" poster="posters/tenant.jpg">
-          <source src="https://cdn.jsdelivr.net/gh/StevenDietz/swrs-video-assets@v2/videos/tenant_debt_collection.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-facade" data-type="mp4" data-src="https://cdn.jsdelivr.net/gh/StevenDietz/swrs-video-assets@v3/videos/tenant_debt_collection.mp4" onclick="swrsPlay(this)">
+          <img src="https://cdn.jsdelivr.net/gh/StevenDietz/swrs-email-assets@main/thumbs/tenant_thumb.jpg" alt="Play the video">
+        </div>
       </div>
 
       <div class="points">
@@ -93,5 +94,11 @@
 
     </div>
   </div>
+  <script>
+  function swrsPlay(el){var t=el.getAttribute('data-type'),s=el.getAttribute('data-src');
+    el.outerHTML = t==='vimeo'
+      ? '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="'+s+'&autoplay=1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe></div>'
+      : '<video controls autoplay playsinline style="width:100%;display:block;"><source src="'+s+'" type="video/mp4"></video>';}
+  </script>
 </body>
 </html>
