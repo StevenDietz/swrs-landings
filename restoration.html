@@ -23,6 +23,8 @@
   .sub { color:#3a4152; font-size:16px; margin:0 0 22px; }
   .video-frame { margin:0 28px; border-radius:14px; overflow:hidden; background:#0b1020; }
   .video-frame video { width:100%; display:block; }
+  .video-facade { position:relative; cursor:pointer; display:block; }
+  .video-facade img { width:100%; display:block; }
   .sec { padding:26px 28px 4px; }
   .sec h3 { font-size:20px; margin:0 0 6px; color:#0b1020; }
   .sec p { color:#3a4152; font-size:15px; margin:0 0 12px; }
@@ -61,10 +63,9 @@
       </div>
 
       <div class="video-frame">
-        <video controls playsinline preload="metadata" poster="posters/restoration_90day.jpg">
-          <source src="https://cdn.jsdelivr.net/gh/StevenDietz/swrs-video-assets@v2/videos/restoration_90day.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-facade" data-type="mp4" data-src="https://cdn.jsdelivr.net/gh/StevenDietz/swrs-video-assets@v3/videos/restoration_90day.mp4" onclick="swrsPlay(this)">
+          <img src="https://cdn.jsdelivr.net/gh/StevenDietz/swrs-email-assets@main/thumbs/restoration_thumb.jpg" alt="Play the video">
+        </div>
       </div>
 
       <div class="sec">
@@ -120,5 +121,11 @@
 
     </div>
   </div>
+  <script>
+  function swrsPlay(el){var t=el.getAttribute('data-type'),s=el.getAttribute('data-src');
+    el.outerHTML = t==='vimeo'
+      ? '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="'+s+'&autoplay=1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe></div>'
+      : '<video controls autoplay playsinline style="width:100%;display:block;"><source src="'+s+'" type="video/mp4"></video>';}
+  </script>
 </body>
 </html>
