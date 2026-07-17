@@ -25,6 +25,8 @@
   .video-facade img { width:100%; display:block; }
   .pad { position:relative; width:100%; padding-top:56.25%; }
   .pad iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .watch { text-align:center; margin:10px 28px 0; font-size:13px; }
+  .watch a { color:#0446F1; text-decoration:none; }
   .points { display:flex; flex-wrap:wrap; gap:14px; padding:26px 28px 6px; }
   .point { flex:1 1 220px; background:#f4f6ff; border-left:4px solid #0446F1; border-radius:0 8px 8px 0; padding:14px 16px; }
   .point b { display:block; color:#0b1020; font-size:15px; margin-bottom:2px; }
@@ -56,10 +58,9 @@
         <p class="sub">How Southwest Recovery Services helps Florida-area businesses turn aging receivables back into working capital &mdash; ethically, and on pure contingency.</p>
       </div>
       <div class="video-frame">
-        <div class="video-facade" data-src="https://www.youtube-nocookie.com/embed/Bu7JWLoeVKU?rel=0&amp;modestbranding=1" onclick="swrsPlay(this)">
-          <img src="https://img.youtube.com/vi/Bu7JWLoeVKU/maxresdefault.jpg" alt="Play the video">
-        </div>
+        <div class="pad"><iframe src="https://www.youtube.com/embed/Bu7JWLoeVKU?rel=0&amp;modestbranding=1" title="Florida&#x27;s Insurance Crisis: Why Debt Recovery Can Help Prevent Fraud" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
       </div>
+      <p class="watch"><a href="https://www.youtube.com/watch?v=Bu7JWLoeVKU" target="_blank" rel="noopener">Trouble viewing? Watch on YouTube &#8599;</a></p>
       <div class="points">
         <div class="point"><b>Local knowledge</b><span>On-the-ground familiarity with the courts, statutes, and payers in your market.</span></div>
         <div class="point"><b>Compliance built-in</b><span>FDCPA, TCPA, and FCRA on every contact &mdash; your reputation stays protected.</span></div>
@@ -87,9 +88,5 @@
       </div>
     </div>
   </div>
-  <script>
-  function swrsPlay(el){var s=el.getAttribute('data-src');
-    el.parentNode.innerHTML='<div class="pad"><iframe src="'+s+'&autoplay=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>';}
-  </script>
 </body>
 </html>
