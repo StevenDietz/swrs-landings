@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<style>*{box-sizing:border-box}img{max-width:100%}</style>
+<title>SWRS Video-Email Playbook — Which Video for Which Prospect</title>
+<style>
+  :root{
+    --navy:#070B97; --blue:#0446F1; --blue-soft:#e9edff;
+    --ink:#12172a; --muted:#5b6178; --line:#dfe3f0;
+    --bg:#f6f7fb; --card:#ffffff; --band:#eef1fb;
+    --good:#0b8a3e;
+    --radius:12px;
+    --sans:"Fira Sans","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --navy:#0a1030; --blue:#6f92ff; --blue-soft:#1a2350;
+      --ink:#e8ebf7; --muted:#9aa2c0; --line:#242c4d;
+      --bg:#080b1a; --card:#0f1430; --band:#121a3a;
+      --good:#3ecf7a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --navy:#0a1030; --blue:#6f92ff; --blue-soft:#1a2350;
+    --ink:#e8ebf7; --muted:#9aa2c0; --line:#242c4d;
+    --bg:#080b1a; --card:#0f1430; --band:#121a3a; --good:#3ecf7a;
+  }
+  :root[data-theme="light"]{
+    --navy:#070B97; --blue:#0446F1; --blue-soft:#e9edff;
+    --ink:#12172a; --muted:#5b6178; --line:#dfe3f0;
+    --bg:#f6f7fb; --card:#ffffff; --band:#eef1fb; --good:#0b8a3e;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;
+    -webkit-font-smoothing:antialiased;font-size:16px}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px 72px}
+
+  header.masthead{background:var(--navy);color:#fff;margin-bottom:0;
+    padding:40px 20px 34px;border-bottom:4px solid var(--blue)}
+  .masthead-inner{max-width:1000px;margin:0 auto}
+  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:#aeb9ff;font-weight:600;margin:0 0 10px}
+  h1{font-size:clamp(26px,4vw,38px);line-height:1.1;margin:0 0 12px;font-weight:800;
+    text-wrap:balance;letter-spacing:-.01em}
+  .lede{margin:0;max-width:64ch;color:#d6dbff;font-size:16.5px}
+  .count{display:inline-flex;align-items:baseline;gap:6px;margin-top:18px;
+    background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
+    padding:6px 14px;border-radius:999px;font-size:13.5px;color:#eef1ff}
+  .count b{font-size:16px}
+
+  .how{background:var(--band);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 22px;margin:26px 0 8px}
+  .how h2{margin:0 0 8px;font-size:15px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+  .how ol{margin:0;padding-left:20px}
+  .how li{margin:5px 0}
+  .how code{font-family:var(--mono);background:var(--blue-soft);color:var(--blue);
+    padding:1px 6px;border-radius:5px;font-size:13.5px;font-weight:600}
+
+  section.block{margin-top:34px}
+  .block-head{display:flex;align-items:center;gap:12px;margin:0 0 12px}
+  .block-head h2{font-size:20px;margin:0;font-weight:800;letter-spacing:-.01em}
+  .block-head .tag{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--blue);font-weight:700;border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+
+  .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:720px}
+  thead th{text-align:left;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;padding:12px 16px;background:var(--band);
+    border-bottom:1px solid var(--line);position:sticky;top:0}
+  tbody td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14.5px}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:var(--band)}
+  .who{font-weight:700;color:var(--ink);white-space:nowrap}
+  .tpl{font-family:var(--mono);font-size:12.5px;color:var(--blue);font-weight:600;
+    background:var(--blue-soft);padding:2px 8px;border-radius:6px;display:inline-block}
+  .subj{color:var(--muted)}
+  .prev a{color:var(--blue);text-decoration:none;font-weight:600;white-space:nowrap}
+  .prev a:hover{text-decoration:underline}
+  .prev a:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:3px}
+
+  .note{margin-top:30px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+  .note b{color:var(--ink)}
+</style>
+</head>
+<body>
+
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">Southwest Recovery Services · Sales Enablement</p>
+    <h1>Video-Email Playbook</h1>
+    <p class="lede">Which video-email to send to which prospect. Every one is a ready Nutshell template with a clickable play-button thumbnail that opens a branded landing page — personalized to the recipient and signed by the sending rep.</p>
+    <span class="count"><b>22</b> templates ready to send</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="how">
+    <h2>How to send one</h2>
+    <ol>
+      <li>Open a lead or contact in Nutshell → <b>Send email</b>.</li>
+      <li>In the template picker, type <code>Video</code> — all 22 surface together.</li>
+      <li>Pick the row below that matches your prospect's <b>industry</b> or <b>location</b>. Send.</li>
+    </ol>
+  </div>
+
+  <section class="block">
+    <div class="block-head"><h2>By industry</h2><span class="tag">Match the prospect's business</span></div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Prospect</th><th>Send this template</th><th>What it opens with</th><th>Preview</th></tr></thead>
+        <tbody>
+          <tr><td class="who">Medical / healthcare</td><td><span class="tpl">Video - Medical - Boost Revenue 25%</span></td><td class="subj">Recover more of what you're owed without straining patient relationships or HIPAA.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/medical_healthcare_industry_debt_collections_hip_195439.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">EMS / ambulance</td><td><span class="tpl">Video - EMS - Revenue Crisis</span></td><td class="subj">Why unpaid transports have become a survival issue — and how to protect revenue.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/ems_ambulance_debt_collection_account_recovery_f_206353.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Dental</td><td><span class="tpl">Video - Dental - Invoice Recovery 2026</span></td><td class="subj">Stop writing off unpaid treatment; recover more of the aging balances.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/overdue_dental_invoice_debt_collections_guide_fo_201072.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Property mgmt / landlords</td><td><span class="tpl">Video - Property Mgmt - Rent Arrears Guide</span></td><td class="subj">Step-by-step recovery of rent arrears and tenant balances.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/rent_arrears_recovery_agency_comparison_continge_208263.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Trucking / logistics / freight</td><td><span class="tpl">Video - Trucking &amp; Logistics - Debt Collection</span></td><td class="subj">Clean up unpaid invoices and get paid faster, with less back-and-forth.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/logistics_management_collections_ar_services_for_194832.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Restoration contractors</td><td><span class="tpl">Video - Restoration - #1 Strategy</span></td><td class="subj">The single biggest move to get paid on completed jobs.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/residential_restoration_company_debt_collection_196121.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Roofing / trades</td><td><span class="tpl">Video - Roofing - Invoice Fix</span></td><td class="subj">Three ways to actually get unpaid commercial jobs paid.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/roof_contractor_collections_for_unpaid_commercia_196312.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Oil &amp; gas</td><td><span class="tpl">Video - Oil &amp; Gas - 3 Legal Methods</span></td><td class="subj">Legal options to recover overdue accounts — a few most operators don't know.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/texas_oil_gas_debt_collection_for_overdue_accoun_194370.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Auto finance / lenders</td><td><span class="tpl">Video - Auto Finance - Deficiency Balances</span></td><td class="subj">Recover more on deficiency balances after repossession.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/swrs_expands_auto_finance_collections_for_defici_196546.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Government / municipal</td><td><span class="tpl">Video - Government - 47% Higher Recovery</span></td><td class="subj">Recover meaningfully more on past-due accounts, compliantly.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/government_municipality_bills_past_due_collectio_195239.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Insurance / subrogation</td><td><span class="tpl">Video - Insurance - Subrogation &amp; Fraud</span></td><td class="subj">Strengthen subrogation and unpaid-claim recovery; flag fraud.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/florida_insurance_subrogation_for_unpaid_claims_195345.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">HOA / community assoc.</td><td><span class="tpl">Video - HOA - Fast Recovery</span></td><td class="subj">Three reasons an agency recovers delinquent dues faster than in-house.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/collection_agency_for_apartments_hoa_residential_198929.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Utilities</td><td><span class="tpl">Video - Utilities - Ethical Recovery</span></td><td class="subj">Recover past-due balances while keeping customer goodwill.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/ethical_unpaid_utility_bill_collections_service_195166.html" target="_blank" rel="noopener">Open →</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-head"><h2>By location</h2><span class="tag">Match the prospect's state or metro</span></div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Market</th><th>Send this template</th><th>What it opens with</th><th>Preview</th></tr></thead>
+        <tbody>
+          <tr><td class="who">Atlanta / Georgia</td><td><span class="tpl">Video - Geo Atlanta - Commercial Recovery</span></td><td class="subj">A commercial-recovery guide for Atlanta-area SMBs.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/atlanta_collection_agency_expands_commercial_bus_199182.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Houston</td><td><span class="tpl">Video - Geo Houston - Choosing an Agency</span></td><td class="subj">How Houston businesses should choose a collection agency.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/houston_commercial_debt_collection_agencies_serv_200212.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Dallas / DFW</td><td><span class="tpl">Video - Geo Dallas - Recover 80% More</span></td><td class="subj">How Dallas-area businesses recover significantly more of overdue accounts.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/dallas_b2b_collection_agency_commercial_account_196924.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Florida</td><td><span class="tpl">Video - Geo Florida - Avoid FCCPA Fines</span></td><td class="subj">Collect on overdue accounts without tripping Florida's FCCPA.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/tampa_debt_collection_agency_expands_recovery_so_195899.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Ohio</td><td><span class="tpl">Video - Geo Ohio - Collection Law</span></td><td class="subj">The one mistake that can legally block Ohio businesses from collecting.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/ohio_debt_collection_laws_consumer_protections_g_199586.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Missouri</td><td><span class="tpl">Video - Geo Missouri - B2B Tips</span></td><td class="subj">Two practical tips for Missouri B2B recovery.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/missouri_debt_collection_laws_recovery_strategy_199060.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">Oklahoma</td><td><span class="tpl">Video - Geo Oklahoma - Recover Legal Fees</span></td><td class="subj">How Oklahoma businesses may make debtors cover their legal fees.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/oklahoma_debt_collection_laws_2026_regulatory_gu_200333.html" target="_blank" rel="noopener">Open →</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-head"><h2>General &amp; objection</h2><span class="tag">Use for any lead, or when price comes up</span></div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Use when…</th><th>Send this template</th><th>What it opens with</th><th>Preview</th></tr></thead>
+        <tbody>
+          <tr><td class="who">Any commercial B2B (default)</td><td><span class="tpl">Video - General B2B - Agency Strategy</span></td><td class="subj">How the right partner collects more, faster, without hurting relationships.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/b2b_debt_recovery_commercial_collection_agency_s_200445.html" target="_blank" rel="noopener">Open →</a></td></tr>
+          <tr><td class="who">They push back on price</td><td><span class="tpl">Video - Fee/Pricing - REAL Cost</span></td><td class="subj">A straight look at what a collection agency really costs.</td><td class="prev"><a href="https://stevendietz.github.io/swrs-landings/yt/professional_collections_agency_fees_b2b_recover_198329.html" target="_blank" rel="noopener">Open →</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <p class="note"><b>Good to know.</b> The recipient's first name auto-fills, and your own Nutshell signature is appended — so the same template works for every rep. These are B2B client outreach across SWRS's licensed states; they are not for consumer/debtor contact. Missing an industry? The full 66-video library and its landing pages live on the batch preview grid.</p>
+
+</div>
+
+</body>
+</html>
