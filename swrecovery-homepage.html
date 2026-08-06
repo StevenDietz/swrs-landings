@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Collection Agency | Commercial & B2B Collections | SWRS</title>
+<meta name="description" content="Southwest Recovery Services is a nationwide debt collection agency with 12 offices, recovering commercial and B2B debt on contingency. No recovery, no fee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#0A1628;--navy-mid:#0F2142;--navy-light:#162D54;--steel:#1E3A5F;
+  --blue-accent:#1D7AE8;--blue-light:#3B94FF;--blue-muted:rgba(29,122,232,.10);
+  --slate:#64748B;--slate-light:#94A3B8;--off-white:#F8F9FC;--white:#FFFFFF;
+  --gold:#C8973A;--border:rgba(255,255,255,.08);--border-dark:rgba(10,22,40,.10);
+  --shadow-xl:0 32px 80px rgba(10,22,40,.14);--shadow-lg:0 16px 48px rgba(10,22,40,.10);
+  --shadow-md:0 6px 24px rgba(10,22,40,.07);--shadow-sm:0 2px 8px rgba(10,22,40,.06);
+  --radius-sm:6px;--radius-md:12px;--radius-lg:20px;--radius-xl:28px;
+  --font-serif:'Instrument Serif',Georgia,serif;--font-sans:'DM Sans',-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--white);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--navy-mid);border-bottom:1px solid var(--border);padding:9px 24px;font-size:12px;font-weight:500;color:rgba(255,255,255,.6)}
+.topbar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar-left{display:flex;gap:20px;flex-wrap:wrap}
+.topbar a{color:rgba(255,255,255,.7);text-decoration:none;transition:color .15s}
+.topbar a:hover{color:var(--white)}
+.topbar-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(29,122,232,.18);border:1px solid rgba(29,122,232,.3);color:var(--blue-light);padding:3px 12px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:.04em}
+
+/* ── NAV ── */
+.nav{background:var(--white);border-bottom:1px solid var(--border-dark);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:68px;gap:40px}
+.nav-logo{display:flex;flex-direction:column;text-decoration:none;flex-shrink:0}
+.nav-logo-name{font-family:var(--font-serif);font-size:20px;font-weight:400;color:var(--navy);letter-spacing:-.01em;line-height:1}
+.nav-logo-sub{font-size:10px;color:var(--slate-light);letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-top:2px}
+.nav-links{display:flex;gap:0;flex:1;justify-content:center}
+.nav-links a{font-size:13px;font-weight:600;color:var(--slate);text-decoration:none;padding:8px 14px;border-radius:var(--radius-sm);transition:color .15s,background .15s;white-space:nowrap}
+.nav-links a:hover{color:var(--navy);background:var(--off-white)}
+.nav-cta{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-btn-ghost{font-size:13px;font-weight:600;color:var(--blue-accent);text-decoration:none;padding:8px 16px;border:1px solid rgba(29,122,232,.3);border-radius:var(--radius-sm);transition:all .15s}
+.nav-btn-ghost:hover{background:var(--blue-muted);border-color:var(--blue-accent)}
+.nav-btn-solid{font-size:13px;font-weight:700;color:var(--white);background:var(--blue-accent);text-decoration:none;padding:9px 20px;border-radius:var(--radius-sm);transition:background .15s,transform .15s}
+.nav-btn-solid:hover{background:var(--blue-light);transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{background:var(--navy);background-image:radial-gradient(ellipse 60% 80% at 110% 30%,rgba(29,122,232,.14) 0%,transparent 55%),radial-gradient(ellipse 40% 60% at -10% 80%,rgba(29,122,232,.07) 0%,transparent 50%),linear-gradient(150deg,var(--navy) 0%,var(--navy-mid) 50%,var(--steel) 100%);padding:96px 24px 0;position:relative;overflow:hidden;min-height:600px}
+.hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(255,255,255,.015) 59px,rgba(255,255,255,.015) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(255,255,255,.01) 59px,rgba(255,255,255,.01) 60px);pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 500px;gap:64px;align-items:end;position:relative;z-index:1}
+.hero-copy{padding-bottom:96px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(29,122,232,.15);border:1px solid rgba(29,122,232,.28);color:var(--blue-light);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:28px}
+.hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--blue-light);border-radius:50%;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+.hero h1{font-family:var(--font-serif);font-size:clamp(42px,5.5vw,72px);font-weight:400;color:var(--white);line-height:1.05;letter-spacing:-.02em;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--blue-light)}
+.hero-sub{font-size:clamp(16px,1.8vw,19px);color:rgba(255,255,255,.6);line-height:1.65;max-width:520px;margin-bottom:16px}
+.hero-no-fee{display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,58,.12);border:1px solid rgba(200,151,58,.28);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:36px}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue-accent);color:var(--white);font-size:15px;font-weight:700;padding:15px 30px;border-radius:var(--radius-sm);text-decoration:none;transition:background .2s,transform .2s}
+.btn-primary:hover{background:var(--blue-light);transform:translateY(-2px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-size:15px;font-weight:600;padding:15px 30px;border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,.25);text-decoration:none;transition:all .2s}
+.btn-secondary:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.06)}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap}
+.hero-trust-item{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:rgba(255,255,255,.55)}
+.hero-trust-item svg{color:var(--blue-light)}
+
+.hero-visual{align-self:end;position:relative}
+.hero-card-stack{display:flex;flex-direction:column;gap:12px;padding-bottom:0}
+.hero-img-frame{position:relative;border-radius:var(--radius-xl) var(--radius-xl) 0 0;overflow:hidden;border:2px solid rgba(255,255,255,.1)}
+.hero-img-frame img{width:100%;height:360px;object-fit:cover;object-position:center top;display:block}
+.hero-img-frame::after{content:'';position:absolute;bottom:0;left:0;right:0;height:35%;background:linear-gradient(to top,rgba(10,22,40,.7),transparent)}
+.stat-bar{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-md);padding:16px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;backdrop-filter:blur(8px)}
+.stat-bar-item{display:flex;flex-direction:column;gap:2px;padding:4px 12px;border-right:1px solid rgba(255,255,255,.1)}
+.stat-bar-item:last-child{border-right:none}
+.stat-bar-item strong{font-family:var(--font-serif);font-size:26px;font-weight:400;color:var(--white);line-height:1}
+.stat-bar-item span{font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+
+/* ── SOCIAL PROOF BAR ── */
+.proof-bar{background:var(--off-white);border-bottom:1px solid var(--border-dark);padding:28px 24px}
+.proof-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:32px;flex-wrap:wrap;justify-content:space-between}
+.proof-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-light);flex-shrink:0}
+.proof-badges{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.proof-badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius-sm);padding:8px 16px;font-size:13px;font-weight:600;color:var(--navy);white-space:nowrap}
+.proof-badge svg{color:var(--blue-accent);flex-shrink:0}
+.proof-since{font-family:var(--font-serif);font-size:15px;font-style:italic;color:var(--slate);flex-shrink:0}
+
+/* ── ABOUT STRIP ── */
+.about-strip{padding:80px 24px;background:var(--white)}
+.about-strip-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:center}
+.about-text .section-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--blue-accent);margin-bottom:12px}
+.about-text h2{font-family:var(--font-serif);font-size:clamp(28px,3.2vw,42px);font-weight:400;line-height:1.15;letter-spacing:-.01em;margin-bottom:20px}
+.about-text p{font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:18px}
+.about-text p:last-of-type{margin-bottom:32px}
+.about-photo{position:relative;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl)}
+.about-photo img{width:100%;height:420px;object-fit:cover;display:block}
+.about-photo-badge{position:absolute;bottom:20px;left:20px;background:rgba(10,22,40,.88);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);color:var(--white);padding:12px 18px;border-radius:var(--radius-md);font-size:13px;font-weight:600}
+.about-photo-badge span{display:block;font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;font-weight:500}
+
+/* ── SERVICES ── */
+.services{padding:80px 24px;background:var(--off-white)}
+.services-inner{max-width:1200px;margin:0 auto}
+.section-header{margin-bottom:48px}
+.section-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--blue-accent);margin-bottom:12px}
+.section-heading{font-family:var(--font-serif);font-size:clamp(28px,3.2vw,42px);font-weight:400;line-height:1.15;letter-spacing:-.01em;margin-bottom:16px}
+.section-lead{font-size:17px;color:var(--slate);line-height:1.75;max-width:600px}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.service-card{background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-md);transition:transform .22s,box-shadow .22s,border-color .22s;position:relative;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:14px}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue-accent),var(--blue-light));opacity:0;transition:opacity .22s}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(29,122,232,.2)}
+.service-card:hover::before{opacity:1}
+.service-icon{width:44px;height:44px;background:var(--blue-muted);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center}
+.service-icon svg{color:var(--blue-accent)}
+.service-card h4{font-size:16px;font-weight:700;color:var(--navy);line-height:1.3}
+.service-card p{font-size:13px;color:var(--slate);line-height:1.65;flex:1}
+.service-link{font-size:13px;font-weight:700;color:var(--blue-accent);display:flex;align-items:center;gap:5px;margin-top:4px}
+.services-cta{margin-top:40px;text-align:center}
+
+/* ── INDUSTRIES ── */
+.industries{padding:80px 24px;background:var(--navy);position:relative;overflow:hidden}
+.industries::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 100% 50%,rgba(29,122,232,.08) 0%,transparent 55%);pointer-events:none}
+.industries-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.industries .section-tag{color:var(--blue-light)}
+.industries .section-heading{color:var(--white)}
+.industries .section-lead{color:rgba(255,255,255,.6)}
+.industries-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:40px}
+.industry-chip{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-md);padding:22px 16px;text-decoration:none;color:rgba(255,255,255,.75);font-size:13px;font-weight:600;text-align:center;line-height:1.3;transition:background .2s,border-color .2s,transform .2s}
+.industry-chip:hover{background:rgba(29,122,232,.15);border-color:rgba(29,122,232,.4);transform:translateY(-3px);color:var(--white)}
+.industry-chip svg{color:var(--blue-light);opacity:.8}
+.industries-footer{text-align:center}
+
+/* ── PULL QUOTE ── */
+.pull-quote-band{background:var(--white);border-top:1px solid var(--border-dark);border-bottom:1px solid var(--border-dark);padding:64px 24px}
+.pq-inner{max-width:860px;margin:0 auto;text-align:center}
+.pq-mark{font-family:Georgia,serif;font-size:100px;line-height:.6;color:var(--blue-accent);opacity:.18;display:block;margin-bottom:20px}
+.pq-text{font-family:var(--font-serif);font-size:clamp(18px,2.5vw,28px);font-style:italic;color:var(--navy);line-height:1.5;margin-bottom:28px;letter-spacing:-.01em}
+.pq-attr{display:inline-flex;align-items:center;gap:14px}
+.pq-line{width:40px;height:1px;background:var(--blue-accent);opacity:.4}
+.pq-name{font-size:13px;font-weight:700;color:var(--slate);letter-spacing:.04em}
+
+/* ── TESTIMONIALS ── */
+.testimonials{padding:80px 24px;background:var(--off-white)}
+.testimonials-inner{max-width:1200px;margin:0 auto}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testimonial-card{background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:16px}
+.stars{display:flex;gap:3px}
+.star{color:var(--gold);font-size:14px}
+.testimonial-text{font-family:var(--font-serif);font-size:15px;font-style:italic;color:var(--navy);line-height:1.65;flex:1}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.author-avatar{width:38px;height:38px;background:linear-gradient(135deg,var(--navy-mid),var(--steel));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--white);flex-shrink:0}
+.author-name{font-size:13px;font-weight:700;color:var(--navy)}
+.author-co{font-size:12px;color:var(--slate-light)}
+
+/* ── LOCATIONS ── */
+.locations{padding:80px 24px;background:var(--white)}
+.locations-inner{max-width:1200px;margin:0 auto}
+.locations-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:40px}
+.location-card{border:1px solid var(--border-dark);border-radius:var(--radius-md);padding:20px;transition:border-color .2s,box-shadow .2s;text-decoration:none;color:inherit;display:block}
+.location-card:hover{border-color:var(--blue-accent);box-shadow:var(--shadow-md)}
+.location-city{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.location-state{font-size:12px;color:var(--blue-accent);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.location-addr{font-size:12px;color:var(--slate-light);line-height:1.5}
+.location-phone{font-size:12px;color:var(--blue-accent);font-weight:600;margin-top:6px}
+
+/* ── FAQ ── */
+.faq{padding:80px 24px;background:var(--off-white)}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border-dark)}
+.faq-item{border-bottom:1px solid var(--border-dark)}
+.faq-q{width:100%;background:none;border:none;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-family:var(--font-sans);font-size:16px;font-weight:700;color:var(--navy);text-align:left;transition:color .15s}
+.faq-q:hover{color:var(--blue-accent)}
+.faq-icon{width:22px;height:22px;border-radius:50%;background:var(--blue-muted);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,transform .3s}
+.faq-icon svg{color:var(--blue-accent)}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--blue-accent)}
+.faq-item.open .faq-icon svg{color:var(--white)}
+.faq-a{display:none;padding:0 4px 22px;font-size:15px;color:var(--slate);line-height:1.8}
+.faq-item.open .faq-a{display:block}
+
+/* ── CTA BAND ── */
+.cta-band{background:linear-gradient(135deg,var(--navy-mid) 0%,var(--steel) 100%);padding:80px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 120% at 50% 130%,rgba(29,122,232,.2) 0%,transparent 60%);pointer-events:none}
+.cta-band-inner{position:relative;z-index:1;max-width:660px;margin:0 auto}
+.cta-band h2{font-family:var(--font-serif);font-size:clamp(26px,3.2vw,44px);font-weight:400;color:var(--white);margin-bottom:14px;line-height:1.15}
+.cta-band p{font-size:18px;color:rgba(255,255,255,.6);margin-bottom:40px;line-height:1.65}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy);padding:64px 24px 0;border-top:1px solid var(--border)}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:280px 1fr 1fr 220px;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--border)}
+.footer-brand{display:flex;flex-direction:column;gap:16px}
+.footer-logo{font-family:var(--font-serif);font-size:22px;font-weight:400;color:var(--white);line-height:1}
+.footer-logo-sub{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-top:3px}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65}
+.footer-disclaimer{font-size:11px;color:rgba(255,255,255,.28);line-height:1.5;margin-top:4px}
+.footer-social{display:flex;gap:10px;margin-top:4px}
+.footer-social a{width:32px;height:32px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);text-decoration:none;transition:background .15s,color .15s}
+.footer-social a:hover{background:rgba(29,122,232,.25);color:var(--white);border-color:rgba(29,122,232,.4)}
+.footer-col h5{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col ul li a{font-size:13px;color:rgba(255,255,255,.55);text-decoration:none;transition:color .15s}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-contact p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.7}
+.footer-contact a{color:var(--blue-light);text-decoration:none}
+.footer-contact strong{color:rgba(255,255,255,.75)}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.25);flex-wrap:wrap;gap:10px}
+.footer-bottom a{color:rgba(255,255,255,.3);text-decoration:none}
+.footer-bottom a:hover{color:rgba(255,255,255,.6)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:0}
+  .hero-visual{display:none}
+  .hero-copy{padding-bottom:72px}
+  .about-strip-inner{grid-template-columns:1fr;gap:40px}
+  .about-photo{max-width:100%}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .industries-grid{grid-template-columns:repeat(3,1fr)}
+  .locations-grid{grid-template-columns:repeat(3,1fr)}
+  .testimonials-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media(max-width:640px){
+  .hero{padding:64px 20px 0}
+  .services-grid{grid-template-columns:1fr}
+  .industries-grid{grid-template-columns:repeat(2,1fr)}
+  .locations-grid{grid-template-columns:1fr 1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:32px}
+  .topbar-left{gap:12px}
+  .nav-links{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span>Customer Service: <a href="tel:8668373065">866-837-3065</a></span>
+      <span>Make A Payment: <a href="tel:8665583328">(866) 558-3328</a></span>
+      <a href="https://www.swrsportal.com/" target="_blank">Client Portal</a>
+      <a href="https://www.swrecovery.com/sms-opt-in-out/">Consumer Support</a>
+    </div>
+    <span class="topbar-pill">
+      <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+      Licensed &amp; Bonded · All 50 States
+    </span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="https://www.swrecovery.com/" class="nav-logo">
+      <span class="nav-logo-name">Southwest Recovery Services</span>
+      <span class="nav-logo-sub">Providing Creative Solutions to Common Problems</span>
+    </a>
+    <div class="nav-links">
+      <a href="https://www.swrecovery.com/about/">About</a>
+      <a href="https://www.swrecovery.com/services/">Services</a>
+      <a href="https://www.swrecovery.com/industries/">Industries</a>
+      <a href="https://www.swrecovery.com/resources/blog/">Resources</a>
+      <a href="https://www.swrecovery.com/about/locations/">Locations</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:8665514684" class="nav-btn-ghost">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:inline;vertical-align:middle;margin-right:5px"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        (866) 551-4684
+      </a>
+      <a href="https://www.swrecovery.com/request-a-quote/" class="nav-btn-solid">Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">Nationwide Debt Collection · Since 2004</div>
+      <h1>Debt Collection Agency<br>for <em>Businesses</em></h1>
+      <p class="hero-sub">SWRS is the debt collection agency businesses trust — on-shore collectors specializing in commercial and B2B accounts receivable management across all 50 states.</p>
+      <div class="hero-no-fee">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        Contingency Only — No Recovery, No Fee
+      </div>
+      <div class="hero-buttons">
+        <a href="https://www.swrecovery.com/contact/" class="btn-primary">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Get Started Today
+        </a>
+        <a href="https://www.swrecovery.com/request-a-quote/" class="btn-secondary">Request a Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          12 Offices · 7 States
+        </div>
+        <div class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          22+ Years Experience
+        </div>
+        <div class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          ACA International Member
+        </div>
+        <div class="hero-trust-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          BBB Accredited · A+ Rating
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="hero-img-frame">
+          <img src="https://e174cb2a.delivery.rocketcdn.me/wp-content/uploads/2023/08/hero-image-1.jpg" alt="Business debt collection consultation" loading="eager">
+        </div>
+        <div class="stat-bar">
+          <div class="stat-bar-item">
+            <strong>$10M+</strong>
+            <span>Annual Revenue</span>
+          </div>
+          <div class="stat-bar-item">
+            <strong>12</strong>
+            <span>Office Locations</span>
+          </div>
+          <div class="stat-bar-item">
+            <strong>50</strong>
+            <span>States Covered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <span class="proof-label">Proud Members Of</span>
+    <div class="proof-badges">
+      <div class="proof-badge">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        ACA International
+      </div>
+      <div class="proof-badge">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Texas Apartment Association
+      </div>
+      <div class="proof-badge">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        NARPM
+      </div>
+      <div class="proof-badge">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Clutch Top US Collections 2026
+      </div>
+      <div class="proof-badge">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Chamber of Commerce A+
+      </div>
+    </div>
+    <span class="proof-since">Serving businesses since 2004</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-strip">
+  <div class="about-strip-inner">
+    <div class="about-text">
+      <span class="section-tag">Your Trusted Partner</span>
+      <h2>About Southwest Recovery Services</h2>
+      <p>Southwest Recovery Services, LLC is a nationally recognized leader in Financial Business Process Outsourcing — headquartered in Addison, Texas with 11 other locations throughout Texas, Colorado, Georgia, Missouri, Florida, Oklahoma, and Ohio.</p>
+      <p>Founded in 2004 by CEO Steven Dietz, SWRS has grown from two desks and one phone to a 12-office, 60-person national agency crossing $10M in annual revenue — built on a single principle: no recovery, no fee.</p>
+      <a href="https://www.swrecovery.com/about/" class="btn-primary" style="width:fit-content">
+        Learn More About Us
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="about-photo">
+      <img src="https://e174cb2a.delivery.rocketcdn.me/wp-content/uploads/2023/08/male-and-female-talking-at-conf-table.jpg" alt="Southwest Recovery Services team consultation" loading="lazy">
+      <div class="about-photo-badge">
+        Addison, TX — Corporate HQ
+        <span>16200 Addison Road, Suite 260</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <span class="section-tag">How We Can Help</span>
+      <h2 class="section-heading">Services We Provide</h2>
+      <p class="section-lead">Southwest Recovery Services provides a wide range of debt collection and receivables management services — all on contingency.</p>
+    </div>
+    <div class="services-grid">
+      <a href="https://www.swrecovery.com/services/debt-recovery/" class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Debt Recovery</h4>
+        <p>Commercial and consumer debt recovery across all 50 states. We pursue every account with Experian intelligence — skip tracing, scoring, and contact validation before the first call.</p>
+        <span class="service-link">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a href="https://www.swrecovery.com/services/revenue-cycle-management/" class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 3h18v18H3z" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h4>Revenue Cycle Management</h4>
+        <p>End-to-end RCM for healthcare and commercial clients. From patient billing and insurance follow-up to B2B invoice recovery — keeping your cash flow healthy at every stage.</p>
+        <span class="service-link">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a href="https://www.swrecovery.com/services/accounts-receivable-management/" class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <h4>Accounts Receivable Management</h4>
+        <p>First-party and third-party AR management that works as an extension of your team. We handle early-stage outreach before accounts go delinquent — protecting your customer relationships.</p>
+        <span class="service-link">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a href="https://www.swrecovery.com/services/consulting-services/" class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4>Consulting Services</h4>
+        <p>Expert debt collection consulting for businesses looking to build their own AR infrastructure. Steven Dietz brings 30 years of collections experience directly to your team's playbook.</p>
+        <span class="service-link">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+    </div>
+    <div class="services-cta">
+      <a href="https://www.swrecovery.com/contact/" class="btn-primary">Contact Our Experts</a>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries">
+  <div class="industries-inner">
+    <div class="section-header">
+      <span class="section-tag">We've Got You Covered</span>
+      <h2 class="section-heading">Industries We Serve</h2>
+      <p class="section-lead">22+ years building expertise across nearly every industry. Whether you're a multimillion-dollar leader or a growing startup, SWRS handles your back-office so you can focus on growth.</p>
+    </div>
+    <div class="industries-grid">
+      <a href="https://www.swrecovery.com/industries/automotive-finance-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8zM5.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+        Automotive
+      </a>
+      <a href="https://www.swrecovery.com/industries/commercial-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        Commercial B2B
+      </a>
+      <a href="https://www.swrecovery.com/industries/construction-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Construction
+      </a>
+      <a href="https://www.swrecovery.com/industries/consumer-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Consumer
+      </a>
+      <a href="https://www.swrecovery.com/industries/government-and-municipality-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 22V9M21 22V9M12 22V4M12 4L3 9M12 4l9 5"/></svg>
+        Government
+      </a>
+      <a href="https://www.swrecovery.com/industries/insurance-and-subrogation-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Insurance &amp; Subrogation
+      </a>
+      <a href="https://www.swrecovery.com/industries/medical-and-healthcare-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Medical &amp; Healthcare
+      </a>
+      <a href="https://www.swrecovery.com/industries/logistics-management-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8zM5.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+        Logistics &amp; Trucking
+      </a>
+      <a href="https://www.swrecovery.com/industries/oil-and-gas-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 4.5V14a2 2 0 002 2h2"/><path d="M14 2v2.5M7 21h10M12 7H7l-3 7h8V7z"/></svg>
+        Oil &amp; Gas
+      </a>
+      <a href="https://www.swrecovery.com/industries/property-management-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Property Management
+      </a>
+      <a href="https://www.swrecovery.com/industries/utility-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        Utility
+      </a>
+      <a href="https://www.swrecovery.com/industries/small-business-collections/" class="industry-chip">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        Small Business
+      </a>
+      <a href="https://www.swrecovery.com/industries/" class="industry-chip" style="border-style:dashed;color:rgba(255,255,255,.4)">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+        View All Industries
+      </a>
+    </div>
+    <div class="industries-footer">
+      <a href="https://www.swrecovery.com/industries/" class="btn-secondary">Get Started Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote-band">
+  <div class="pq-inner">
+    <span class="pq-mark" aria-hidden="true">"</span>
+    <p class="pq-text">We help you collect what you're owed without burning the customer relationships you spent years building. That's the whole job.</p>
+    <div class="pq-attr">
+      <div class="pq-line"></div>
+      <span class="pq-name">Steven Dietz — CEO &amp; Founder, Southwest Recovery Services</span>
+      <div class="pq-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <div class="section-header" style="text-align:center;max-width:600px;margin:0 auto 48px">
+      <span class="section-tag">Testimonials</span>
+      <h2 class="section-heading">What Our Customers Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-text">"Southwest Recovery Services has been an invaluable partner for our company. Their professionalism, communication, and results speak for themselves. They truly work as an extension of our team."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div>
+            <div class="author-name">Michael R.</div>
+            <div class="author-co">Commercial Property Management, Texas</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-text">"We've worked with several collection agencies over the years and SWRS is in a class of their own. Recovered debt we had completely written off. Responsive, compliant, and respectful to our customers."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SL</div>
+          <div>
+            <div class="author-name">Sandra L.</div>
+            <div class="author-co">Healthcare Revenue Cycle, Oklahoma</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testimonial-text">"The contingency model alone was enough to get us to try them. The results are what made us stay. Our AR department runs tighter than it ever has since bringing in SWRS."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">TK</div>
+          <div>
+            <div class="author-name">Thomas K.</div>
+            <div class="author-co">Oil &amp; Gas, Houston TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations">
+  <div class="locations-inner">
+    <div class="section-header">
+      <span class="section-tag">Locations</span>
+      <h2 class="section-heading">Find an Expert Near You</h2>
+      <p class="section-lead">12 strategically located offices across 7 states — ready to serve your business needs today.</p>
+    </div>
+    <div class="locations-grid">
+      <a href="https://www.swrecovery.com/about/locations/addison-collection-agency/" class="location-card">
+        <div class="location-city">Addison</div>
+        <div class="location-state">TX · HQ</div>
+        <div class="location-addr">16200 Addison Road, Suite 260<br>Addison, TX 75001</div>
+        <div class="location-phone">(469) 817-7484</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/dallas-collection-agency/" class="location-card">
+        <div class="location-city">Dallas</div>
+        <div class="location-state">TX</div>
+        <div class="location-addr">2626 Cole Ave, Suite 364<br>Dallas, TX 75204</div>
+        <div class="location-phone">(214) 307-9576</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/houston-collection-agency/" class="location-card">
+        <div class="location-city">Houston</div>
+        <div class="location-state">TX</div>
+        <div class="location-addr">5718 Westheimer Road, Suite 1053<br>Houston, TX 77057</div>
+        <div class="location-phone">(713) 804-6308</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/austin-collection-agency/" class="location-card">
+        <div class="location-city">Austin</div>
+        <div class="location-state">TX</div>
+        <div class="location-addr">13809 Research Blvd, Suite 586<br>Austin, TX 78738</div>
+        <div class="location-phone">(512) 881-9243</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/denver-debt-collection-agency/" class="location-card">
+        <div class="location-city">Denver</div>
+        <div class="location-state">CO</div>
+        <div class="location-addr">7887 E Belleview Ave, Suite 1100<br>Centennial, CO 80111</div>
+        <div class="location-phone">(303) 276-1533</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/tampa-collection-agency/" class="location-card">
+        <div class="location-city">Tampa</div>
+        <div class="location-state">FL</div>
+        <div class="location-addr">625 E Twiggs St, Suite 1028<br>Tampa, FL 33602</div>
+        <div class="location-phone">(407) 604-2536</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/atlanta-collection-agency/" class="location-card">
+        <div class="location-city">Atlanta</div>
+        <div class="location-state">GA</div>
+        <div class="location-addr">2330 Scenic Hwy S, Suite 192<br>Snellville, GA 30078</div>
+        <div class="location-phone">(470) 333-5753</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/columbus-collection-agency/" class="location-card">
+        <div class="location-city">Columbus</div>
+        <div class="location-state">OH</div>
+        <div class="location-addr">20 East Broad Street, Suite 315<br>Columbus, OH 43215</div>
+        <div class="location-phone">(380) 226-8142</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/oklahoma-city-collection-agency/" class="location-card">
+        <div class="location-city">Oklahoma City</div>
+        <div class="location-state">OK</div>
+        <div class="location-addr">100 Park Ave, Suite 700<br>Oklahoma City, OK 73102</div>
+        <div class="location-phone">(405) 565-9335</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/st-louis-collection-agency/" class="location-card">
+        <div class="location-city">St. Louis</div>
+        <div class="location-state">MO</div>
+        <div class="location-addr">12747 Olive Blvd, Suite 300<br>St. Louis, MO 63141</div>
+        <div class="location-phone">(314) 947-4105</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/san-antonio-collection-agency/" class="location-card">
+        <div class="location-city">San Antonio</div>
+        <div class="location-state">TX</div>
+        <div class="location-addr">18911 Hardy Oak Blvd<br>San Antonio, TX 78258</div>
+        <div class="location-phone">(210) 598-6959</div>
+      </a>
+      <a href="https://www.swrecovery.com/about/locations/midland-collection-agency/" class="location-card">
+        <div class="location-city">Midland</div>
+        <div class="location-state">TX</div>
+        <div class="location-addr">223 W Wall St, Suite 204<br>Midland, TX 79701</div>
+        <div class="location-phone">(432) 224-8134</div>
+      </a>
+    </div>
+    <div style="text-align:center">
+      <a href="https://www.swrecovery.com/about/locations/" class="btn-primary">View All Locations</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-header" style="text-align:center;margin-bottom:48px">
+      <span class="section-tag">Frequently Asked</span>
+      <h2 class="section-heading">Questions Business Owners Ask Us</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          How much does a commercial collection agency charge?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Southwest Recovery Services works on a <strong>contingency-fee basis</strong>. There are no upfront fees, no monthly retainers, no setup costs. We only earn a percentage of what we successfully recover. The percentage varies by account age, balance size, and account type (commercial vs consumer) — older accounts and lower balances carry higher rates because they require more work to recover. <a href="https://www.swrecovery.com/request-a-quote/" style="color:var(--blue-accent);font-weight:600">Request a quote</a> to get exact pricing for your portfolio.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          How long does it take to collect a B2B debt?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Setup is fast: most clients are onboarded and placing accounts within <strong>24 to 48 hours</strong> of initial intake. Recovery timeline depends on account profile. Fresh commercial accounts (under 90 days past due) often resolve within 30–60 days. Aged accounts, disputed invoices, and skip-traced debtors take longer. We give every client an honest outlook on each account before you commit.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          Do you collect commercial debt, consumer debt, or both?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Both. Commercial (B2B) debt is our core business and we collect across <strong>all 50 U.S. states</strong>. For consumer (B2C) debt, we collect in <strong>47 states</strong>; we do not collect consumer debt in California, Washington, or Oregon. Our consumer division operates under strict FDCPA, CFPB Regulation F, and individual state-overlay regulations.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          Is Southwest Recovery Services FDCPA-compliant and licensed?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Yes. Southwest Recovery Services has maintained flawless regulatory compliance since 2004. We are <strong>licensed and bonded in all 50 states</strong> where required and operate under FDCPA, CFPB Regulation F, FCRA, TCPA, HIPAA (healthcare), and applicable federal bankruptcy laws. We are a <strong>BBB-Accredited Business</strong> with the Better Business Bureau of North Central Texas and an ACA International member.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          Will you damage my customer relationships?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">No. Protecting your customer relationships is core to how we work. Our collectors are trained to investigate the root cause behind non-payment and find a resolution that recovers your money without burning the bridge. For commercial accounts especially, we treat your debtor as your future customer — because frequently they are.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFAQ(this)">
+          Why choose Southwest Recovery Services over other collection agencies?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+        </button>
+        <div class="faq-a">Three reasons. First, <strong>22+ years of recovery experience</strong> since 2004 across all 50 states and 10+ industry verticals. Second, <strong>12 regional offices</strong> across seven states staffed with local collectors who understand state-specific compliance and regional business norms. Third, <strong>contingency-only pricing</strong> — if we don't collect, you don't pay.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Building A Better Business Together</h2>
+    <p>We help you collect what you're owed without burning the customer relationships you spent years building. No upfront fees. No monthly retainers. You pay nothing until we recover.</p>
+    <div class="cta-buttons">
+      <a href="https://www.swrecovery.com/contact/" class="btn-primary">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        Maximize My Cash Flow
+      </a>
+      <a href="https://www.swrecovery.com/request-a-quote/" class="btn-secondary">Request a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div>
+        <div class="footer-logo">Southwest Recovery Services</div>
+        <div class="footer-logo-sub">Providing Creative Solutions to Common Problems</div>
+      </div>
+      <p class="footer-tagline">Nationally recognized leader in Financial Business Process Outsourcing. Headquartered in Addison, TX with 12 offices across 7 states.</p>
+      <p class="footer-disclaimer">Southwest Recovery Services LLC does not collect consumer debt in CA, WA, or OR.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61581194245199" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/southwest-recovery-services" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://www.instagram.com/swrecoveryserv/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://x.com/SWRecoveryServ" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@SouthwestRecoveryServices" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="https://www.swrecovery.com/services/debt-recovery/">Debt Recovery</a></li>
+        <li><a href="https://www.swrecovery.com/services/revenue-cycle-management/">Revenue Cycle Management</a></li>
+        <li><a href="https://www.swrecovery.com/services/accounts-receivable-management/">AR Management</a></li>
+        <li><a href="https://www.swrecovery.com/services/consulting-services/">Consulting Services</a></li>
+        <li><a href="https://www.swrecovery.com/services/bpo/">Business Process Outsourcing</a></li>
+        <li><a href="https://www.swrecovery.com/early-out-program/">Early Out Program</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="https://www.swrecovery.com/about/">About SWRS</a></li>
+        <li><a href="https://www.swrecovery.com/about/leadership/">Steven Dietz — CEO</a></li>
+        <li><a href="https://www.swrecovery.com/industries/">Industries We Serve</a></li>
+        <li><a href="https://www.swrecovery.com/about/locations/">All Locations</a></li>
+        <li><a href="https://www.swrecovery.com/resources/blog/">Resources Blog</a></li>
+        <li><a href="https://www.swrecovery.com/customer-testimonials/">Testimonials</a></li>
+        <li><a href="https://www.swrecovery.com/contact/">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact footer-col">
+      <h5>Contact</h5>
+      <p>
+        <strong>16200 Addison Road, Suite 260</strong><br>
+        Addison, TX 75001<br><br>
+        <a href="tel:8665514684">(866) 551-4684</a><br>
+        <a href="mailto:info@swrecovery.com">info@swrecovery.com</a><br><br>
+        <strong style="color:rgba(255,255,255,.4);font-size:12px">Mon–Fri: 8 AM – 5 PM CT</strong>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Southwest Recovery Services LLC. All Rights Reserved.</span>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="https://www.swrecovery.com/privacy-policy/">Privacy Policy</a>
+      <a href="https://www.swrecovery.com/sms-privacy-policy/">SMS Privacy</a>
+      <a href="https://www.swrecovery.com/sms-terms-and-conditions-policy/">SMS Terms</a>
+      <a href="https://www.swrecovery.com/site-credits/">Site Credits</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFAQ(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>
