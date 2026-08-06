@@ -103,6 +103,7 @@ body{font-family:var(--font-sans);background:var(--white);color:var(--navy);line
 .hero-photo-frame{position:relative;width:100%;max-width:340px;margin:0 auto}
 .hero-photo-frame::before{content:'';position:absolute;inset:-2px;background:linear-gradient(135deg,var(--blue-accent) 0%,transparent 55%,rgba(29,122,232,.25) 100%);border-radius:var(--radius-xl) var(--radius-xl) 0 0;z-index:0}
 .photo-placeholder{position:relative;z-index:1;width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,var(--navy-light) 0%,var(--steel) 100%);border-radius:calc(var(--radius-xl) - 2px) calc(var(--radius-xl) - 2px) 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;overflow:hidden}
+@media(max-width:960px){.photo-placeholder{aspect-ratio:4/3;max-height:400px}.hero-photo-frame{max-width:500px;margin:0 auto}}
 .photo-placeholder::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,rgba(10,22,40,.6),transparent)}
 .photo-icon{width:96px;height:96px;background:rgba(29,122,232,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid rgba(29,122,232,.3)}
 .photo-icon svg{color:rgba(255,255,255,.4)}
@@ -211,8 +212,8 @@ body{font-family:var(--font-sans);background:var(--white);color:var(--navy);line
 
 /* RESPONSIVE */
 @media(max-width:960px){
-  .hero-inner{grid-template-columns:1fr;gap:0}
-  .hero-photo-col{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-photo-col{display:block;order:-1}
   .hero-copy{padding-bottom:64px}
   .story-grid{grid-template-columns:1fr;gap:40px}
   .stats-strip-inner{grid-template-columns:repeat(3,1fr)}
@@ -221,7 +222,8 @@ body{font-family:var(--font-sans);background:var(--white);color:var(--navy);line
 }
 @media(max-width:640px){
   .section{padding:56px 20px}
-  .hero{padding:56px 20px 0}
+  .hero{padding:40px 20px 0}
+  .hero-copy{padding-bottom:48px}
   .stats-strip-inner{grid-template-columns:1fr 1fr}
   .philosophy-grid{grid-template-columns:1fr}
   .career-table td:first-child{width:auto;white-space:normal}
