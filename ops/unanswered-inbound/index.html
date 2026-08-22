@@ -1,213 +1,43 @@
 <!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="refresh" content="900">
-<title>SWRS — Unanswered Inbound</title><style>
-*{box-sizing:border-box}body{margin:0;background:#EEF0F7;font-family:'Fira Sans',Arial,sans-serif;color:#1a1d2e}
-header{background:#070B97;color:#fff;padding:20px 24px}
-h1{margin:0;font-size:19px}header p{margin:5px 0 0;font-size:13px;color:#B9C2F5}
-.wrap{max-width:1040px;margin:0 auto;padding:20px 16px 60px}
-.kpis{display:flex;gap:26px;background:#fff;padding:16px 20px;margin-bottom:18px;flex-wrap:wrap}
-.kpi b{display:block;font-size:26px;color:#0446F1}.kpi span{font-size:11px;color:#7A7F95}
-section{background:#fff;margin-bottom:16px}
-h2{margin:0;padding:12px 18px;font-size:14px;border-bottom:1px solid #E4E7F2;background:#F7F8FC}
-.n{display:inline-block;background:#070B97;color:#fff;border-radius:9px;padding:1px 8px;font-size:11px;margin-left:6px}
-.escn{background:#B3261E}
-table{width:100%;border-collapse:collapse}
-td{padding:11px 18px;border-bottom:1px solid #EEF0F7;vertical-align:top;font-size:13px}
-td.w{width:70px;font-weight:700;color:#070B97;white-space:nowrap}
-td.a{width:70px;text-align:right;white-space:nowrap}
-td.a a{color:#0446F1;font-weight:700;text-decoration:none;font-size:12px}
-.co{font-weight:600}.sub{font-size:11px;color:#7A7F95;margin-top:2px}.subj{font-style:italic}
-tr.esc td.w{color:#B3261E}tr.esc{background:#FFF6F5}
-.tag{display:inline-block;margin-top:6px;font-size:10px;font-weight:700;letter-spacing:.3px;
-padding:2px 7px;border-radius:3px;background:#B3261E;color:#fff;text-transform:uppercase}
-.note{margin-top:6px;font-size:11px;color:#4a4f66;background:#F7F8FC;border-left:3px solid #C9CFE6;padding:6px 9px;white-space:pre-wrap}
-.muted h2{color:#7A7F95}.muted{opacity:.82}
-footer{font-size:11px;color:#7A7F95;padding:14px 4px}
-</style></head><body>
-<header><h1>Unanswered Inbound — Default Pipeline</h1>
-<p>Open leads where a prospect wrote in and nobody has written back. Grouped by lead owner.</p></header>
-<div class="wrap">
+<title>SWRS — Unanswered Inbound</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F6FB;font-family:'Fira Sans',Helvetica,Arial,sans-serif;color:#1B2440;padding:26px 16px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:26px;margin:0 0 4px;font-weight:800}
+.sub{color:#5A6A8C;font-size:13.5px;margin-bottom:20px}
+.kpis{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.kpi{background:#fff;border:1px solid #E2E7F2;border-radius:12px;padding:14px 18px;min-width:120px}
+.kpi b{display:block;font-size:26px;font-weight:800;line-height:1.1}
+.kpi span{font-size:11.5px;color:#5A6A8C;text-transform:uppercase;letter-spacing:.06em}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #E2E7F2;border-radius:12px;overflow:hidden}
+th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#5A6A8C;padding:11px 12px;background:#EEF2FA;border-bottom:1px solid #E2E7F2}
+td{padding:11px 12px;font-size:13.5px;border-bottom:1px solid #EEF1F7;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.d{font-weight:800;white-space:nowrap} .co{font-weight:600}
+.stage{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;background:#EEF2FA;color:#3C4A6B;white-space:nowrap}
+.hot{background:#FDE9E7;color:#8E1D16}
+a.open{display:inline-block;background:#0446F1;color:#fff;text-decoration:none;font-size:12px;font-weight:700;padding:6px 12px;border-radius:6px}
+.subj{color:#5A6A8C;font-size:12.5px} .from{font-size:12.5px;color:#3C4A6B;word-break:break-all}
+h2{font-size:14px;margin:26px 0 10px;text-transform:uppercase;letter-spacing:.07em;color:#5A6A8C}
+.empty{background:#fff;border:1px solid #E2E7F2;border-radius:12px;padding:26px;text-align:center;color:#5A6A8C}
+.note{background:#fff;border:1px solid #E2E7F2;border-radius:12px;padding:15px 18px;font-size:13px;color:#3C4A6B;margin-top:22px;line-height:1.6}
+</style></head><body><div class="wrap">
+<h1>Unanswered Inbound — Default Pipeline</h1>
+<div class="sub">Open leads whose newest email is inbound from a prospect with no rep reply after it.
+Last scan Aug 22, 2026 19:15 UTC · auto-refreshes every 15 minutes.</div>
 <div class="kpis">
-<div class="kpi"><b>25</b><span>Need a reply</span></div>
-<div class="kpi"><b>5</b><span>Escalated</span></div>
-<div class="kpi"><b>17</b><span>3+ days</span></div>
-<div class="kpi"><b>6</b><span>Handled by phone</span></div>
-</div>
-<section><h2>Steven Dietz <span class="n">8</span>
-<span class="n escn">2 escalated</span></h2>
-<table><tr class="">
-<td class="w">36d</td>
-<td><div class="co">Ratio Technologies</div>
-<div class="sub">Virtual Meeting Booked &middot; megan@ratiotech.com</div>
-<div class="sub subj">Re: Still the right time for Ratio Technologies?</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/33620" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="esc">
-<td class="w">32d</td>
-<td><div class="co">WTG ENERGY</div>
-<div class="sub">Pitch &middot; dhrebicek@wtg-energy.com</div>
-<div class="sub subj">RE: Still the right time for WTG ENERGY?</div><span class="tag esc">prospect replied again — unanswered</span><div class="note"><b>2026-07-20 Notes:</b> Hi Stephen,
-Thank you for following up.
-Nothing has changed </div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/24612" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="esc">
-<td class="w">31d</td>
-<td><div class="co">RAN Management Company</div>
-<div class="sub">Contract Review &middot; amber@rancotrust.com</div>
-<div class="sub subj">Re: SOUTHWEST RECOVERY SERVICES...</div><span class="tag esc">prospect replied again — unanswered</span><div class="note"><b>2026-07-27 Notes:</b> received em saying no decision has been made and I WILL BE I</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/31179" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">30d</td>
-<td><div class="co">Procurify</div>
-<div class="sub">Virtual Meeting Booked &middot; myra.ayre@procurify.com</div>
-<div class="sub subj">Re: Have You Had a Chance to Explore the Portal?</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34253" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">22d</td>
-<td><div class="co">Preston High School</div>
-<div class="sub">Contract Review &middot; ptraina@prestonhs.org</div>
-<div class="sub subj">Redirecting Your Email Re: Preston High School — ready to move your agreement forward?</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/18073" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">11d</td>
-<td><div class="co">Spanish Trail Country Club</div>
-<div class="sub">Lead &middot; aschwartz@SPANISHTRAILCC.COM</div>
-<div class="sub subj">RE: More info on our process. SWRS gets you paid faster!</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34603" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">2d</td>
-<td><div class="co">Emerald Dental Care</div>
-<div class="sub">Pitch &middot; info@emerald-dentalcare.com</div>
-<div class="sub subj">Re: The overview you requested, Dr. Chaballout</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34752" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">34h</td>
-<td><div class="co">AMaxima Realty &amp; Prop., Mgmt.</div>
-<div class="sub">Quote &middot; resteves@amaximarealty.com</div>
-<div class="sub subj">908 Bare Branch; Introduction</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/20934" target="_blank">Open&nbsp;&rsaquo;</a></td></tr></table></section><section><h2>Brenn Morrow <span class="n">6</span>
-<span class="n escn">3 escalated</span></h2>
-<table><tr class="esc">
-<td class="w">24d</td>
-<td><div class="co">AvalonBay Communities, Inc</div>
-<div class="sub">Lead &middot; tiffany_bain@avalonbay.com</div>
-<div class="sub subj">RE: SOUTHWEST RECOVERY SERVICES...</div><span class="tag esc">prospect replied again — unanswered</span><div class="note"><b>2026-08-02 Notes:</b> received the following from the prospect:  Good day!
- 
-We ha</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/31236" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="esc">
-<td class="w">11d</td>
-<td><div class="co">5280 Waste Solutions</div>
-<div class="sub">Contract Review &middot; Emily.Stirling@5280Waste.com</div>
-<div class="sub subj">Re: Should I keep 5280 Waste Solutions&#x27;s file open?</div><span class="tag esc">prospect replied again — unanswered</span><div class="note"><b>2026-08-21 Notes:</b> client said the following: Hello Brenn,
-
-Thank you for sendi</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/31510" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="esc">
-<td class="w">9d</td>
-<td><div class="co">Steel City Dermatology</div>
-<div class="sub">Pitch &middot; naomijesionowski@steelcitydermatology.com</div>
-<div class="sub subj">Re: SOUTHWEST RECOVERY SERVICES...</div><span class="tag esc">prospect replied again — unanswered</span><div class="note"><b>2026-08-21 Notes:</b> this is what the prospect said: Thank you for the informatio</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34708" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">3d</td>
-<td><div class="co">Ferguson-Veresh, Inc</div>
-<div class="sub">Virtual Meeting Booked &middot; randy@fergusonveresh.com</div>
-<div class="sub subj">RE: removing pt and email   (SWRS687851- ARDY MNJAIDI)</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/32387" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">2d</td>
-<td><div class="co">CINC SYSTEMS</div>
-<div class="sub">Pitch &middot; melecia.hutton@cincsystems.com</div>
-<div class="sub subj">RE: More info on our process. SWRS gets you paid faster!</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34774" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">39h</td>
-<td><div class="co">The Shopping Center Group, LLC (TSCG)</div>
-<div class="sub">Pitch &middot; Brett.Standard@tscg.com</div>
-<div class="sub subj">Re: SOUTHWEST RECOVERY SERVICES...</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/31332" target="_blank">Open&nbsp;&rsaquo;</a></td></tr></table></section><section><h2>Hunter Howard <span class="n">6</span>
-</h2>
-<table><tr class="">
-<td class="w">16d</td>
-<td><div class="co">Silver Token Realty</div>
-<div class="sub">Contract Review &middot; Steven@thedersgroup.net</div>
-<div class="sub subj">Re: Southwest Recovery Services - New Client Onboarding</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34080" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">11d</td>
-<td><div class="co">Texas Allstar Cheer</div>
-<div class="sub">Lead &middot; cheer@texasallstarcheer.com</div>
-<div class="sub subj">Re: Re: More info on our process. SWRS gets you paid faster!</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34520" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">9d</td>
-<td><div class="co">Investa Capital</div>
-<div class="sub">Lead &middot; vicki@investacapital.com</div>
-<div class="sub subj">Re: Why does the collections industry have such a bad reputation?</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34745" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">2d</td>
-<td><div class="co">Choosing Hope Adoptions</div>
-<div class="sub">Lead &middot; info@choosinghopeadoptions.com</div>
-<div class="sub subj">Re: Thank you for your inquiry!</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34678" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">2d</td>
-<td><div class="co">Strata Maintenance</div>
-<div class="sub">Lead &middot; valerie@stratalandscape.com</div>
-<div class="sub subj">Re: Strata Maintenance seeks a collection partner</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34741" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">34h</td>
-<td><div class="co">Moore Chiropractic &amp; Wellness</div>
-<div class="sub">Lead &middot; moorechiroandwellness@gmail.com</div>
-<div class="sub subj">Re: More info on our process. SWRS gets you paid faster!</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34492" target="_blank">Open&nbsp;&rsaquo;</a></td></tr></table></section><section><h2>Raymond Davidson <span class="n">5</span>
-</h2>
-<table><tr class="">
-<td class="w">31d</td>
-<td><div class="co">Holdingplace LLC</div>
-<div class="sub">Virtual Meeting Booked &middot; lorenzo.inerarity@gmail.com</div>
-<div class="sub subj">Re: Quick question for Holdingplace</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/33950" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">15d</td>
-<td><div class="co">Cloudsheer Private Limited</div>
-<div class="sub">Contract Review &middot; shubham@cloudsheer.com</div>
-<div class="sub subj">Re: Cloudsheer Private Limited — ready to move your agreement forward?</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/33069" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">15d</td>
-<td><div class="co">Relavix</div>
-<div class="sub">Lead &middot; L.Borucki@relavixhealth.com</div>
-<div class="sub subj">Re: Relavix may be seeking a collection solution.</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34396" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">4d</td>
-<td><div class="co">Sea Lane Ltd</div>
-<div class="sub">Lead &middot; leszczynski@sealane.pl</div>
-<div class="sub subj">RE: Sea Lane Ltd seeks a collection partner</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34748" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">2d</td>
-<td><div class="co">The Builders &amp; Cleaners</div>
-<div class="sub">Contract Review &middot; tbcllc.office@gmail.com</div>
-<div class="sub subj">Re: Reminder to sign document &quot;The Builders and Cleaners&quot;</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34412" target="_blank">Open&nbsp;&rsaquo;</a></td></tr></table></section><section class="muted"><h2>Recently handled — no email reply, but the rep called
-<span class="n">6</span></h2>
-<table><tr class="">
-<td class="w">284d</td>
-<td><div class="co">Tiffany Russell Group</div>
-<div class="sub">Pitch &middot; cresil@tiffanyrussellgroup.com</div>
-<div class="sub subj">Re: Following up on your inquiry</div><div class="note"><b>2026-07-22 Activities:</b> Phone Call</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/21755" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">35d</td>
-<td><div class="co">PCAM, LLC (Parking Company of America)</div>
-<div class="sub">Quote &middot; bwickstrom@parkpca.com</div>
-<div class="sub subj">RE: SOUTHWEST RECOVERY SERVICES</div><div class="note"><b>2026-08-21 Notes:</b> lvm</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/23638" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">18d</td>
-<td><div class="co">High Five Media</div>
-<div class="sub">Pitch &middot; Barbara.Cochran@highfivemedia.com</div>
-<div class="sub subj">Re: SOUTHWEST RECOVERY SERVICES...</div><div class="note"><b>2026-08-03 Notes:</b> Barbara said they are on hold at the moment but will reach o</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/34081" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">16d</td>
-<td><div class="co">City of Demorest</div>
-<div class="sub">Pitch &middot; mmusselwhite@cityofdemorest.org</div>
-<div class="sub subj">FW: Requested info</div><div class="note"><b>2026-08-21 Activities:</b> Phone Call</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/28570" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">15d</td>
-<td><div class="co">Staples Property Management</div>
-<div class="sub">Lead &middot; rminvestment32@gmail.com</div>
-<div class="sub subj">Re: Fw: SOUTHWEST RECOVERY SERVICES...</div><div class="note"><b>2026-08-21 Notes:</b> called again....lvm</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/33350" target="_blank">Open&nbsp;&rsaquo;</a></td></tr><tr class="">
-<td class="w">14d</td>
-<td><div class="co">Denver M. Y. Brown &amp; Rachel A. Brown</div>
-<div class="sub">Pitch &middot; denverbrown@live.ca</div>
-<div class="sub subj">Re: Second Notice: Past Due Balance - Denver M. Y. Brown &amp; Rachel A. Brown - $350.00</div><div class="note"><b>2026-08-21 Notes:</b> lvm call mid next week</div></td>
-<td class="a"><a href="https://app.nutshell.com/lead/23510" target="_blank">Open&nbsp;&rsaquo;</a></td></tr></table></section>
-<footer>Scan Aug 22, 2026 19:51 UTC &middot; auto-refreshes every 15 min &middot;
-Escalated = the rep logged the prospect's reply as a note but never answered it.
-Handled by phone = a call or voicemail was logged after the inbound, so no email reply is owed.
-&middot; Southwest Recovery Services</footer>
+<div class="kpi"><b>0</b><span>Unanswered</span></div>
+<div class="kpi"><b style="color:#B3261E">0</b><span>3+ days</span></div>
+<div class="kpi"><b>0</b><span>Brenn</span></div><div class="kpi"><b>0</b><span>Steven</span></div><div class="kpi"><b>0</b><span>Raymond</span></div><div class="kpi"><b>0</b><span>Hunter</span></div></div>
+<h2>Overdue — 3+ days (0)</h2>
+<div class="empty">Nothing here. Inbox zero on inbound replies.</div>
+<h2>Under 3 days (0)</h2>
+<div class="empty">Nothing here. Inbox zero on inbound replies.</div>
+<div class="note"><b>Method.</b> An email counts as inbound when the sender is not @swrecovery.com and at least
+one recipient is. A lead flags when the newest inbound has no outbound dated after it. Automated replies,
+read receipts and calendar events are excluded. Outlook is synced to Nutshell, so a reply sent from Outlook
+would clear the flag. <b>Pink stage pills</b> mark prospects who replied at Quote or later.</div>
 </div></body></html>
