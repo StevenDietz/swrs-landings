@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-25T09:11:33+00:00",
+ "generated": "2026-08-25T11:45:21+00:00",
  "lead_count_actual": 15163,
  "status": {
   "cancelled": 5006,
@@ -15,10 +15,10 @@
  "avg_cycle_days": 75,
  "aging": {
   "open": 6799,
-  "stale_60": 5173,
+  "stale_60": 5172,
   "stale_threshold_days": 60,
   "never_contacted": 2865,
-  "overdue": 2298
+  "overdue": 2297
  },
  "rep_board": {
   "Steven Dietz": {
@@ -64,7 +64,7 @@
   "Brenn Morrow": {
    "open": 90,
    "value": 18606122.65,
-   "overdue": 52,
+   "overdue": 51,
    "d0_30": 67,
    "d31_90": 20,
    "d91_180": 0,
@@ -75,10 +75,10 @@
    "open": 72,
    "value": 2962499.0,
    "overdue": 47,
-   "d0_30": 55,
+   "d0_30": 56,
    "d31_90": 15,
    "d91_180": 0,
-   "d180_plus": 1,
+   "d180_plus": 0,
    "never": 1
   },
   "Paid Media CFATX": {
@@ -109,10 +109,10 @@
    }
   },
   "Default Pipeline": {
-   "open": 516,
+   "open": 515,
    "value": 34164970.53999999,
    "stages": {
-    "Lead": 196,
+    "Lead": 195,
     "Pitch": 119,
     "Virtual Meeting Booked": 72,
     "Contract Review": 70,
@@ -123,10 +123,10 @@
    }
   },
   "Nurture": {
-   "open": 438,
+   "open": 439,
    "value": 20461224.77,
    "stages": {
-    "Nurture": 438
+    "Nurture": 439
    }
   },
   "Viewed Website Cold Lead": {
@@ -183,17 +183,6 @@
   "Copy of FRANCHISE PROPOSALS": 1
  },
  "stale": [
-  {
-   "name": "Regent Restoration",
-   "number": "16880",
-   "url": "https://app.nutshell.com/lead/16880",
-   "owner": "Raymond Davidson",
-   "pipeline": "Nurture",
-   "stage": "Nurture",
-   "days": 537,
-   "never": false,
-   "value": 0.0
-  },
   {
    "name": "Excelsior Springs Fire",
    "number": "13424",
@@ -283,6 +272,28 @@
    "value": 0.0
   },
   {
+   "name": "Ash Family Medical",
+   "number": "18078",
+   "url": "https://app.nutshell.com/lead/18078",
+   "owner": "Brenn Morrow",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 362,
+   "never": true,
+   "value": 0.0
+  },
+  {
+   "name": "Trang Nguyen MD, PLCC",
+   "number": "18079",
+   "url": "https://app.nutshell.com/lead/18079",
+   "owner": "Brenn Morrow",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 362,
+   "never": true,
+   "value": 0.0
+  },
+  {
    "name": "Flower Dental",
    "number": "13293",
    "url": "https://app.nutshell.com/lead/13293",
@@ -335,28 +346,6 @@
    "stage": "Nurture",
    "days": 361,
    "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Ash Family Medical",
-   "number": "18078",
-   "url": "https://app.nutshell.com/lead/18078",
-   "owner": "Brenn Morrow",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 361,
-   "never": true,
-   "value": 0.0
-  },
-  {
-   "name": "Trang Nguyen MD, PLCC",
-   "number": "18079",
-   "url": "https://app.nutshell.com/lead/18079",
-   "owner": "Brenn Morrow",
-   "pipeline": "Nurture",
-   "stage": "Nurture",
-   "days": 361,
-   "never": true,
    "value": 0.0
   },
   {
@@ -1826,6 +1815,17 @@
    "name": "College Degrees For Me",
    "number": "18409",
    "url": "https://app.nutshell.com/lead/18409",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "U.S. Department of State",
+   "number": "18411",
+   "url": "https://app.nutshell.com/lead/18411",
    "owner": "Steven Dietz",
    "pipeline": "AimLogic - Visited Website",
    "stage": "Lead - AimLogic |",
