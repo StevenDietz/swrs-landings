@@ -1,0 +1,1074 @@
+{
+ "generated": "2026-08-25T08:07:48+00:00",
+ "lead_count_actual": 15163,
+ "status": {
+  "cancelled": 5004,
+  "lost": 491,
+  "open": 6801,
+  "pending": 69,
+  "won": 2798
+ },
+ "win_rate": 33.7,
+ "won": 2798,
+ "lost": 5495,
+ "open_value": 60305215.74,
+ "avg_cycle_days": 75,
+ "aging": {
+  "open": 6801,
+  "stale_60": 5173,
+  "stale_threshold_days": 60,
+  "never_contacted": 2865,
+  "overdue": 2298
+ },
+ "rep_board": {
+  "Steven Dietz": {
+   "open": 4220,
+   "value": 22867861.92,
+   "overdue": 405,
+   "d0_30": 510,
+   "d31_90": 443,
+   "d91_180": 340,
+   "d180_plus": 337,
+   "never": 2590
+  },
+  "Hunter Howard": {
+   "open": 2090,
+   "value": 15316932.170000002,
+   "overdue": 1626,
+   "d0_30": 187,
+   "d31_90": 145,
+   "d91_180": 72,
+   "d180_plus": 1681,
+   "never": 5
+  },
+  "Bryson Stevens": {
+   "open": 173,
+   "value": 551800.0,
+   "overdue": 166,
+   "d0_30": 15,
+   "d31_90": 44,
+   "d91_180": 1,
+   "d180_plus": 0,
+   "never": 113
+  },
+  "(unassigned)": {
+   "open": 154,
+   "value": 0.0,
+   "overdue": 0,
+   "d0_30": 2,
+   "d31_90": 0,
+   "d91_180": 0,
+   "d180_plus": 1,
+   "never": 151
+  },
+  "Brenn Morrow": {
+   "open": 90,
+   "value": 18606122.65,
+   "overdue": 52,
+   "d0_30": 67,
+   "d31_90": 20,
+   "d91_180": 0,
+   "d180_plus": 0,
+   "never": 3
+  },
+  "Raymond Davidson": {
+   "open": 72,
+   "value": 2962499.0,
+   "overdue": 47,
+   "d0_30": 55,
+   "d31_90": 15,
+   "d91_180": 0,
+   "d180_plus": 1,
+   "never": 1
+  },
+  "Paid Media CFATX": {
+   "open": 2,
+   "value": 0.0,
+   "overdue": 2,
+   "d0_30": 0,
+   "d31_90": 0,
+   "d91_180": 0,
+   "d180_plus": 0,
+   "never": 2
+  }
+ },
+ "pipelines_live": {
+  "CallRail": {
+   "open": 3409,
+   "value": 0.0,
+   "stages": {
+    "CallRail Stage": 3409
+   }
+  },
+  "AimLogic - Visited Website": {
+   "open": 1767,
+   "value": 0.0,
+   "stages": {
+    "Lead - AimLogic |": 1742,
+    "Qualify": 25
+   }
+  },
+  "Default Pipeline": {
+   "open": 518,
+   "value": 34164970.53999999,
+   "stages": {
+    "Lead": 198,
+    "Pitch": 119,
+    "Virtual Meeting Booked": 72,
+    "Contract Review": 70,
+    "Quote": 52,
+    "Ready To Onboard": 3,
+    "Closed": 3,
+    "Placement(s) Confirmed": 1
+   }
+  },
+  "Nurture": {
+   "open": 438,
+   "value": 20461224.77,
+   "stages": {
+    "Nurture": 438
+   }
+  },
+  "Viewed Website Cold Lead": {
+   "open": 218,
+   "value": 0.0,
+   "stages": {
+    "Response From Cold Leads": 217,
+    "Cold Lead": 1
+   }
+  },
+  "AI Leads": {
+   "open": 150,
+   "value": 0.0,
+   "stages": {
+    "New Lead": 150
+   }
+  },
+  "WEBSITE-APPOLO-CREDIT/COLLECTIONS": {
+   "open": 93,
+   "value": 0.0,
+   "stages": {
+    "Import": 93
+   }
+  },
+  "Placements": {
+   "open": 51,
+   "value": 5670220.43,
+   "stages": {
+    "Placements Confirmed": 28,
+    "Placements Needed": 23
+   }
+  },
+  "Incoming Calls": {
+   "open": 37,
+   "value": 8800.0,
+   "stages": {
+    "Lead": 35,
+    "Slide Deck Created": 1,
+    "Quote": 1
+   }
+  },
+  "Intake": {
+   "open": 5,
+   "value": 0.0,
+   "stages": {
+    "Enrichment": 3,
+    "Form submitted": 1,
+    "Call Required": 1
+   }
+  }
+ },
+ "pipelines_dead": {
+  "(TESTING - Do not use) Cold Pipeline": 114,
+  "Copy of FRANCHISE PROPOSALS": 1
+ },
+ "stale": [
+  {
+   "name": "Regent Restoration",
+   "number": "16880",
+   "url": "https://app.nutshell.com/lead/16880",
+   "owner": "Raymond Davidson",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 537,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Excelsior Springs Fire",
+   "number": "13424",
+   "url": "https://app.nutshell.com/lead/13424",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 367,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Ten Eighty Media LLC",
+   "number": "15377",
+   "url": "https://app.nutshell.com/lead/15377",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 367,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Fendel Cleaning Solutions LLC",
+   "number": "15511",
+   "url": "https://app.nutshell.com/lead/15511",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 364,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Direct moving group LLC",
+   "number": "15816",
+   "url": "https://app.nutshell.com/lead/15816",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 364,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Permian Pump And Power, LLC",
+   "number": "13622",
+   "url": "https://app.nutshell.com/lead/13622",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 363,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Llano Self Storage",
+   "number": "15757",
+   "url": "https://app.nutshell.com/lead/15757",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 363,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "clarus partners",
+   "number": "18059",
+   "url": "https://app.nutshell.com/lead/18059",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 363,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Immaculate Conception Church & School",
+   "number": "15154",
+   "url": "https://app.nutshell.com/lead/15154",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 362,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Flower Dental",
+   "number": "13293",
+   "url": "https://app.nutshell.com/lead/13293",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 361,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "A&D Recycle",
+   "number": "13344",
+   "url": "https://app.nutshell.com/lead/13344",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 361,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Suboxone and Wellness Clinic",
+   "number": "13591",
+   "url": "https://app.nutshell.com/lead/13591",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 361,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "IC Clearview Services",
+   "number": "14977",
+   "url": "https://app.nutshell.com/lead/14977",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 361,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Blu Sky Investments LLC",
+   "number": "15516",
+   "url": "https://app.nutshell.com/lead/15516",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 361,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Ash Family Medical",
+   "number": "18078",
+   "url": "https://app.nutshell.com/lead/18078",
+   "owner": "Brenn Morrow",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 361,
+   "never": true,
+   "value": 0.0
+  },
+  {
+   "name": "Trang Nguyen MD, PLCC",
+   "number": "18079",
+   "url": "https://app.nutshell.com/lead/18079",
+   "owner": "Brenn Morrow",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 361,
+   "never": true,
+   "value": 0.0
+  },
+  {
+   "name": "Datatex Computer Corp.",
+   "number": "15486",
+   "url": "https://app.nutshell.com/lead/15486",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 354,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Natchez Tree Company",
+   "number": "17804",
+   "url": "https://app.nutshell.com/lead/17804",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 348,
+   "never": false,
+   "value": 9200.0
+  },
+  {
+   "name": "Lightspeed Restoration of NE Tarrant",
+   "number": "18525",
+   "url": "https://app.nutshell.com/lead/18525",
+   "owner": "Steven Dietz",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 343,
+   "never": true,
+   "value": 0.0
+  },
+  {
+   "name": "Antoinette Coelho",
+   "number": "18312",
+   "url": "https://app.nutshell.com/lead/18312",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 341,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Dolly Joveline Gorres",
+   "number": "18363",
+   "url": "https://app.nutshell.com/lead/18363",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 341,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Eric Frega",
+   "number": "18384",
+   "url": "https://app.nutshell.com/lead/18384",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 341,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Cowchick Razor",
+   "number": "18470",
+   "url": "https://app.nutshell.com/lead/18470",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 341,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Delta Restoration",
+   "number": "18566",
+   "url": "https://app.nutshell.com/lead/18566",
+   "owner": "(unassigned)",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 341,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "American Pan - A Bundy Baking Solution",
+   "number": "18352",
+   "url": "https://app.nutshell.com/lead/18352",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 340,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Electro Medical Systems, LLC",
+   "number": "18112",
+   "url": "https://app.nutshell.com/lead/18112",
+   "owner": "Hunter Howard",
+   "pipeline": "Nurture",
+   "stage": "Nurture",
+   "days": 335,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Swish Inc",
+   "number": "18159",
+   "url": "https://app.nutshell.com/lead/18159",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Lee\u2019s Furniture",
+   "number": "18160",
+   "url": "https://app.nutshell.com/lead/18160",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Blackburn and Carter P C",
+   "number": "18161",
+   "url": "https://app.nutshell.com/lead/18161",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "eMortgage Finders",
+   "number": "18162",
+   "url": "https://app.nutshell.com/lead/18162",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Harbor",
+   "number": "18163",
+   "url": "https://app.nutshell.com/lead/18163",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Whole Foods Market",
+   "number": "18164",
+   "url": "https://app.nutshell.com/lead/18164",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Knox Fertilizer Company",
+   "number": "18169",
+   "url": "https://app.nutshell.com/lead/18169",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Berkshire Group",
+   "number": "18170",
+   "url": "https://app.nutshell.com/lead/18170",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "FileMaker Inc., an Apple subsidiary",
+   "number": "18173",
+   "url": "https://app.nutshell.com/lead/18173",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Capital One",
+   "number": "18174",
+   "url": "https://app.nutshell.com/lead/18174",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Upwork",
+   "number": "18175",
+   "url": "https://app.nutshell.com/lead/18175",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Anne Arundel County Public Schools",
+   "number": "18178",
+   "url": "https://app.nutshell.com/lead/18178",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "NOV",
+   "number": "18179",
+   "url": "https://app.nutshell.com/lead/18179",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Aon",
+   "number": "18184",
+   "url": "https://app.nutshell.com/lead/18184",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Premier Inc.",
+   "number": "18185",
+   "url": "https://app.nutshell.com/lead/18185",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Pure Maintenance of North Carolina",
+   "number": "18186",
+   "url": "https://app.nutshell.com/lead/18186",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Quincy Medical Group",
+   "number": "18188",
+   "url": "https://app.nutshell.com/lead/18188",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Everbridge",
+   "number": "18189",
+   "url": "https://app.nutshell.com/lead/18189",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "College Finder Hub",
+   "number": "18190",
+   "url": "https://app.nutshell.com/lead/18190",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "BookIt.com",
+   "number": "18191",
+   "url": "https://app.nutshell.com/lead/18191",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Drive Thru Inc",
+   "number": "18193",
+   "url": "https://app.nutshell.com/lead/18193",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Denali",
+   "number": "18194",
+   "url": "https://app.nutshell.com/lead/18194",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "INR.Net",
+   "number": "18195",
+   "url": "https://app.nutshell.com/lead/18195",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Luminator Technology Group",
+   "number": "18197",
+   "url": "https://app.nutshell.com/lead/18197",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Kimmeridge",
+   "number": "18199",
+   "url": "https://app.nutshell.com/lead/18199",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Northcott Hospitality International, LLC",
+   "number": "18201",
+   "url": "https://app.nutshell.com/lead/18201",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Fisher Dynamics",
+   "number": "18208",
+   "url": "https://app.nutshell.com/lead/18208",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "AT&T",
+   "number": "18210",
+   "url": "https://app.nutshell.com/lead/18210",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "National Techmark",
+   "number": "18213",
+   "url": "https://app.nutshell.com/lead/18213",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Greenway Equipment Inc",
+   "number": "18215",
+   "url": "https://app.nutshell.com/lead/18215",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "BERETTA",
+   "number": "18216",
+   "url": "https://app.nutshell.com/lead/18216",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Colorado College",
+   "number": "18217",
+   "url": "https://app.nutshell.com/lead/18217",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Hall Render",
+   "number": "18219",
+   "url": "https://app.nutshell.com/lead/18219",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Gadgetcenter.us.com, An Esolutionsmedia.net, Inc",
+   "number": "18225",
+   "url": "https://app.nutshell.com/lead/18225",
+   "owner": "Steven Dietz",
+   "pipeline": "AimLogic - Visited Website",
+   "stage": "Lead - AimLogic |",
+   "days": 333,
+   "never": false,
+   "value": 0.0
+  }
+ ],
+ "attribution_90d": {
+  "(no source set)": {
+   "leads": 1960,
+   "won": 205,
+   "value": 9077791.670000002
+  },
+  "organic": {
+   "leads": 308,
+   "won": 54,
+   "value": 107908306.8
+  },
+  "google": {
+   "leads": 260,
+   "won": 53,
+   "value": 106343543.82000001
+  },
+  "chatgpt.com": {
+   "leads": 75,
+   "won": 10,
+   "value": 3517536.84
+  },
+  "cpc": {
+   "leads": 27,
+   "won": 9,
+   "value": 722675.5800000001
+  },
+  "gmb": {
+   "leads": 24,
+   "won": 3,
+   "value": 106400.0
+  },
+  "brand": {
+   "leads": 23,
+   "won": 6,
+   "value": 470175.58
+  },
+  "southwest recovery services": {
+   "leads": 20,
+   "won": 6,
+   "value": 390175.58
+  },
+  "bing": {
+   "leads": 17,
+   "won": 3,
+   "value": 342446.88
+  },
+  "linkedin": {
+   "leads": 12,
+   "won": 0,
+   "value": 0.0
+  },
+  "facebook": {
+   "leads": 9,
+   "won": 1,
+   "value": 27845.0
+  },
+  "claude.ai": {
+   "leads": 7,
+   "won": 0,
+   "value": 265892.26
+  },
+  "yahoo": {
+   "leads": 5,
+   "won": 0,
+   "value": 100.0
+  },
+  "email": {
+   "leads": 5,
+   "won": 0,
+   "value": 5000.0
+  },
+  "debt collection agency": {
+   "leads": 4,
+   "won": 3,
+   "value": 252500.0
+  },
+  "industries": {
+   "leads": 4,
+   "won": 3,
+   "value": 252500.0
+  },
+  "referral": {
+   "leads": 4,
+   "won": 0,
+   "value": 0.0
+  },
+  "nutshell": {
+   "leads": 4,
+   "won": 0,
+   "value": 0.0
+  },
+  "New_Lead_First_Drip": {
+   "leads": 4,
+   "won": 0,
+   "value": 0.0
+  },
+  "New_Lead_Drip": {
+   "leads": 4,
+   "won": 0,
+   "value": 0.0
+  },
+  "gmb-dallas": {
+   "leads": 3,
+   "won": 1,
+   "value": 42000.0
+  },
+  "chatgpt": {
+   "leads": 3,
+   "won": 1,
+   "value": 100.0
+  },
+  "gbp": {
+   "leads": 3,
+   "won": 2,
+   "value": 90100.0
+  },
+  "www.yelp.com": {
+   "leads": 2,
+   "won": 0,
+   "value": 0.0
+  },
+  "southwest collections agency": {
+   "leads": 2,
+   "won": 0,
+   "value": 0.0
+  },
+  "gmb-austin": {
+   "leads": 2,
+   "won": 0,
+   "value": 0.0
+  },
+  "gmb-columbus": {
+   "leads": 2,
+   "won": 0,
+   "value": 0.0
+  },
+  "ai-dev.oxy.com": {
+   "leads": 2,
+   "won": 0,
+   "value": 0.0
+  },
+  "www.yellowpages.com": {
+   "leads": 2,
+   "won": 0,
+   "value": 0.0
+  },
+  "www.google.com": {
+   "leads": 2,
+   "won": 0,
+   "value": 0.0
+  },
+  "www.chamberofcommerce.com": {
+   "leads": 2,
+   "won": 0,
+   "value": 0.0
+  },
+  "ecosia": {
+   "leads": 1,
+   "won": 0,
+   "value": 0.0
+  },
+  "search": {
+   "leads": 1,
+   "won": 0,
+   "value": 0.0
+  },
+  "www.ecosia.org": {
+   "leads": 1,
+   "won": 0,
+   "value": 0.0
+  },
+  "southwest recovery collection agency": {
+   "leads": 1,
+   "won": 0,
+   "value": 80000.0
+  },
+  "Website": {
+   "leads": 1,
+   "won": 0,
+   "value": 0.0
+  },
+  "duckduckgo": {
+   "leads": 1,
+   "won": 0,
+   "value": 0.0
+  },
+  "duckduckgo.com": {
+   "leads": 1,
+   "won": 0,
+   "value": 0.0
+  },
+  "gmb-denver": {
+   "leads": 1,
+   "won": 0,
+   "value": 0.0
+  },
+  "gmb-sanantonio": {
+   "leads": 1,
+   "won": 0,
+   "value": 0.0
+  },
+  "Referral": {
+   "leads": 1,
+   "won": 1,
+   "value": 100.0
+  }
+ },
+ "source_coverage_90d": {
+  "leads": 2324,
+  "with_source": 364,
+  "pct": 15.7
+ },
+ "new_leads_by_week": {
+  "2026-06-01": 177,
+  "2026-06-08": 393,
+  "2026-06-15": 312,
+  "2026-06-22": 210,
+  "2026-06-29": 81,
+  "2026-07-06": 118,
+  "2026-07-13": 226,
+  "2026-07-20": 143,
+  "2026-07-27": 107,
+  "2026-08-03": 101,
+  "2026-08-10": 153,
+  "2026-08-17": 121,
+  "2026-08-24": 50
+ }
+}
