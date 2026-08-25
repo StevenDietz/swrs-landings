@@ -1,20 +1,20 @@
 {
- "generated": "2026-08-25T08:44:39+00:00",
+ "generated": "2026-08-25T08:55:23+00:00",
  "lead_count_actual": 15163,
  "status": {
-  "cancelled": 5005,
+  "cancelled": 5006,
   "lost": 491,
-  "open": 6800,
+  "open": 6799,
   "pending": 69,
   "won": 2798
  },
  "win_rate": 33.7,
  "won": 2798,
- "lost": 5496,
+ "lost": 5497,
  "open_value": 60305215.74,
  "avg_cycle_days": 75,
  "aging": {
-  "open": 6800,
+  "open": 6799,
   "stale_60": 5173,
   "stale_threshold_days": 60,
   "never_contacted": 2865,
@@ -32,10 +32,10 @@
    "never": 2590
   },
   "Hunter Howard": {
-   "open": 2089,
+   "open": 2088,
    "value": 15316932.170000002,
    "overdue": 1626,
-   "d0_30": 186,
+   "d0_30": 185,
    "d31_90": 145,
    "d91_180": 72,
    "d180_plus": 1681,
@@ -109,10 +109,10 @@
    }
   },
   "Default Pipeline": {
-   "open": 517,
+   "open": 516,
    "value": 34164970.53999999,
    "stages": {
-    "Lead": 197,
+    "Lead": 196,
     "Pitch": 119,
     "Virtual Meeting Booked": 72,
     "Contract Review": 70,
