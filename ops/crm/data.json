@@ -1,55 +1,55 @@
 {
- "generated": "2026-08-25T20:37:14+00:00",
- "lead_count_actual": 15185,
+ "generated": "2026-08-26T00:51:25+00:00",
+ "lead_count_actual": 15193,
  "status": {
-  "cancelled": 5013,
+  "cancelled": 5016,
   "lost": 492,
-  "open": 6805,
-  "pending": 68,
-  "won": 2807
+  "open": 6795,
+  "pending": 69,
+  "won": 2821
  },
- "win_rate": 33.8,
- "won": 2807,
- "lost": 5505,
- "open_value": 60292671.7,
+ "win_rate": 33.9,
+ "won": 2821,
+ "lost": 5508,
+ "open_value": 60125671.7,
  "avg_cycle_days": 75,
  "aging": {
-  "open": 6805,
-  "stale_60": 5204,
+  "open": 6795,
+  "stale_60": 5278,
   "stale_threshold_days": 60,
-  "never_contacted": 2872,
-  "overdue": 2291
+  "never_contacted": 2868,
+  "overdue": 2277
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4227,
-   "value": 22892861.92,
-   "overdue": 406,
-   "d0_30": 513,
-   "d31_90": 440,
-   "d91_180": 339,
-   "d180_plus": 340,
-   "never": 2595
+   "open": 4226,
+   "value": 22788861.92,
+   "overdue": 402,
+   "d0_30": 516,
+   "d31_90": 437,
+   "d91_180": 338,
+   "d180_plus": 341,
+   "never": 2594
   },
   "Hunter Howard": {
-   "open": 2088,
-   "value": 15260875.990000002,
-   "overdue": 1623,
-   "d0_30": 183,
-   "d31_90": 145,
-   "d91_180": 72,
-   "d180_plus": 1681,
-   "never": 7
+   "open": 2082,
+   "value": 15217875.990000002,
+   "overdue": 1616,
+   "d0_30": 177,
+   "d31_90": 147,
+   "d91_180": 71,
+   "d180_plus": 1682,
+   "never": 5
   },
   "Bryson Stevens": {
-   "open": 173,
-   "value": 551800.0,
-   "overdue": 166,
+   "open": 169,
+   "value": 531800.0,
+   "overdue": 163,
    "d0_30": 15,
-   "d31_90": 44,
-   "d91_180": 1,
+   "d31_90": 42,
+   "d91_180": 0,
    "d180_plus": 0,
-   "never": 113
+   "never": 112
   },
   "(unassigned)": {
    "open": 154,
@@ -62,10 +62,10 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 93,
+   "open": 94,
    "value": 18613134.79,
    "overdue": 51,
-   "d0_30": 70,
+   "d0_30": 71,
    "d31_90": 20,
    "d91_180": 0,
    "d180_plus": 0,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3414,
+   "open": 3415,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3414
+    "CallRail Stage": 3415
    }
   },
   "AimLogic - Visited Website": {
@@ -109,13 +109,13 @@
    }
   },
   "Default Pipeline": {
-   "open": 514,
-   "value": 34152426.49999999,
+   "open": 497,
+   "value": 33980326.49999999,
    "stages": {
-    "Lead": 198,
+    "Lead": 187,
     "Pitch": 120,
-    "Virtual Meeting Booked": 71,
-    "Contract Review": 66,
+    "Virtual Meeting Booked": 69,
+    "Contract Review": 62,
     "Quote": 52,
     "Ready To Onboard": 3,
     "Placement(s) Confirmed": 2,
@@ -123,10 +123,10 @@
    }
   },
   "Nurture": {
-   "open": 441,
-   "value": 20461224.77,
+   "open": 447,
+   "value": 20466324.77,
    "stages": {
-    "Nurture": 441
+    "Nurture": 447
    }
   },
   "Viewed Website Cold Lead": {
@@ -142,6 +142,14 @@
    "value": 0.0,
    "stages": {
     "New Lead": 150
+   }
+  },
+  "Cold Leads": {
+   "open": 114,
+   "value": 0.0,
+   "stages": {
+    "Cold Lead \u2013 New": 111,
+    "Contacted": 3
    }
   },
   "WEBSITE-APPOLO-CREDIT/COLLECTIONS": {
@@ -179,76 +187,9 @@
   }
  },
  "pipelines_dead": {
-  "(TESTING - Do not use) Cold Pipeline": 114,
   "Copy of FRANCHISE PROPOSALS": 1
  },
  "stale": [
-  {
-   "name": "Home Instead",
-   "number": "23394",
-   "url": "https://app.nutshell.com/lead/23394",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 251,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "A Life Renewed",
-   "number": "24356",
-   "url": "https://app.nutshell.com/lead/24356",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 220,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Orlando Attraction Homes",
-   "number": "29601",
-   "url": "https://app.nutshell.com/lead/29601",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 178,
-   "never": true,
-   "value": 17000.0
-  },
-  {
-   "name": "fuzion field services",
-   "number": "30160",
-   "url": "https://app.nutshell.com/lead/30160",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 164,
-   "never": true,
-   "value": 0.0
-  },
-  {
-   "name": "The Cannabis Place",
-   "number": "31035",
-   "url": "https://app.nutshell.com/lead/31035",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 118,
-   "never": false,
-   "value": 20000.0
-  },
-  {
-   "name": "CEO Technologies",
-   "number": "14560",
-   "url": "https://app.nutshell.com/lead/14560",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 89,
-   "never": false,
-   "value": 0.0
-  },
   {
    "name": "Home Instead",
    "number": "32483",
@@ -258,61 +199,6 @@
    "stage": "Lead",
    "days": 84,
    "never": true,
-   "value": 0.0
-  },
-  {
-   "name": "Al Chat",
-   "number": "32537",
-   "url": "https://app.nutshell.com/lead/32537",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 83,
-   "never": true,
-   "value": 0.0
-  },
-  {
-   "name": "LOS AMIGOS TIRE",
-   "number": "33157",
-   "url": "https://app.nutshell.com/lead/33157",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 70,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "LANDMARK GRPHCS",
-   "number": "33307",
-   "url": "https://app.nutshell.com/lead/33307",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 68,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Lakeshore Landing",
-   "number": "33357",
-   "url": "https://app.nutshell.com/lead/33357",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 67,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "CasaKey Properties NC",
-   "number": "32813",
-   "url": "https://app.nutshell.com/lead/32813",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 63,
-   "never": false,
    "value": 0.0
   },
   {
@@ -374,22 +260,22 @@
  "stale_scope": [
   "Default Pipeline"
  ],
- "stale_scope_total": 17,
+ "stale_scope_total": 6,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1954,
-   "won": 205,
-   "value": 9050545.810000002
+   "leads": 1961,
+   "won": 219,
+   "value": 9068645.810000002
   },
   "organic": {
-   "leads": 309,
+   "leads": 307,
    "won": 60,
    "value": 107705069.38000001
   },
   "google": {
-   "leads": 262,
-   "won": 59,
-   "value": 106353543.82000001
+   "leads": 259,
+   "won": 58,
+   "value": 106352009.24000001
   },
   "chatgpt.com": {
    "leads": 74,
@@ -397,9 +283,9 @@
    "value": 3091062.0
   },
   "cpc": {
-   "leads": 27,
-   "won": 9,
-   "value": 722675.5800000001
+   "leads": 26,
+   "won": 8,
+   "value": 721141.0
   },
   "gmb": {
    "leads": 24,
@@ -407,14 +293,14 @@
    "value": 106400.0
   },
   "brand": {
-   "leads": 23,
-   "won": 6,
-   "value": 470175.58
+   "leads": 22,
+   "won": 5,
+   "value": 468641.0
   },
   "southwest recovery services": {
-   "leads": 20,
-   "won": 6,
-   "value": 390175.58
+   "leads": 19,
+   "won": 5,
+   "value": 388641.0
   },
   "bing": {
    "leads": 17,
@@ -583,14 +469,14 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2319,
-  "with_source": 365,
-  "pct": 15.7
+  "leads": 2323,
+  "with_source": 362,
+  "pct": 15.6
  },
  "new_leads_by_week": {
-  "2026-06-01": 148,
+  "2026-06-01": 138,
   "2026-06-08": 393,
-  "2026-06-15": 312,
+  "2026-06-15": 311,
   "2026-06-22": 210,
   "2026-06-29": 81,
   "2026-07-06": 118,
@@ -599,7 +485,7 @@
   "2026-07-27": 107,
   "2026-08-03": 101,
   "2026-08-10": 153,
-  "2026-08-17": 121,
-  "2026-08-24": 72
+  "2026-08-17": 120,
+  "2026-08-24": 84
  }
 }
