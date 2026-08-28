@@ -1,45 +1,45 @@
 {
- "generated": "2026-08-27T21:02:33+00:00",
- "lead_count_actual": 15246,
+ "generated": "2026-08-28T01:30:10+00:00",
+ "lead_count_actual": 15253,
  "status": {
-  "cancelled": 5024,
+  "cancelled": 5025,
   "lost": 493,
-  "open": 6834,
-  "pending": 71,
+  "open": 6841,
+  "pending": 70,
   "won": 2824
  },
  "win_rate": 33.9,
  "won": 2824,
- "lost": 5517,
+ "lost": 5518,
  "open_value": 62075268.72,
  "avg_cycle_days": 74,
  "aging": {
-  "open": 6834,
+  "open": 6841,
   "stale_60": 5275,
   "stale_threshold_days": 60,
-  "never_contacted": 2881,
-  "overdue": 2293
+  "never_contacted": 2885,
+  "overdue": 2294
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4244,
+   "open": 4247,
    "value": 22783861.92,
    "overdue": 401,
-   "d0_30": 392,
-   "d31_90": 564,
+   "d0_30": 390,
+   "d31_90": 566,
    "d91_180": 338,
    "d180_plus": 346,
-   "never": 2604
+   "never": 2607
   },
   "Hunter Howard": {
-   "open": 2104,
+   "open": 2107,
    "value": 15628773.510000002,
    "overdue": 1634,
-   "d0_30": 199,
+   "d0_30": 201,
    "d31_90": 140,
    "d91_180": 75,
    "d180_plus": 1684,
-   "never": 6
+   "never": 7
   },
   "Bryson Stevens": {
    "open": 168,
@@ -72,10 +72,10 @@
    "never": 4
   },
   "Raymond Davidson": {
-   "open": 62,
+   "open": 63,
    "value": 2492999.0,
-   "overdue": 37,
-   "d0_30": 49,
+   "overdue": 38,
+   "d0_30": 50,
    "d31_90": 11,
    "d91_180": 0,
    "d180_plus": 0,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3434,
+   "open": 3437,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3434
+    "CallRail Stage": 3437
    }
   },
   "AimLogic - Visited Website": {
@@ -109,12 +109,12 @@
    }
   },
   "Default Pipeline": {
-   "open": 516,
+   "open": 520,
    "value": 35944524.519999996,
    "stages": {
-    "Lead": 202,
+    "Lead": 205,
     "Pitch": 119,
-    "Contract Review": 72,
+    "Contract Review": 73,
     "Virtual Meeting Booked": 64,
     "Quote": 52,
     "Ready To Onboard": 3,
@@ -241,7 +241,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 60,
+   "days": 61,
    "never": true,
    "value": 0.0
   }
@@ -252,17 +252,17 @@
  "stale_scope_total": 5,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1970,
+   "leads": 1975,
    "won": 218,
    "value": 11243670.15
   },
   "organic": {
-   "leads": 306,
+   "leads": 307,
    "won": 59,
    "value": 107411069.38000001
   },
   "google": {
-   "leads": 254,
+   "leads": 255,
    "won": 56,
    "value": 106058009.24000001
   },
@@ -458,12 +458,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2329,
-  "with_source": 359,
+  "leads": 2335,
+  "with_source": 360,
   "pct": 15.4
  },
  "new_leads_by_week": {
-  "2026-06-01": 75,
+  "2026-06-01": 56,
   "2026-06-08": 393,
   "2026-06-15": 311,
   "2026-06-22": 210,
@@ -475,6 +475,6 @@
   "2026-08-03": 101,
   "2026-08-10": 153,
   "2026-08-17": 120,
-  "2026-08-24": 137
+  "2026-08-24": 144
  }
 }
