@@ -1,45 +1,45 @@
 {
- "generated": "2026-08-28T01:30:10+00:00",
- "lead_count_actual": 15253,
+ "generated": "2026-08-28T21:26:30+00:00",
+ "lead_count_actual": 15287,
  "status": {
-  "cancelled": 5025,
+  "cancelled": 5028,
   "lost": 493,
-  "open": 6841,
-  "pending": 70,
-  "won": 2824
+  "open": 6859,
+  "pending": 67,
+  "won": 2840
  },
- "win_rate": 33.9,
- "won": 2824,
- "lost": 5518,
- "open_value": 62075268.72,
- "avg_cycle_days": 74,
+ "win_rate": 34.0,
+ "won": 2840,
+ "lost": 5521,
+ "open_value": 62133833.61,
+ "avg_cycle_days": 73,
  "aging": {
-  "open": 6841,
+  "open": 6859,
   "stale_60": 5275,
   "stale_threshold_days": 60,
-  "never_contacted": 2885,
-  "overdue": 2294
+  "never_contacted": 2893,
+  "overdue": 2305
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4247,
-   "value": 22783861.92,
-   "overdue": 401,
-   "d0_30": 390,
-   "d31_90": 566,
-   "d91_180": 338,
-   "d180_plus": 346,
-   "never": 2607
+   "open": 4260,
+   "value": 22771260.92,
+   "overdue": 403,
+   "d0_30": 331,
+   "d31_90": 628,
+   "d91_180": 340,
+   "d180_plus": 345,
+   "never": 2616
   },
   "Hunter Howard": {
-   "open": 2107,
+   "open": 2106,
    "value": 15628773.510000002,
    "overdue": 1634,
    "d0_30": 201,
-   "d31_90": 140,
-   "d91_180": 75,
+   "d31_90": 137,
+   "d91_180": 78,
    "d180_plus": 1684,
-   "never": 7
+   "never": 6
   },
   "Bryson Stevens": {
    "open": 168,
@@ -62,20 +62,20 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 100,
-   "value": 20637834.29,
-   "overdue": 56,
-   "d0_30": 76,
+   "open": 102,
+   "value": 20641855.18,
+   "overdue": 60,
+   "d0_30": 78,
    "d31_90": 20,
    "d91_180": 0,
    "d180_plus": 0,
    "never": 4
   },
   "Raymond Davidson": {
-   "open": 63,
-   "value": 2492999.0,
-   "overdue": 38,
-   "d0_30": 50,
+   "open": 67,
+   "value": 2560144.0,
+   "overdue": 43,
+   "d0_30": 54,
    "d31_90": 11,
    "d91_180": 0,
    "d180_plus": 0,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3437,
+   "open": 3450,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3437
+    "CallRail Stage": 3450
    }
   },
   "AimLogic - Visited Website": {
@@ -109,14 +109,14 @@
    }
   },
   "Default Pipeline": {
-   "open": 520,
-   "value": 35944524.519999996,
+   "open": 525,
+   "value": 36003089.41,
    "stages": {
-    "Lead": 205,
+    "Lead": 210,
     "Pitch": 119,
-    "Contract Review": 73,
+    "Contract Review": 72,
     "Virtual Meeting Booked": 64,
-    "Quote": 52,
+    "Quote": 53,
     "Ready To Onboard": 3,
     "Placement(s) Confirmed": 2,
     "Closed": 2
@@ -197,7 +197,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 86,
+   "days": 87,
    "never": true,
    "value": 0.0
   },
@@ -208,7 +208,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 64,
+   "days": 65,
    "never": true,
    "value": 5000.0
   },
@@ -219,7 +219,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 63,
+   "days": 64,
    "never": true,
    "value": 0.0
   },
@@ -230,7 +230,7 @@
    "owner": "Paid Media CFATX",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 62,
+   "days": 63,
    "never": true,
    "value": 0.0
   },
@@ -252,19 +252,19 @@
  "stale_scope_total": 5,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1975,
-   "won": 218,
-   "value": 11243670.15
+   "leads": 2009,
+   "won": 234,
+   "value": 11384636.04
   },
   "organic": {
    "leads": 307,
-   "won": 59,
-   "value": 107411069.38000001
+   "won": 60,
+   "value": 107436069.38000001
   },
   "google": {
    "leads": 255,
-   "won": 56,
-   "value": 106058009.24000001
+   "won": 57,
+   "value": 106083009.24000001
   },
   "chatgpt.com": {
    "leads": 74,
@@ -458,12 +458,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2335,
+  "leads": 2369,
   "with_source": 360,
-  "pct": 15.4
+  "pct": 15.2
  },
  "new_leads_by_week": {
-  "2026-06-01": 56,
+  "2026-06-01": 18,
   "2026-06-08": 393,
   "2026-06-15": 311,
   "2026-06-22": 210,
@@ -475,6 +475,6 @@
   "2026-08-03": 101,
   "2026-08-10": 153,
   "2026-08-17": 120,
-  "2026-08-24": 144
+  "2026-08-24": 178
  }
 }
