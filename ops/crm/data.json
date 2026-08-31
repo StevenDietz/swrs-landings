@@ -1,45 +1,45 @@
 {
- "generated": "2026-08-31T18:01:06+00:00",
- "lead_count_actual": 15336,
+ "generated": "2026-08-31T21:54:50+00:00",
+ "lead_count_actual": 15342,
  "status": {
   "cancelled": 5030,
   "lost": 493,
-  "open": 6875,
-  "pending": 67,
-  "won": 2871
+  "open": 6878,
+  "pending": 68,
+  "won": 2873
  },
  "win_rate": 34.2,
- "won": 2871,
+ "won": 2873,
  "lost": 5523,
- "open_value": 62207844.61,
+ "open_value": 62238231.72,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6875,
-  "stale_60": 5319,
+  "open": 6878,
+  "stale_60": 5327,
   "stale_threshold_days": 60,
-  "never_contacted": 2900,
-  "overdue": 2326
+  "never_contacted": 2902,
+  "overdue": 2324
  },
  "rep_board": {
   "Steven Dietz": {
    "open": 4269,
-   "value": 22771260.92,
+   "value": 22766693.92,
    "overdue": 405,
    "d0_30": 252,
-   "d31_90": 699,
-   "d91_180": 344,
-   "d180_plus": 353,
-   "never": 2621
+   "d31_90": 695,
+   "d91_180": 345,
+   "d180_plus": 355,
+   "never": 2622
   },
   "Hunter Howard": {
-   "open": 2110,
+   "open": 2112,
    "value": 15628773.510000002,
-   "overdue": 1647,
-   "d0_30": 187,
+   "overdue": 1648,
+   "d0_30": 188,
    "d31_90": 151,
    "d91_180": 82,
    "d180_plus": 1684,
-   "never": 6
+   "never": 7
   },
   "Bryson Stevens": {
    "open": 168,
@@ -63,23 +63,23 @@
   },
   "Brenn Morrow": {
    "open": 104,
-   "value": 20715866.18,
-   "overdue": 61,
-   "d0_30": 76,
+   "value": 20750820.29,
+   "overdue": 60,
+   "d0_30": 77,
    "d31_90": 22,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 6
+   "never": 5
   },
   "Raymond Davidson": {
-   "open": 68,
+   "open": 69,
    "value": 2560144.0,
-   "overdue": 48,
+   "overdue": 46,
    "d0_30": 54,
    "d31_90": 12,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 2
+   "never": 3
   },
   "Paid Media CFATX": {
    "open": 2,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3457,
+   "open": 3458,
    "value": 20010.0,
    "stages": {
-    "CallRail Stage": 3457
+    "CallRail Stage": 3458
    }
   },
   "AimLogic - Visited Website": {
@@ -109,17 +109,17 @@
    }
   },
   "Default Pipeline": {
-   "open": 534,
-   "value": 36057090.41,
+   "open": 536,
+   "value": 36087477.519999996,
    "stages": {
     "Lead": 214,
     "Pitch": 118,
-    "Contract Review": 71,
-    "Virtual Meeting Booked": 66,
-    "Quote": 53,
-    "Ready To Onboard": 8,
-    "Placement(s) Confirmed": 2,
-    "Closed": 2
+    "Contract Review": 73,
+    "Virtual Meeting Booked": 67,
+    "Quote": 52,
+    "Ready To Onboard": 7,
+    "Closed": 3,
+    "Placement(s) Confirmed": 2
    }
   },
   "Nurture": {
@@ -252,33 +252,55 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 61,
+   "days": 62,
    "never": true,
    "value": 18000.0
+  },
+  {
+   "name": "Kido Psychiatry",
+   "number": "31244",
+   "url": "https://app.nutshell.com/lead/31244",
+   "owner": "Brenn Morrow",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 60,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "SpeedyDollar",
+   "number": "33390",
+   "url": "https://app.nutshell.com/lead/33390",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 60,
+   "never": false,
+   "value": 0.0
   }
  ],
  "stale_scope": [
   "Default Pipeline"
  ],
- "stale_scope_total": 6,
+ "stale_scope_total": 8,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1999,
-   "won": 260,
-   "value": 11353647.04
+   "leads": 1995,
+   "won": 262,
+   "value": 11392522.04
   },
   "organic": {
-   "leads": 303,
+   "leads": 304,
    "won": 60,
    "value": 107451239.38000001
   },
   "google": {
-   "leads": 249,
-   "won": 55,
-   "value": 105842879.24000001
+   "leads": 248,
+   "won": 54,
+   "value": 105840379.24000001
   },
   "chatgpt.com": {
-   "leads": 74,
+   "leads": 76,
    "won": 10,
    "value": 3091062.0
   },
@@ -288,9 +310,9 @@
    "value": 106400.0
   },
   "cpc": {
-   "leads": 21,
-   "won": 5,
-   "value": 465841.0
+   "leads": 20,
+   "won": 4,
+   "value": 463341.0
   },
   "brand": {
    "leads": 20,
@@ -452,16 +474,6 @@
    "won": 0,
    "value": 0.0
   },
-  "debt collection agency": {
-   "leads": 1,
-   "won": 1,
-   "value": 2500.0
-  },
-  "industries": {
-   "leads": 1,
-   "won": 1,
-   "value": 2500.0
-  },
   "Referral": {
    "leads": 1,
    "won": 1,
@@ -469,12 +481,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2343,
+  "leads": 2339,
   "with_source": 344,
   "pct": 14.7
  },
  "new_leads_by_week": {
-  "2026-06-08": 366,
+  "2026-06-08": 344,
   "2026-06-15": 311,
   "2026-06-22": 210,
   "2026-06-29": 81,
@@ -486,6 +498,6 @@
   "2026-08-10": 153,
   "2026-08-17": 120,
   "2026-08-24": 220,
-  "2026-08-31": 7
+  "2026-08-31": 13
  }
 }
