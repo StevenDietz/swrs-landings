@@ -1,45 +1,45 @@
 {
- "generated": "2026-09-01T19:56:40+00:00",
- "lead_count_actual": 15377,
+ "generated": "2026-09-02T15:06:43+00:00",
+ "lead_count_actual": 15402,
  "status": {
-  "cancelled": 5035,
-  "lost": 493,
-  "open": 6899,
+  "cancelled": 5037,
+  "lost": 494,
+  "open": 6914,
   "pending": 67,
-  "won": 2883
+  "won": 2890
  },
  "win_rate": 34.3,
- "won": 2883,
- "lost": 5528,
- "open_value": 62068372.04,
+ "won": 2890,
+ "lost": 5531,
+ "open_value": 62349552.04,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6899,
-  "stale_60": 5353,
+  "open": 6914,
+  "stale_60": 5358,
   "stale_threshold_days": 60,
-  "never_contacted": 2911,
-  "overdue": 2327
+  "never_contacted": 2914,
+  "overdue": 2326
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4279,
+   "open": 4284,
    "value": 22766693.92,
    "overdue": 407,
-   "d0_30": 257,
-   "d31_90": 663,
-   "d91_180": 369,
-   "d180_plus": 361,
-   "never": 2629
+   "d0_30": 260,
+   "d31_90": 660,
+   "d91_180": 371,
+   "d180_plus": 362,
+   "never": 2631
   },
   "Hunter Howard": {
-   "open": 2125,
-   "value": 15506073.510000002,
-   "overdue": 1647,
-   "d0_30": 190,
+   "open": 2134,
+   "value": 15494553.510000002,
+   "overdue": 1648,
+   "d0_30": 198,
    "d31_90": 162,
    "d91_180": 82,
    "d180_plus": 1684,
-   "never": 7
+   "never": 8
   },
   "Bryson Stevens": {
    "open": 168,
@@ -63,23 +63,23 @@
   },
   "Brenn Morrow": {
    "open": 102,
-   "value": 20719160.61,
-   "overdue": 60,
-   "d0_30": 71,
+   "value": 20929660.61,
+   "overdue": 58,
+   "d0_30": 73,
    "d31_90": 23,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 8
+   "never": 6
   },
   "Raymond Davidson": {
-   "open": 69,
-   "value": 2544644.0,
+   "open": 70,
+   "value": 2626844.0,
    "overdue": 48,
-   "d0_30": 55,
+   "d0_30": 54,
    "d31_90": 12,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 2
+   "never": 4
   },
   "Paid Media CFATX": {
    "open": 2,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3467,
+   "open": 3469,
    "value": 20010.0,
    "stages": {
-    "CallRail Stage": 3467
+    "CallRail Stage": 3469
    }
   },
   "AimLogic - Visited Website": {
@@ -109,13 +109,13 @@
    }
   },
   "Default Pipeline": {
-   "open": 550,
-   "value": 35995217.839999996,
+   "open": 563,
+   "value": 36276397.839999996,
    "stages": {
-    "Lead": 225,
-    "Pitch": 118,
-    "Contract Review": 77,
-    "Virtual Meeting Booked": 71,
+    "Lead": 232,
+    "Pitch": 121,
+    "Contract Review": 79,
+    "Virtual Meeting Booked": 72,
     "Quote": 52,
     "Ready To Onboard": 3,
     "Placement(s) Confirmed": 2,
@@ -197,7 +197,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 91,
+   "days": 92,
    "never": true,
    "value": 0.0
   },
@@ -219,7 +219,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 68,
+   "days": 69,
    "never": true,
    "value": 0.0
   },
@@ -241,7 +241,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 65,
+   "days": 66,
    "never": true,
    "value": 0.0
   },
@@ -257,6 +257,17 @@
    "value": 18000.0
   },
   {
+   "name": "KarKey",
+   "number": "23347",
+   "url": "https://app.nutshell.com/lead/23347",
+   "owner": "Bryson Stevens",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 61,
+   "never": false,
+   "value": 500000.0
+  },
+  {
    "name": "Kido Psychiatry",
    "number": "31244",
    "url": "https://app.nutshell.com/lead/31244",
@@ -268,24 +279,13 @@
    "value": 0.0
   },
   {
-   "name": "KarKey",
-   "number": "23347",
-   "url": "https://app.nutshell.com/lead/23347",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 60,
-   "never": false,
-   "value": 500000.0
-  },
-  {
    "name": "SpeedyDollar",
    "number": "33390",
    "url": "https://app.nutshell.com/lead/33390",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 60,
+   "days": 61,
    "never": false,
    "value": 0.0
   }
@@ -296,29 +296,29 @@
  "stale_scope_total": 9,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 2008,
-   "won": 267,
-   "value": 11331522.160000002
+   "leads": 2011,
+   "won": 271,
+   "value": 11025553.160000002
   },
   "organic": {
-   "leads": 304,
+   "leads": 303,
    "won": 61,
-   "value": 107451239.38000001
+   "value": 107721239.38000001
   },
   "google": {
-   "leads": 246,
+   "leads": 244,
    "won": 55,
-   "value": 105805379.24000001
+   "value": 105875379.24000001
   },
   "chatgpt.com": {
-   "leads": 76,
+   "leads": 77,
    "won": 10,
-   "value": 3091062.0
+   "value": 3291062.0
   },
   "gmb": {
    "leads": 24,
    "won": 3,
-   "value": 106400.0
+   "value": 176400.0
   },
   "cpc": {
    "leads": 18,
@@ -487,12 +487,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2349,
-  "with_source": 341,
+  "leads": 2351,
+  "with_source": 340,
   "pct": 14.5
  },
  "new_leads_by_week": {
-  "2026-06-08": 308,
+  "2026-06-08": 289,
   "2026-06-15": 311,
   "2026-06-22": 210,
   "2026-06-29": 81,
@@ -504,6 +504,6 @@
   "2026-08-10": 153,
   "2026-08-17": 120,
   "2026-08-24": 220,
-  "2026-08-31": 48
+  "2026-08-31": 73
  }
 }
