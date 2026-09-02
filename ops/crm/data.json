@@ -1,45 +1,45 @@
 {
- "generated": "2026-09-02T15:06:43+00:00",
- "lead_count_actual": 15402,
+ "generated": "2026-09-02T19:48:50+00:00",
+ "lead_count_actual": 15405,
  "status": {
-  "cancelled": 5037,
+  "cancelled": 5039,
   "lost": 494,
-  "open": 6914,
-  "pending": 67,
-  "won": 2890
+  "open": 6912,
+  "pending": 69,
+  "won": 2891
  },
  "win_rate": 34.3,
- "won": 2890,
- "lost": 5531,
- "open_value": 62349552.04,
+ "won": 2891,
+ "lost": 5533,
+ "open_value": 62150852.04,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6914,
-  "stale_60": 5358,
+  "open": 6912,
+  "stale_60": 5363,
   "stale_threshold_days": 60,
-  "never_contacted": 2914,
-  "overdue": 2326
+  "never_contacted": 2912,
+  "overdue": 2330
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4284,
+   "open": 4286,
    "value": 22766693.92,
    "overdue": 407,
-   "d0_30": 260,
-   "d31_90": 660,
+   "d0_30": 263,
+   "d31_90": 655,
    "d91_180": 371,
-   "d180_plus": 362,
-   "never": 2631
+   "d180_plus": 364,
+   "never": 2633
   },
   "Hunter Howard": {
-   "open": 2134,
-   "value": 15494553.510000002,
-   "overdue": 1648,
+   "open": 2131,
+   "value": 15501053.510000002,
+   "overdue": 1650,
    "d0_30": 198,
    "d31_90": 162,
    "d91_180": 82,
    "d180_plus": 1684,
-   "never": 8
+   "never": 5
   },
   "Bryson Stevens": {
    "open": 168,
@@ -62,10 +62,10 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 102,
-   "value": 20929660.61,
-   "overdue": 58,
-   "d0_30": 73,
+   "open": 101,
+   "value": 20724660.61,
+   "overdue": 60,
+   "d0_30": 72,
    "d31_90": 23,
    "d91_180": 0,
    "d180_plus": 0,
@@ -73,13 +73,13 @@
   },
   "Raymond Davidson": {
    "open": 70,
-   "value": 2626844.0,
+   "value": 2626644.0,
    "overdue": 48,
-   "d0_30": 54,
+   "d0_30": 55,
    "d31_90": 12,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 4
+   "never": 3
   },
   "Paid Media CFATX": {
    "open": 2,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3469,
+   "open": 3471,
    "value": 20010.0,
    "stages": {
-    "CallRail Stage": 3469
+    "CallRail Stage": 3471
    }
   },
   "AimLogic - Visited Website": {
@@ -109,13 +109,13 @@
    }
   },
   "Default Pipeline": {
-   "open": 563,
-   "value": 36276397.839999996,
+   "open": 559,
+   "value": 36077697.839999996,
    "stages": {
-    "Lead": 232,
-    "Pitch": 121,
-    "Contract Review": 79,
-    "Virtual Meeting Booked": 72,
+    "Lead": 230,
+    "Pitch": 120,
+    "Contract Review": 80,
+    "Virtual Meeting Booked": 70,
     "Quote": 52,
     "Ready To Onboard": 3,
     "Placement(s) Confirmed": 2,
@@ -208,7 +208,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 69,
+   "days": 70,
    "never": true,
    "value": 5000.0
   },
@@ -230,7 +230,7 @@
    "owner": "Paid Media CFATX",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 67,
+   "days": 68,
    "never": true,
    "value": 0.0
   },
@@ -252,7 +252,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 63,
+   "days": 64,
    "never": true,
    "value": 18000.0
   },
@@ -296,19 +296,19 @@
  "stale_scope_total": 9,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 2011,
-   "won": 271,
-   "value": 11025553.160000002
+   "leads": 1998,
+   "won": 272,
+   "value": 11085053.160000002
   },
   "organic": {
-   "leads": 303,
-   "won": 61,
-   "value": 107721239.38000001
+   "leads": 301,
+   "won": 60,
+   "value": 107721139.38000001
   },
   "google": {
-   "leads": 244,
-   "won": 55,
-   "value": 105875379.24000001
+   "leads": 243,
+   "won": 54,
+   "value": 105875279.24000001
   },
   "chatgpt.com": {
    "leads": 77,
@@ -370,11 +370,6 @@
    "won": 1,
    "value": 27845.0
   },
-  "yahoo": {
-   "leads": 5,
-   "won": 0,
-   "value": 100.0
-  },
   "gbp": {
    "leads": 4,
    "won": 2,
@@ -384,6 +379,11 @@
    "leads": 4,
    "won": 0,
    "value": 0.0
+  },
+  "yahoo": {
+   "leads": 4,
+   "won": 0,
+   "value": 100.0
   },
   "referral": {
    "leads": 3,
@@ -487,12 +487,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2351,
-  "with_source": 340,
+  "leads": 2336,
+  "with_source": 338,
   "pct": 14.5
  },
  "new_leads_by_week": {
-  "2026-06-08": 289,
+  "2026-06-08": 271,
   "2026-06-15": 311,
   "2026-06-22": 210,
   "2026-06-29": 81,
@@ -504,6 +504,6 @@
   "2026-08-10": 153,
   "2026-08-17": 120,
   "2026-08-24": 220,
-  "2026-08-31": 73
+  "2026-08-31": 76
  }
 }
