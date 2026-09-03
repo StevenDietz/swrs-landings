@@ -1,45 +1,45 @@
 {
- "generated": "2026-09-02T19:48:50+00:00",
- "lead_count_actual": 15405,
+ "generated": "2026-09-03T15:01:11+00:00",
+ "lead_count_actual": 15420,
  "status": {
-  "cancelled": 5039,
+  "cancelled": 5043,
   "lost": 494,
-  "open": 6912,
-  "pending": 69,
-  "won": 2891
+  "open": 6919,
+  "pending": 70,
+  "won": 2894
  },
  "win_rate": 34.3,
- "won": 2891,
- "lost": 5533,
- "open_value": 62150852.04,
+ "won": 2894,
+ "lost": 5537,
+ "open_value": 62097147.04,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6912,
+  "open": 6919,
   "stale_60": 5363,
   "stale_threshold_days": 60,
-  "never_contacted": 2912,
+  "never_contacted": 2916,
   "overdue": 2330
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4286,
+   "open": 4290,
    "value": 22766693.92,
    "overdue": 407,
-   "d0_30": 263,
-   "d31_90": 655,
-   "d91_180": 371,
-   "d180_plus": 364,
-   "never": 2633
+   "d0_30": 264,
+   "d31_90": 644,
+   "d91_180": 380,
+   "d180_plus": 367,
+   "never": 2635
   },
   "Hunter Howard": {
-   "open": 2131,
-   "value": 15501053.510000002,
-   "overdue": 1650,
-   "d0_30": 198,
-   "d31_90": 162,
-   "d91_180": 82,
+   "open": 2136,
+   "value": 15535573.510000002,
+   "overdue": 1648,
+   "d0_30": 202,
+   "d31_90": 157,
+   "d91_180": 87,
    "d180_plus": 1684,
-   "never": 5
+   "never": 6
   },
   "Bryson Stevens": {
    "open": 168,
@@ -62,20 +62,20 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 101,
-   "value": 20724660.61,
-   "overdue": 60,
-   "d0_30": 72,
-   "d31_90": 23,
+   "open": 100,
+   "value": 20642435.61,
+   "overdue": 61,
+   "d0_30": 71,
+   "d31_90": 22,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 6
+   "never": 7
   },
   "Raymond Davidson": {
-   "open": 70,
-   "value": 2626644.0,
-   "overdue": 48,
-   "d0_30": 55,
+   "open": 69,
+   "value": 2620644.0,
+   "overdue": 49,
+   "d0_30": 54,
    "d31_90": 12,
    "d91_180": 0,
    "d180_plus": 0,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3471,
+   "open": 3475,
    "value": 20010.0,
    "stages": {
-    "CallRail Stage": 3471
+    "CallRail Stage": 3475
    }
   },
   "AimLogic - Visited Website": {
@@ -109,13 +109,13 @@
    }
   },
   "Default Pipeline": {
-   "open": 559,
-   "value": 36077697.839999996,
+   "open": 556,
+   "value": 36068808.839999996,
    "stages": {
-    "Lead": 230,
+    "Lead": 229,
     "Pitch": 120,
     "Contract Review": 80,
-    "Virtual Meeting Booked": 70,
+    "Virtual Meeting Booked": 68,
     "Quote": 52,
     "Ready To Onboard": 3,
     "Placement(s) Confirmed": 2,
@@ -123,10 +123,10 @@
    }
   },
   "Nurture": {
-   "open": 447,
-   "value": 20449123.77,
+   "open": 453,
+   "value": 20404307.77,
    "stages": {
-    "Nurture": 447
+    "Nurture": 453
    }
   },
   "Viewed Website Cold Lead": {
@@ -197,7 +197,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 92,
+   "days": 93,
    "never": true,
    "value": 0.0
   },
@@ -219,7 +219,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 69,
+   "days": 70,
    "never": true,
    "value": 0.0
   },
@@ -241,7 +241,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 66,
+   "days": 67,
    "never": true,
    "value": 0.0
   },
@@ -263,7 +263,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 61,
+   "days": 62,
    "never": false,
    "value": 500000.0
   },
@@ -274,7 +274,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 61,
+   "days": 62,
    "never": false,
    "value": 0.0
   },
@@ -285,7 +285,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 61,
+   "days": 62,
    "never": false,
    "value": 0.0
   }
@@ -296,22 +296,22 @@
  "stale_scope_total": 9,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1998,
-   "won": 272,
-   "value": 11085053.160000002
+   "leads": 1991,
+   "won": 274,
+   "value": 11158853.160000002
   },
   "organic": {
-   "leads": 301,
+   "leads": 299,
    "won": 60,
    "value": 107721139.38000001
   },
   "google": {
-   "leads": 243,
+   "leads": 242,
    "won": 54,
    "value": 105875279.24000001
   },
   "chatgpt.com": {
-   "leads": 77,
+   "leads": 75,
    "won": 10,
    "value": 3291062.0
   },
@@ -487,12 +487,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2336,
-  "with_source": 338,
-  "pct": 14.5
+  "leads": 2327,
+  "with_source": 336,
+  "pct": 14.4
  },
  "new_leads_by_week": {
-  "2026-06-08": 271,
+  "2026-06-08": 254,
   "2026-06-15": 311,
   "2026-06-22": 210,
   "2026-06-29": 81,
@@ -504,6 +504,6 @@
   "2026-08-10": 153,
   "2026-08-17": 120,
   "2026-08-24": 220,
-  "2026-08-31": 76
+  "2026-08-31": 91
  }
 }
