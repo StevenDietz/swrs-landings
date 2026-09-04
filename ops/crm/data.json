@@ -1,45 +1,45 @@
 {
- "generated": "2026-09-04T14:58:18+00:00",
- "lead_count_actual": 15439,
+ "generated": "2026-09-04T19:38:03+00:00",
+ "lead_count_actual": 15444,
  "status": {
-  "cancelled": 5044,
+  "cancelled": 5049,
   "lost": 495,
-  "open": 6931,
+  "open": 6930,
   "pending": 70,
-  "won": 2899
+  "won": 2900
  },
- "win_rate": 34.4,
- "won": 2899,
- "lost": 5539,
- "open_value": 62605947.09,
+ "win_rate": 34.3,
+ "won": 2900,
+ "lost": 5544,
+ "open_value": 62581837.04,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6931,
-  "stale_60": 5375,
+  "open": 6930,
+  "stale_60": 5381,
   "stale_threshold_days": 60,
-  "never_contacted": 2921,
-  "overdue": 2337
+  "never_contacted": 2923,
+  "overdue": 2336
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4299,
+   "open": 4301,
    "value": 22766693.92,
    "overdue": 409,
-   "d0_30": 265,
-   "d31_90": 642,
-   "d91_180": 375,
+   "d0_30": 266,
+   "d31_90": 638,
+   "d91_180": 380,
    "d180_plus": 375,
    "never": 2642
   },
   "Hunter Howard": {
-   "open": 2140,
+   "open": 2142,
    "value": 15477873.510000002,
-   "overdue": 1654,
-   "d0_30": 206,
+   "overdue": 1655,
+   "d0_30": 205,
    "d31_90": 153,
    "d91_180": 92,
    "d180_plus": 1684,
-   "never": 5
+   "never": 8
   },
   "Bryson Stevens": {
    "open": 168,
@@ -62,19 +62,19 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 99,
-   "value": 20904935.66,
-   "overdue": 61,
-   "d0_30": 71,
+   "open": 94,
+   "value": 20880825.61,
+   "overdue": 58,
+   "d0_30": 67,
    "d31_90": 22,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 6
+   "never": 5
   },
   "Raymond Davidson": {
    "open": 69,
    "value": 2924644.0,
-   "overdue": 48,
+   "overdue": 49,
    "d0_30": 54,
    "d31_90": 12,
    "d91_180": 0,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3484,
+   "open": 3486,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3484
+    "CallRail Stage": 3486
    }
   },
   "AimLogic - Visited Website": {
@@ -109,13 +109,13 @@
    }
   },
   "Default Pipeline": {
-   "open": 548,
-   "value": 36428618.88999999,
+   "open": 545,
+   "value": 36404508.839999996,
    "stages": {
-    "Lead": 227,
-    "Pitch": 119,
-    "Contract Review": 76,
-    "Virtual Meeting Booked": 66,
+    "Lead": 225,
+    "Pitch": 118,
+    "Contract Review": 77,
+    "Virtual Meeting Booked": 65,
     "Quote": 53,
     "Ready To Onboard": 3,
     "Placement(s) Confirmed": 2,
@@ -208,7 +208,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 71,
+   "days": 72,
    "never": true,
    "value": 5000.0
   },
@@ -230,7 +230,7 @@
    "owner": "Paid Media CFATX",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 69,
+   "days": 70,
    "never": true,
    "value": 0.0
   },
@@ -297,11 +297,11 @@
  "attribution_90d": {
   "(no source set)": {
    "leads": 1971,
-   "won": 277,
+   "won": 278,
    "value": 11862853.21
   },
   "organic": {
-   "leads": 299,
+   "leads": 300,
    "won": 61,
    "value": 107721139.38000001
   },
@@ -311,7 +311,7 @@
    "value": 105866679.24000001
   },
   "chatgpt.com": {
-   "leads": 77,
+   "leads": 79,
    "won": 10,
    "value": 3291062.0
   },
@@ -482,12 +482,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2304,
-  "with_source": 333,
+  "leads": 2305,
+  "with_source": 334,
   "pct": 14.5
  },
  "new_leads_by_week": {
-  "2026-06-08": 209,
+  "2026-06-08": 177,
   "2026-06-15": 311,
   "2026-06-22": 210,
   "2026-06-29": 81,
@@ -499,6 +499,6 @@
   "2026-08-10": 153,
   "2026-08-17": 120,
   "2026-08-24": 220,
-  "2026-08-31": 111
+  "2026-08-31": 116
  }
 }
