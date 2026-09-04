@@ -1,45 +1,45 @@
 {
- "generated": "2026-09-03T19:52:02+00:00",
- "lead_count_actual": 15426,
+ "generated": "2026-09-04T14:58:18+00:00",
+ "lead_count_actual": 15439,
  "status": {
-  "cancelled": 5043,
-  "lost": 494,
-  "open": 6924,
+  "cancelled": 5044,
+  "lost": 495,
+  "open": 6931,
   "pending": 70,
-  "won": 2895
+  "won": 2899
  },
- "win_rate": 34.3,
- "won": 2895,
- "lost": 5537,
- "open_value": 62397147.04,
+ "win_rate": 34.4,
+ "won": 2899,
+ "lost": 5539,
+ "open_value": 62605947.09,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6924,
-  "stale_60": 5372,
+  "open": 6931,
+  "stale_60": 5375,
   "stale_threshold_days": 60,
-  "never_contacted": 2917,
-  "overdue": 2338
+  "never_contacted": 2921,
+  "overdue": 2337
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4293,
+   "open": 4299,
    "value": 22766693.92,
-   "overdue": 407,
+   "overdue": 409,
    "d0_30": 265,
-   "d31_90": 643,
-   "d91_180": 374,
-   "d180_plus": 374,
-   "never": 2637
+   "d31_90": 642,
+   "d91_180": 375,
+   "d180_plus": 375,
+   "never": 2642
   },
   "Hunter Howard": {
-   "open": 2136,
-   "value": 15535573.510000002,
-   "overdue": 1655,
-   "d0_30": 202,
-   "d31_90": 157,
-   "d91_180": 87,
+   "open": 2140,
+   "value": 15477873.510000002,
+   "overdue": 1654,
+   "d0_30": 206,
+   "d31_90": 153,
+   "d91_180": 92,
    "d180_plus": 1684,
-   "never": 6
+   "never": 5
   },
   "Bryson Stevens": {
    "open": 168,
@@ -62,20 +62,20 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 100,
-   "value": 20942435.61,
-   "overdue": 62,
-   "d0_30": 72,
+   "open": 99,
+   "value": 20904935.66,
+   "overdue": 61,
+   "d0_30": 71,
    "d31_90": 22,
    "d91_180": 0,
    "d180_plus": 0,
    "never": 6
   },
   "Raymond Davidson": {
-   "open": 71,
-   "value": 2620644.0,
-   "overdue": 49,
-   "d0_30": 56,
+   "open": 69,
+   "value": 2924644.0,
+   "overdue": 48,
+   "d0_30": 54,
    "d31_90": 12,
    "d91_180": 0,
    "d180_plus": 0,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3477,
+   "open": 3484,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3477
+    "CallRail Stage": 3484
    }
   },
   "AimLogic - Visited Website": {
@@ -109,24 +109,24 @@
    }
   },
   "Default Pipeline": {
-   "open": 559,
-   "value": 36388818.839999996,
+   "open": 548,
+   "value": 36428618.88999999,
    "stages": {
-    "Lead": 230,
-    "Pitch": 120,
-    "Contract Review": 80,
-    "Virtual Meeting Booked": 68,
+    "Lead": 227,
+    "Pitch": 119,
+    "Contract Review": 76,
+    "Virtual Meeting Booked": 66,
     "Quote": 53,
-    "Ready To Onboard": 4,
+    "Ready To Onboard": 3,
     "Placement(s) Confirmed": 2,
     "Closed": 2
    }
   },
   "Nurture": {
-   "open": 453,
-   "value": 20404307.77,
+   "open": 464,
+   "value": 20573307.77,
    "stages": {
-    "Nurture": 453
+    "Nurture": 464
    }
   },
   "Viewed Website Cold Lead": {
@@ -197,7 +197,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 93,
+   "days": 94,
    "never": true,
    "value": 0.0
   },
@@ -219,7 +219,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 70,
+   "days": 71,
    "never": true,
    "value": 0.0
   },
@@ -241,7 +241,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 67,
+   "days": 68,
    "never": true,
    "value": 0.0
   },
@@ -263,7 +263,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 62,
+   "days": 63,
    "never": false,
    "value": 500000.0
   },
@@ -274,7 +274,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 62,
+   "days": 63,
    "never": false,
    "value": 0.0
   },
@@ -285,7 +285,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 62,
+   "days": 63,
    "never": false,
    "value": 0.0
   }
@@ -296,19 +296,19 @@
  "stale_scope_total": 9,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1973,
-   "won": 275,
-   "value": 11458853.160000002
+   "leads": 1971,
+   "won": 277,
+   "value": 11862853.21
   },
   "organic": {
    "leads": 299,
-   "won": 60,
+   "won": 61,
    "value": 107721139.38000001
   },
   "google": {
-   "leads": 240,
-   "won": 53,
-   "value": 105866779.24000001
+   "leads": 237,
+   "won": 52,
+   "value": 105866679.24000001
   },
   "chatgpt.com": {
    "leads": 77,
@@ -321,24 +321,24 @@
    "value": 176400.0
   },
   "bing": {
-   "leads": 18,
+   "leads": 19,
    "won": 3,
    "value": 342446.88
   },
   "cpc": {
-   "leads": 17,
-   "won": 3,
-   "value": 419841.0
+   "leads": 15,
+   "won": 2,
+   "value": 419741.0
   },
   "brand": {
-   "leads": 17,
-   "won": 3,
-   "value": 419841.0
+   "leads": 15,
+   "won": 2,
+   "value": 419741.0
   },
   "southwest recovery services": {
-   "leads": 14,
-   "won": 3,
-   "value": 339841.0
+   "leads": 12,
+   "won": 2,
+   "value": 339741.0
   },
   "email": {
    "leads": 8,
@@ -347,7 +347,7 @@
   },
   "claude.ai": {
    "leads": 7,
-   "won": 0,
+   "won": 2,
    "value": 265892.26
   },
   "nutshell": {
@@ -475,11 +475,6 @@
    "won": 0,
    "value": 0.0
   },
-  "gmb-sanantonio": {
-   "leads": 1,
-   "won": 0,
-   "value": 0.0
-  },
   "Referral": {
    "leads": 1,
    "won": 1,
@@ -487,12 +482,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2308,
-  "with_source": 335,
+  "leads": 2304,
+  "with_source": 333,
   "pct": 14.5
  },
  "new_leads_by_week": {
-  "2026-06-08": 229,
+  "2026-06-08": 209,
   "2026-06-15": 311,
   "2026-06-22": 210,
   "2026-06-29": 81,
@@ -504,6 +499,6 @@
   "2026-08-10": 153,
   "2026-08-17": 120,
   "2026-08-24": 220,
-  "2026-08-31": 97
+  "2026-08-31": 111
  }
 }
