@@ -1,40 +1,40 @@
 {
- "generated": "2026-09-07T20:35:58+00:00",
- "lead_count_actual": 15457,
+ "generated": "2026-09-08T15:07:48+00:00",
+ "lead_count_actual": 15461,
  "status": {
   "cancelled": 5055,
   "lost": 495,
-  "open": 6935,
+  "open": 6938,
   "pending": 70,
-  "won": 2902
+  "won": 2903
  },
  "win_rate": 34.3,
- "won": 2902,
+ "won": 2903,
  "lost": 5550,
- "open_value": 62543483.91,
+ "open_value": 62553488.91,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6935,
-  "stale_60": 5423,
+  "open": 6938,
+  "stale_60": 5434,
   "stale_threshold_days": 60,
-  "never_contacted": 2926,
-  "overdue": 2347
+  "never_contacted": 2927,
+  "overdue": 2348
  },
  "rep_board": {
   "Steven Dietz": {
    "open": 4306,
    "value": 22766693.92,
    "overdue": 407,
-   "d0_30": 249,
+   "d0_30": 248,
    "d31_90": 638,
-   "d91_180": 383,
-   "d180_plus": 388,
-   "never": 2648
+   "d91_180": 381,
+   "d180_plus": 390,
+   "never": 2649
   },
   "Hunter Howard": {
    "open": 2142,
-   "value": 15477873.510000002,
-   "overdue": 1665,
+   "value": 15475273.510000002,
+   "overdue": 1663,
    "d0_30": 205,
    "d31_90": 152,
    "d91_180": 93,
@@ -62,20 +62,20 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 92,
-   "value": 20842472.48,
+   "open": 93,
+   "value": 20852477.48,
    "overdue": 58,
-   "d0_30": 65,
+   "d0_30": 66,
    "d31_90": 22,
    "d91_180": 0,
    "d180_plus": 0,
    "never": 5
   },
   "Raymond Davidson": {
-   "open": 71,
-   "value": 2924644.0,
-   "overdue": 52,
-   "d0_30": 54,
+   "open": 73,
+   "value": 2927244.0,
+   "overdue": 55,
+   "d0_30": 56,
    "d31_90": 15,
    "d91_180": 0,
    "d180_plus": 0,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3491,
+   "open": 3492,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3491
+    "CallRail Stage": 3492
    }
   },
   "AimLogic - Visited Website": {
@@ -109,14 +109,14 @@
    }
   },
   "Default Pipeline": {
-   "open": 545,
-   "value": 36366155.70999999,
+   "open": 547,
+   "value": 36376160.70999999,
    "stages": {
     "Lead": 226,
     "Pitch": 118,
-    "Contract Review": 77,
-    "Virtual Meeting Booked": 65,
-    "Quote": 53,
+    "Contract Review": 76,
+    "Virtual Meeting Booked": 67,
+    "Quote": 54,
     "Ready To Onboard": 3,
     "Closed": 2,
     "Placement(s) Confirmed": 1
@@ -197,7 +197,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 97,
+   "days": 98,
    "never": true,
    "value": 0.0
   },
@@ -219,7 +219,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 74,
+   "days": 75,
    "never": true,
    "value": 0.0
   },
@@ -241,7 +241,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 71,
+   "days": 72,
    "never": true,
    "value": 0.0
   },
@@ -255,6 +255,17 @@
    "days": 69,
    "never": true,
    "value": 18000.0
+  },
+  {
+   "name": "KarKey",
+   "number": "23347",
+   "url": "https://app.nutshell.com/lead/23347",
+   "owner": "Bryson Stevens",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 67,
+   "never": false,
+   "value": 500000.0
   },
   {
    "name": "Kido Psychiatry",
@@ -279,17 +290,6 @@
    "value": 0.0
   },
   {
-   "name": "KarKey",
-   "number": "23347",
-   "url": "https://app.nutshell.com/lead/23347",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 66,
-   "never": false,
-   "value": 500000.0
-  },
-  {
    "name": "Empress Ambulance Services",
    "number": "22269",
    "url": "https://app.nutshell.com/lead/22269",
@@ -299,25 +299,36 @@
    "days": 61,
    "never": false,
    "value": 0.0
+  },
+  {
+   "name": "Precision Foundation Specialist Inc",
+   "number": "32042",
+   "url": "https://app.nutshell.com/lead/32042",
+   "owner": "Brenn Morrow",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 60,
+   "never": false,
+   "value": 366000.0
   }
  ],
  "stale_scope": [
   "Default Pipeline"
  ],
- "stale_scope_total": 10,
+ "stale_scope_total": 11,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1895,
+   "leads": 1881,
    "won": 274,
-   "value": 11576504.510000002
+   "value": 11586509.510000002
   },
   "organic": {
-   "leads": 296,
+   "leads": 297,
    "won": 61,
    "value": 106321139.38000001
   },
   "google": {
-   "leads": 235,
+   "leads": 236,
    "won": 52,
    "value": 105866679.24000001
   },
@@ -416,11 +427,6 @@
    "won": 0,
    "value": 0.0
   },
-  "gmb-columbus": {
-   "leads": 2,
-   "won": 0,
-   "value": 0.0
-  },
   "ai-dev.oxy.com": {
    "leads": 2,
    "won": 0,
@@ -438,6 +444,11 @@
   },
   "www.chamberofcommerce.com": {
    "leads": 2,
+   "won": 0,
+   "value": 0.0
+  },
+  "gmb-columbus": {
+   "leads": 1,
    "won": 0,
    "value": 0.0
   },
@@ -493,12 +504,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2225,
-  "with_source": 330,
-  "pct": 14.8
+  "leads": 2212,
+  "with_source": 331,
+  "pct": 15.0
  },
  "new_leads_by_week": {
-  "2026-06-15": 281,
+  "2026-06-15": 264,
   "2026-06-22": 210,
   "2026-06-29": 81,
   "2026-07-06": 118,
@@ -510,6 +521,6 @@
   "2026-08-17": 120,
   "2026-08-24": 220,
   "2026-08-31": 123,
-  "2026-09-07": 6
+  "2026-09-07": 10
  }
 }
