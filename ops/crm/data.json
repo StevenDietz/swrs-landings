@@ -1,45 +1,45 @@
 {
- "generated": "2026-09-10T14:59:16+00:00",
- "lead_count_actual": 15499,
+ "generated": "2026-09-10T19:44:33+00:00",
+ "lead_count_actual": 15510,
  "status": {
-  "cancelled": 5070,
-  "lost": 497,
-  "open": 6948,
+  "cancelled": 5073,
+  "lost": 498,
+  "open": 6955,
   "pending": 69,
   "won": 2915
  },
  "win_rate": 34.4,
  "won": 2915,
- "lost": 5567,
- "open_value": 62219139.91,
+ "lost": 5571,
+ "open_value": 62155448.91,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6948,
+  "open": 6955,
   "stale_60": 5448,
   "stale_threshold_days": 60,
-  "never_contacted": 2934,
-  "overdue": 2343
+  "never_contacted": 2935,
+  "overdue": 2344
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4313,
+   "open": 4319,
    "value": 22579583.92,
    "overdue": 408,
-   "d0_30": 249,
-   "d31_90": 633,
-   "d91_180": 377,
-   "d180_plus": 399,
-   "never": 2655
+   "d0_30": 246,
+   "d31_90": 635,
+   "d91_180": 379,
+   "d180_plus": 401,
+   "never": 2658
   },
   "Hunter Howard": {
-   "open": 2140,
-   "value": 15479073.510000002,
-   "overdue": 1664,
-   "d0_30": 202,
-   "d31_90": 146,
+   "open": 2143,
+   "value": 15485382.510000002,
+   "overdue": 1665,
+   "d0_30": 204,
+   "d31_90": 148,
    "d91_180": 100,
    "d180_plus": 1686,
-   "never": 6
+   "never": 5
   },
   "Bryson Stevens": {
    "open": 168,
@@ -62,21 +62,21 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 94,
+   "open": 95,
    "value": 20942891.48,
    "overdue": 53,
-   "d0_30": 68,
+   "d0_30": 70,
    "d31_90": 22,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 4
+   "never": 3
   },
   "Raymond Davidson": {
-   "open": 77,
-   "value": 2685791.0,
+   "open": 74,
+   "value": 2615791.0,
    "overdue": 53,
-   "d0_30": 60,
-   "d31_90": 13,
+   "d0_30": 56,
+   "d31_90": 14,
    "d91_180": 0,
    "d180_plus": 0,
    "never": 4
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3500,
+   "open": 3506,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3500
+    "CallRail Stage": 3506
    }
   },
   "AimLogic - Visited Website": {
@@ -109,11 +109,11 @@
    }
   },
   "Default Pipeline": {
-   "open": 549,
-   "value": 36041811.70999999,
+   "open": 550,
+   "value": 35978120.70999999,
    "stages": {
     "Lead": 235,
-    "Pitch": 116,
+    "Pitch": 117,
     "Contract Review": 75,
     "Virtual Meeting Booked": 63,
     "Quote": 54,
@@ -208,7 +208,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 77,
+   "days": 78,
    "never": true,
    "value": 5000.0
   },
@@ -230,7 +230,7 @@
    "owner": "Paid Media CFATX",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 75,
+   "days": 76,
    "never": true,
    "value": 0.0
   },
@@ -252,7 +252,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 71,
+   "days": 72,
    "never": true,
    "value": 18000.0
   },
@@ -296,7 +296,18 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 63,
+   "days": 64,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "JTJ Associates, Inc Care-A-Lot Preschool",
+   "number": "18495",
+   "url": "https://app.nutshell.com/lead/18495",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 62,
    "never": false,
    "value": 0.0
   },
@@ -310,17 +321,6 @@
    "days": 62,
    "never": false,
    "value": 366000.0
-  },
-  {
-   "name": "JTJ Associates, Inc Care-A-Lot Preschool",
-   "number": "18495",
-   "url": "https://app.nutshell.com/lead/18495",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 61,
-   "never": false,
-   "value": 0.0
   }
  ],
  "stale_scope": [
@@ -329,14 +329,14 @@
  "stale_scope_total": 12,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1834,
-   "won": 283,
-   "value": 11572784.510000002
+   "leads": 1813,
+   "won": 281,
+   "value": 11550352.510000002
   },
   "organic": {
    "leads": 304,
    "won": 61,
-   "value": 106486639.38000001
+   "value": 106501639.38000001
   },
   "google": {
    "leads": 236,
@@ -481,12 +481,12 @@
   "duckduckgo": {
    "leads": 1,
    "won": 0,
-   "value": 0.0
+   "value": 15000.0
   },
   "duckduckgo.com": {
    "leads": 1,
    "won": 0,
-   "value": 0.0
+   "value": 15000.0
   },
   "gmb-denver": {
    "leads": 1,
@@ -500,12 +500,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2170,
+  "leads": 2149,
   "with_source": 336,
-  "pct": 15.5
+  "pct": 15.6
  },
  "new_leads_by_week": {
-  "2026-06-15": 122,
+  "2026-06-15": 91,
   "2026-06-22": 210,
   "2026-06-29": 81,
   "2026-07-06": 118,
@@ -517,6 +517,6 @@
   "2026-08-17": 120,
   "2026-08-24": 220,
   "2026-08-31": 121,
-  "2026-09-07": 50
+  "2026-09-07": 61
  }
 }
