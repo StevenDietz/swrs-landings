@@ -1,52 +1,52 @@
 {
- "generated": "2026-09-10T19:44:33+00:00",
- "lead_count_actual": 15510,
+ "generated": "2026-09-11T15:02:24+00:00",
+ "lead_count_actual": 15525,
  "status": {
-  "cancelled": 5073,
+  "cancelled": 5075,
   "lost": 498,
-  "open": 6955,
-  "pending": 69,
-  "won": 2915
+  "open": 6965,
+  "pending": 70,
+  "won": 2917
  },
  "win_rate": 34.4,
- "won": 2915,
- "lost": 5571,
- "open_value": 62155448.91,
+ "won": 2917,
+ "lost": 5573,
+ "open_value": 62189048.91,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6955,
+  "open": 6965,
   "stale_60": 5448,
   "stale_threshold_days": 60,
-  "never_contacted": 2935,
-  "overdue": 2344
+  "never_contacted": 2940,
+  "overdue": 2351
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4319,
+   "open": 4325,
    "value": 22579583.92,
    "overdue": 408,
    "d0_30": 246,
-   "d31_90": 635,
-   "d91_180": 379,
+   "d31_90": 630,
+   "d91_180": 385,
    "d180_plus": 401,
-   "never": 2658
+   "never": 2663
   },
   "Hunter Howard": {
-   "open": 2143,
-   "value": 15485382.510000002,
-   "overdue": 1665,
-   "d0_30": 204,
-   "d31_90": 148,
+   "open": 2149,
+   "value": 15522382.510000002,
+   "overdue": 1669,
+   "d0_30": 206,
+   "d31_90": 149,
    "d91_180": 100,
-   "d180_plus": 1686,
-   "never": 5
+   "d180_plus": 1687,
+   "never": 7
   },
   "Bryson Stevens": {
    "open": 168,
    "value": 531800.0,
    "overdue": 163,
-   "d0_30": 11,
-   "d31_90": 44,
+   "d0_30": 10,
+   "d31_90": 45,
    "d91_180": 1,
    "d180_plus": 0,
    "never": 112
@@ -62,24 +62,24 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 95,
-   "value": 20942891.48,
-   "overdue": 53,
-   "d0_30": 70,
+   "open": 93,
+   "value": 20936991.48,
+   "overdue": 54,
+   "d0_30": 69,
    "d31_90": 22,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 3
+   "never": 2
   },
   "Raymond Davidson": {
    "open": 74,
-   "value": 2615791.0,
-   "overdue": 53,
+   "value": 2618291.0,
+   "overdue": 55,
    "d0_30": 56,
-   "d31_90": 14,
+   "d31_90": 15,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 4
+   "never": 3
   },
   "Paid Media CFATX": {
    "open": 2,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3506,
+   "open": 3512,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3506
+    "CallRail Stage": 3512
    }
   },
   "AimLogic - Visited Website": {
@@ -109,14 +109,14 @@
    }
   },
   "Default Pipeline": {
-   "open": 550,
-   "value": 35978120.70999999,
+   "open": 555,
+   "value": 36019620.70999999,
    "stages": {
-    "Lead": 235,
-    "Pitch": 117,
+    "Lead": 241,
+    "Pitch": 116,
     "Contract Review": 75,
-    "Virtual Meeting Booked": 63,
-    "Quote": 54,
+    "Virtual Meeting Booked": 62,
+    "Quote": 55,
     "Ready To Onboard": 3,
     "Closed": 2,
     "Placement(s) Confirmed": 1
@@ -160,10 +160,10 @@
    }
   },
   "Placements": {
-   "open": 50,
-   "value": 5595220.43,
+   "open": 49,
+   "value": 5587320.43,
    "stages": {
-    "Placements Confirmed": 27,
+    "Placements Confirmed": 26,
     "Placements Needed": 23
    }
   },
@@ -197,7 +197,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 100,
+   "days": 101,
    "never": true,
    "value": 0.0
   },
@@ -219,7 +219,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 77,
+   "days": 78,
    "never": true,
    "value": 0.0
   },
@@ -241,7 +241,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 74,
+   "days": 75,
    "never": true,
    "value": 0.0
   },
@@ -263,7 +263,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 69,
+   "days": 70,
    "never": false,
    "value": 500000.0
   },
@@ -274,7 +274,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 69,
+   "days": 70,
    "never": false,
    "value": 0.0
   },
@@ -285,7 +285,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 69,
+   "days": 70,
    "never": false,
    "value": 0.0
   },
@@ -301,6 +301,17 @@
    "value": 0.0
   },
   {
+   "name": "Precision Foundation Specialist Inc",
+   "number": "32042",
+   "url": "https://app.nutshell.com/lead/32042",
+   "owner": "Brenn Morrow",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 63,
+   "never": false,
+   "value": 366000.0
+  },
+  {
    "name": "JTJ Associates, Inc Care-A-Lot Preschool",
    "number": "18495",
    "url": "https://app.nutshell.com/lead/18495",
@@ -310,17 +321,6 @@
    "days": 62,
    "never": false,
    "value": 0.0
-  },
-  {
-   "name": "Precision Foundation Specialist Inc",
-   "number": "32042",
-   "url": "https://app.nutshell.com/lead/32042",
-   "owner": "Brenn Morrow",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 62,
-   "never": false,
-   "value": 366000.0
   }
  ],
  "stale_scope": [
@@ -329,24 +329,24 @@
  "stale_scope_total": 12,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1813,
-   "won": 281,
-   "value": 11550352.510000002
+   "leads": 1815,
+   "won": 279,
+   "value": 11505852.510000002
   },
   "organic": {
-   "leads": 304,
-   "won": 61,
-   "value": 106501639.38000001
+   "leads": 303,
+   "won": 63,
+   "value": 106504139.38000001
   },
   "google": {
-   "leads": 236,
-   "won": 52,
-   "value": 106032179.24000001
+   "leads": 235,
+   "won": 53,
+   "value": 106025179.24000001
   },
   "chatgpt.com": {
    "leads": 81,
-   "won": 10,
-   "value": 491062.0
+   "won": 11,
+   "value": 500562.0
   },
   "gmb": {
    "leads": 25,
@@ -500,12 +500,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 2149,
-  "with_source": 336,
+  "leads": 2150,
+  "with_source": 335,
   "pct": 15.6
  },
  "new_leads_by_week": {
-  "2026-06-15": 91,
+  "2026-06-15": 58,
   "2026-06-22": 210,
   "2026-06-29": 81,
   "2026-07-06": 118,
@@ -517,6 +517,6 @@
   "2026-08-17": 120,
   "2026-08-24": 220,
   "2026-08-31": 121,
-  "2026-09-07": 61
+  "2026-09-07": 76
  }
 }
