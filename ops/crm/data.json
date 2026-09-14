@@ -1,45 +1,45 @@
 {
- "generated": "2026-09-14T16:58:15+00:00",
- "lead_count_actual": 15556,
+ "generated": "2026-09-14T20:57:13+00:00",
+ "lead_count_actual": 15567,
  "status": {
   "cancelled": 5086,
-  "lost": 499,
-  "open": 6978,
+  "lost": 500,
+  "open": 6985,
   "pending": 71,
-  "won": 2922
+  "won": 2925
  },
- "win_rate": 34.3,
- "won": 2922,
- "lost": 5585,
- "open_value": 62148859.13,
+ "win_rate": 34.4,
+ "won": 2925,
+ "lost": 5586,
+ "open_value": 62112959.13,
  "avg_cycle_days": 72,
  "aging": {
-  "open": 6978,
-  "stale_60": 5590,
+  "open": 6985,
+  "stale_60": 5598,
   "stale_threshold_days": 60,
-  "never_contacted": 2950,
+  "never_contacted": 2951,
   "overdue": 2356
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4336,
+   "open": 4339,
    "value": 22579583.92,
-   "overdue": 409,
+   "overdue": 408,
    "d0_30": 242,
-   "d31_90": 622,
-   "d91_180": 395,
+   "d31_90": 614,
+   "d91_180": 403,
    "d180_plus": 405,
-   "never": 2672
+   "never": 2675
   },
   "Hunter Howard": {
-   "open": 2144,
-   "value": 15517173.510000002,
-   "overdue": 1670,
-   "d0_30": 189,
-   "d31_90": 152,
+   "open": 2148,
+   "value": 15486173.510000002,
+   "overdue": 1671,
+   "d0_30": 193,
+   "d31_90": 153,
    "d91_180": 109,
    "d180_plus": 1687,
-   "never": 7
+   "never": 6
   },
   "Bryson Stevens": {
    "open": 168,
@@ -62,20 +62,20 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 98,
-   "value": 20939810.7,
-   "overdue": 60,
+   "open": 97,
+   "value": 20934910.7,
+   "overdue": 59,
    "d0_30": 70,
    "d31_90": 25,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 3
+   "never": 2
   },
   "Raymond Davidson": {
-   "open": 76,
+   "open": 77,
    "value": 2580491.0,
-   "overdue": 52,
-   "d0_30": 52,
+   "overdue": 53,
+   "d0_30": 53,
    "d31_90": 21,
    "d91_180": 0,
    "d180_plus": 0,
@@ -94,10 +94,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3523,
+   "open": 3527,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3523
+    "CallRail Stage": 3527
    }
   },
   "AimLogic - Visited Website": {
@@ -109,13 +109,13 @@
    }
   },
   "Default Pipeline": {
-   "open": 557,
-   "value": 35979430.92999999,
+   "open": 560,
+   "value": 35943530.92999999,
    "stages": {
-    "Lead": 239,
+    "Lead": 240,
     "Pitch": 114,
     "Contract Review": 77,
-    "Virtual Meeting Booked": 66,
+    "Virtual Meeting Booked": 68,
     "Quote": 55,
     "Ready To Onboard": 3,
     "Closed": 2,
@@ -252,9 +252,31 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 75,
+   "days": 76,
    "never": true,
    "value": 18000.0
+  },
+  {
+   "name": "Kido Psychiatry",
+   "number": "31244",
+   "url": "https://app.nutshell.com/lead/31244",
+   "owner": "Brenn Morrow",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 74,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "SpeedyDollar",
+   "number": "33390",
+   "url": "https://app.nutshell.com/lead/33390",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 74,
+   "never": false,
+   "value": 0.0
   },
   {
    "name": "KarKey",
@@ -268,35 +290,24 @@
    "value": 500000.0
   },
   {
-   "name": "Kido Psychiatry",
-   "number": "31244",
-   "url": "https://app.nutshell.com/lead/31244",
-   "owner": "Brenn Morrow",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 73,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "SpeedyDollar",
-   "number": "33390",
-   "url": "https://app.nutshell.com/lead/33390",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 73,
-   "never": false,
-   "value": 0.0
-  },
-  {
    "name": "Empress Ambulance Services",
    "number": "22269",
    "url": "https://app.nutshell.com/lead/22269",
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 67,
+   "days": 68,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "JTJ Associates, Inc Care-A-Lot Preschool",
+   "number": "18495",
+   "url": "https://app.nutshell.com/lead/18495",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 66,
    "never": false,
    "value": 0.0
   },
@@ -310,17 +321,6 @@
    "days": 66,
    "never": false,
    "value": 366000.0
-  },
-  {
-   "name": "JTJ Associates, Inc Care-A-Lot Preschool",
-   "number": "18495",
-   "url": "https://app.nutshell.com/lead/18495",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 65,
-   "never": false,
-   "value": 0.0
   },
   {
    "name": "It\u2019s not a company, my fianc\u00e9e owes a house and he rents it",
@@ -1203,6 +1203,17 @@
    "value": 0.0
   },
   {
+   "name": "AB Rental Properties",
+   "number": "32430",
+   "url": "https://app.nutshell.com/lead/32430",
+   "owner": "Brenn Morrow",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 61,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "Comerica Bank",
    "number": "32436",
    "url": "https://app.nutshell.com/lead/32436",
@@ -1272,6 +1283,17 @@
    "name": "FLiiP",
    "number": "17351",
    "url": "https://app.nutshell.com/lead/17351",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 60,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "FoxBridge Solution LLC",
+   "number": "17411",
+   "url": "https://app.nutshell.com/lead/17411",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
@@ -1423,10 +1445,10 @@
    "value": 0.0
   },
   {
-   "name": "AB Rental Properties",
-   "number": "32430",
-   "url": "https://app.nutshell.com/lead/32430",
-   "owner": "Brenn Morrow",
+   "name": "Diamond Door Realty",
+   "number": "28704",
+   "url": "https://app.nutshell.com/lead/28704",
+   "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
    "days": 60,
@@ -1459,22 +1481,22 @@
  "stale_scope": [
   "Default Pipeline"
  ],
- "stale_scope_total": 115,
+ "stale_scope_total": 117,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1624,
-   "won": 236,
-   "value": 11362852.510000002
+   "leads": 1613,
+   "won": 238,
+   "value": 11352852.510000002
   },
   "organic": {
-   "leads": 300,
+   "leads": 297,
    "won": 64,
    "value": 105878555.52000001
   },
   "google": {
-   "leads": 231,
+   "leads": 227,
    "won": 54,
-   "value": 105149595.38000001
+   "value": 105069595.38000001
   },
   "chatgpt.com": {
    "leads": 79,
@@ -1487,22 +1509,22 @@
    "value": 176400.0
   },
   "bing": {
-   "leads": 21,
+   "leads": 20,
    "won": 3,
    "value": 342446.88
   },
   "cpc": {
-   "leads": 11,
+   "leads": 9,
    "won": 2,
-   "value": 169741.0
+   "value": 89741.0
   },
   "brand": {
-   "leads": 11,
+   "leads": 9,
    "won": 2,
-   "value": 169741.0
+   "value": 89741.0
   },
   "southwest recovery services": {
-   "leads": 9,
+   "leads": 8,
    "won": 2,
    "value": 89741.0
   },
@@ -1601,11 +1623,6 @@
    "won": 0,
    "value": 0.0
   },
-  "southwest recovery collection agency": {
-   "leads": 1,
-   "won": 0,
-   "value": 80000.0
-  },
   "Website": {
    "leads": 1,
    "won": 0,
@@ -1633,12 +1650,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 1954,
-  "with_source": 330,
-  "pct": 16.9
+  "leads": 1938,
+  "with_source": 325,
+  "pct": 16.8
  },
  "new_leads_by_week": {
-  "2026-06-22": 188,
+  "2026-06-22": 174,
   "2026-06-29": 81,
   "2026-07-06": 118,
   "2026-07-13": 226,
@@ -1650,6 +1667,6 @@
   "2026-08-24": 220,
   "2026-08-31": 121,
   "2026-09-07": 96,
-  "2026-09-14": 11
+  "2026-09-14": 22
  }
 }
