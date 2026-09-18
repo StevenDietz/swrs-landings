@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Go Logistics — Collection Status &amp; Recovery Benchmark Report</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700&display=swap');
+:root{--navy:#070731;--pnavy:#070B97;--blue:#0446F1;--sky:#0495F1;--light:#82CCFA;--slate:#3D3D52;--body:#26303B;--hair:#D9DEE3;--green:#1F9D55;--amber:#B8790A;--red:#C0392B;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Fira Sans',sans-serif;color:var(--body);line-height:1.6;background:#eef2f7;-webkit-font-smoothing:antialiased}
+.page{max-width:920px;margin:0 auto;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.wrap{padding:0 clamp(20px,5vw,56px)}
+header{padding:clamp(24px,5vw,44px) clamp(20px,5vw,56px) 0}
+.topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;border-bottom:2px solid var(--sky);padding-bottom:18px}
+.topbar img{width:210px;max-width:52vw}
+.eyebrow{color:var(--sky);font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-align:right;line-height:1.4;padding-top:6px}
+h1{color:var(--navy);font-size:clamp(1.6rem,4.5vw,2.3rem);font-weight:700;margin:26px 0 4px;letter-spacing:-.01em}
+.sub{color:var(--pnavy);font-style:italic;font-size:clamp(1.05rem,2.5vw,1.25rem);margin-bottom:18px}
+.meta{font-size:.82rem;color:var(--slate);margin-bottom:5px}.meta b{color:var(--navy);font-weight:500}
+.src{font-size:.72rem;color:var(--slate);margin-top:10px;padding-top:10px;border-top:1px solid var(--hair);line-height:1.5}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:28px 0}
+.kpi{border:1px solid var(--hair);border-left:4px solid var(--blue);border-radius:7px;padding:14px 16px;background:linear-gradient(180deg,#f8fbff,#fff)}
+.kpi.g{border-left-color:var(--green)}.kpi.g .n{color:var(--green)}
+.kpi.a{border-left-color:var(--amber)}.kpi.a .n{color:var(--amber)}
+.kpi.r{border-left-color:var(--red)}.kpi.r .n{color:var(--red)}
+.kpi .n{font-size:clamp(1.35rem,3.5vw,1.7rem);font-weight:700;color:var(--pnavy);line-height:1.1}
+.kpi .l{font-size:.66rem;color:var(--slate);text-transform:uppercase;letter-spacing:.05em;margin-top:5px;font-weight:500}
+.toc{background:#f8fbff;border:1px solid var(--hair);border-radius:8px;padding:18px 22px;margin:26px 0}
+.toc h4{color:var(--navy);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.toc ol{margin-left:18px;columns:2;column-gap:32px}
+.toc li{margin:5px 0;font-size:.9rem}
+.toc a{color:var(--blue);text-decoration:none}.toc a:hover{text-decoration:underline}
+section{padding:8px 0 4px}
+h2{color:var(--blue);font-size:clamp(1.15rem,3vw,1.45rem);font-weight:700;margin:40px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--hair);display:flex;align-items:baseline;gap:10px;scroll-margin-top:12px}
+h2 .num{color:var(--light);font-size:1.4em;font-weight:700}
+h3{color:var(--navy);font-size:1.02rem;font-weight:700;margin:24px 0 8px}
+h4.rlbl{color:var(--pnavy);font-size:.92rem;font-weight:700;margin:18px 0 6px}
+p{margin:12px 0}
+.box{background:#EEF5FE;border-left:4px solid var(--blue);border-radius:0 6px 6px 0;padding:16px 20px;margin:20px 0;font-size:.94rem}
+.box b{color:var(--blue)}
+.box.amber{background:#FCF4E4;border-left-color:var(--amber)}.box.amber b{color:var(--amber)}
+.box.green{background:#EAF7EF;border-left-color:var(--green)}.box.green b{color:var(--green)}
+.box.red{background:#FBEDEB;border-left-color:var(--red)}.box.red b{color:var(--red)}
+.box ul{margin:10px 0 2px 4px}
+ul.dset{margin:12px 0 12px 20px}ul.dset li{margin:9px 0}
+.tbl-wrap{overflow-x:auto;margin:16px 0;-webkit-overflow-scrolling:touch;border:1px solid var(--hair);border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:520px}
+thead th{background:var(--navy);color:#fff;font-weight:500;text-align:left;padding:10px 12px;font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+th.r,td.r{text-align:right}th.c,td.c{text-align:center}
+tbody td{padding:9px 12px;border-bottom:1px solid #EDF1F5;font-variant-numeric:tabular-nums;vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:#FafBfd}
+tr.dup td{color:#9AA3AD;font-style:italic}
+tr.hl{background:#EEF5FE!important}tr.hl td{font-weight:700}
+tfoot td{font-weight:700;border-top:2px solid var(--navy);background:#F2F6FB;padding:10px 12px;font-variant-numeric:tabular-nums}
+tfoot td.r{text-align:right}
+td.mono{font-family:ui-monospace,monospace;font-size:.78rem}
+td.gap{font-size:.82rem;line-height:1.45}
+td.cite2{font-size:.7rem;color:var(--slate);font-style:italic;white-space:normal}
+.badge{display:inline-block;color:#fff;padding:3px 9px;border-radius:11px;font-size:.64rem;font-weight:700;white-space:nowrap;letter-spacing:.02em}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:middle}
+.curve-tbl table{min-width:0}
+.note{font-size:.72rem;color:var(--slate);margin-top:8px;font-style:italic;line-height:1.5}
+.cite{font-size:.72rem;color:var(--slate);font-style:italic;margin:4px 0 14px}
+.shrink-tbl table{min-width:0;max-width:320px}
+.reflist{columns:2;column-gap:34px;margin:10px 0 0 18px}.reflist li{margin:6px 0;font-size:.82rem;break-inside:avoid}
+.cavlist{margin:10px 0 0 18px}.cavlist li{margin:8px 0;font-size:.82rem;color:var(--slate)}
+footer{margin-top:44px;padding:22px clamp(20px,5vw,56px) 34px;border-top:1px solid var(--hair);background:#fafbfd}
+.foot-note{font-size:.72rem;color:var(--slate);line-height:1.6}
+.foot-brand{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.foot-brand .co{font-weight:700;color:var(--navy);font-size:.9rem}
+.foot-brand .contact{font-size:.76rem;color:var(--slate);text-align:right}
+.confidential{display:inline-block;background:var(--navy);color:#fff;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 11px;border-radius:4px;font-weight:500;margin-bottom:16px}
+.backtop{font-size:.7rem;color:var(--slate);text-decoration:none;float:right;margin-top:-6px}.backtop:hover{color:var(--blue)}
+@media print{body{background:#fff}.page{box-shadow:none;max-width:100%}.tbl-wrap{overflow:visible;border:none}table{min-width:0}h2{page-break-after:avoid}tr{page-break-inside:avoid}.box{page-break-inside:avoid}.toc{page-break-inside:avoid}.reflist,.toc ol{columns:1}}
+@media(max-width:560px){table{font-size:.76rem}.kpi .n{font-size:1.3rem}.toc ol,.reflist{columns:1}}
+
+.tag-list{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="topbar">
+    <div class="wordmark" style="font-family:'Fira Sans',sans-serif;font-weight:700;font-size:1.3rem;color:var(--navy);letter-spacing:-.01em;padding-top:4px">
+      SOUTHWEST<span style="color:var(--sky)">.</span> <span style="font-weight:400;color:var(--slate);font-size:.85rem;display:block;letter-spacing:.08em;text-transform:uppercase;margin-top:2px">Recovery Services</span>
+    </div>
+    <div class="eyebrow">Collection Status &amp;<br>Recovery Benchmark Report</div>
+  </div>
+  <h1>Go Logistics — Placement Status Review</h1>
+  <div class="sub">Why the placed balance hasn't moved, and what would change that</div>
+  <div class="meta"><b>Prepared for:</b> Sarah Hovren, Go Logistics LLC</div>
+  <div class="meta"><b>Prepared by:</b> Southwest Recovery Services, LLC</div>
+  <div class="meta"><b>Report date:</b> September 17, 2026</div>
+</header>
+<div class="wrap">
+
+<div class="toc">
+  <h4>Contents</h4>
+  <ol>
+    <li><a href="#s1">Portfolio Status</a></li>
+    <li><a href="#s2">Why These Accounts Haven't Collected</a></li>
+    <li><a href="#s3">Full Account Detail</a></li>
+    <li><a href="#s4">Industry Benchmark Context</a></li>
+    <li><a href="#s5">Recommended Next Steps</a></li>
+    <li><a href="#s6">Sources &amp; Methodology</a></li>
+  </ol>
+</div>
+
+<section id="s1">
+<h2><span class="num">1.</span> Portfolio Status</h2>
+<p>Go Logistics has one active placement with SWRS, totaling <b>$16,976.00</b>, tracked across six
+account records: the original placement (360 Health Services) and five billing-alias entities that
+trace to the same operation (see Section 2). None have been paid to date. This is not six separate
+client relationships going unworked — it is one contested, actively-pursued matter.</p>
+<div class="kpis">
+  <div class="kpi"><div class="n">1</div><div class="l">Debtor Relationship</div></div>
+  <div class="kpi"><div class="n">$16,976</div><div class="l">Total Placed</div></div>
+  <div class="kpi r"><div class="n">$16,976</div><div class="l">Open Balance</div></div>
+  <div class="kpi r"><div class="n">$0</div><div class="l">Collected To Date</div></div>
+  <div class="kpi a"><div class="n">8.9 mo</div><div class="l">Avg. Age at Placement</div></div>
+  <div class="kpi a"><div class="n">~38%</div><div class="l">Expected Collectability at Placement*</div></div>
+</div>
+<p class="note">*Dollar-weighted, from the standard industry age-of-debt collectability curve (Section 4) —
+this is what a typical account with this pre-placement age would be expected to recover, before any
+collection work begins. It is a benchmark, not a guarantee.</p>
+</section>
+
+<section id="s2">
+<h2><span class="num">2.</span> Why This Balance Hasn't Collected</h2>
+
+<div class="box amber">
+<b>This is one debtor relationship, not six separate businesses.</b>
+<p>All $16,976.00 placed traces back to a single operation, originally placed as
+<b>360 Health Services</b> ($8,488.00) on 12/22/2025. SWRS worked it hard from day one:
+more than <b>20 phone contact attempts</b> to five named individuals identified as owners or officers
+(the listed owner, a CFO, a co-owner, a former CEO, and a warehouse employee), <b>4 formal collection
+letters</b>, and validation/workflow emails — all inside the first three months. By March 2026, every
+direct phone number on file had gone dead or was disclaimed by whoever answered.</p>
+</div>
+
+<div class="box">
+<b>The account was reorganized to reach the money through its billing entities instead.</b>
+<p>On 03/17/2026, with the direct contact channel exhausted, the collector split the claim into five
+billing-alias sub-accounts that trace to the same operation — <b>VRC Medical Services, Astor
+Pharmaceuticals, Revive Med Pharmaceuticals, Integrity Compounding Pharmacy, and IV Nutrition</b>
+($8,488.00 combined) — to pursue each one's own accounts-payable contact directly rather than
+the individuals who'd stopped responding. Since then, SWRS has sent direct email outreach to these
+entities on an ongoing basis, including <b>six separate emails in the last two weeks alone</b>, most
+recently yesterday (9/16). No response or payment has come back on any of the five.</p>
+</div>
+
+<div class="box red">
+<b>Bottom line: this looks like an evasive debtor, not an under-worked file or a legal stop.</b>
+<p>The pattern — good-looking contacts who deny association once reached, phone numbers that go dead
+in bulk, and the same underlying operation billing under at least five different names — is more
+consistent with a debtor working to avoid collection than with a routine aging problem. It also means
+there's a live next step: fresh accounts-payable phone numbers are on file for all five billing
+entities and <b>have not yet actually been dialed</b> — outreach so far has been email-only. Steven can
+speak to whether SWRS should try that channel, or whether this has crossed the line into a legal
+referral / skip-trace situation given the pattern.</p>
+</div>
+
+<div class="box">
+<b>Separately, placement timing is still worth flagging.</b>
+<p>The dollar-weighted average age at placement — from original invoice date to the date SWRS received
+the file — was <b>8.9 months</b>. Industry data (Section 4) puts collectability at roughly 88.7%
+when placed within 30 days, falling to 37–51% by the 6–9 month mark. This particular account may have
+been headed for a difficult collection regardless of timing, but as a general practice, referring
+receivables to SWRS sooner after they go past due improves the odds on every future placement,
+independent of this specific situation.</p>
+</div>
+</section>
+
+<section id="s3">
+<h2><span class="num">3.</span> Full Account Detail</h2>
+<div class="tbl-wrap">
+<table>
+<thead><tr>
+  <th>Debtor / Billing Entity</th><th>AGYID</th><th class="r">Placed</th><th class="r">Balance</th>
+  <th class="c">Status</th><th class="c">Referral (DOR)</th><th class="c">Placed w/ SWRS (DOA)</th>
+  <th class="c">Age at Placement</th><th class="c">Activity Count</th>
+</tr></thead>
+<tbody>
+<tr>
+      <td>360 Health Services (parent account)<br><span style="font-size:.7rem;color:var(--slate);font-style:italic">Original placement</span></td>
+      <td class="mono">SWRS577264</td>
+      <td class="r">$8,488.00</td>
+      <td class="r">$8,488.00</td>
+      <td class="c"><span class="badge" style="background:var(--blue)">Active</span></td>
+      <td class="c">04/01/2025</td>
+      <td class="c">12/22/2025</td>
+      <td class="c">8.7 mo</td>
+      <td class="c">135</td>
+    </tr><tr>
+      <td>Astor Pharmaceuticals LLC<br><span style="font-size:.7rem;color:var(--slate);font-style:italic">Billing alias, same operation</span></td>
+      <td class="mono">SWRS620004</td>
+      <td class="r">$4,525.00</td>
+      <td class="r">$4,525.00</td>
+      <td class="c"><span class="badge" style="background:var(--amber)">Letter Hold</span></td>
+      <td class="c">06/01/2025</td>
+      <td class="c">03/17/2026</td>
+      <td class="c">9.5 mo</td>
+      <td class="c">2</td>
+    </tr><tr>
+      <td>Revive Med Pharmaceuticals LLC<br><span style="font-size:.7rem;color:var(--slate);font-style:italic">Billing alias, same operation</span></td>
+      <td class="mono">SWRS620008</td>
+      <td class="r">$1,700.00</td>
+      <td class="r">$1,700.00</td>
+      <td class="c"><span class="badge" style="background:var(--amber)">Letter Hold</span></td>
+      <td class="c">07/09/2025</td>
+      <td class="c">03/17/2026</td>
+      <td class="c">8.2 mo</td>
+      <td class="c">2</td>
+    </tr><tr>
+      <td>VRC Medical Services<br><span style="font-size:.7rem;color:var(--slate);font-style:italic">Billing alias, same operation</span></td>
+      <td class="mono">SWRS620006</td>
+      <td class="r">$1,100.00</td>
+      <td class="r">$1,100.00</td>
+      <td class="c"><span class="badge" style="background:var(--amber)">Letter Hold</span></td>
+      <td class="c">05/17/2025</td>
+      <td class="c">03/17/2026</td>
+      <td class="c">10.0 mo</td>
+      <td class="c">2</td>
+    </tr><tr>
+      <td>Integrity Compounding Pharmacy<br><span style="font-size:.7rem;color:var(--slate);font-style:italic">Billing alias, same operation</span></td>
+      <td class="mono">SWRS620007</td>
+      <td class="r">$788.00</td>
+      <td class="r">$788.00</td>
+      <td class="c"><span class="badge" style="background:var(--amber)">Letter Hold</span></td>
+      <td class="c">06/24/2025</td>
+      <td class="c">03/17/2026</td>
+      <td class="c">8.7 mo</td>
+      <td class="c">2</td>
+    </tr><tr>
+      <td>IV Nutrition<br><span style="font-size:.7rem;color:var(--slate);font-style:italic">Billing alias, same operation</span></td>
+      <td class="mono">SWRS620005</td>
+      <td class="r">$375.00</td>
+      <td class="r">$375.00</td>
+      <td class="c"><span class="badge" style="background:var(--amber)">Letter Hold</span></td>
+      <td class="c">07/03/2025</td>
+      <td class="c">03/17/2026</td>
+      <td class="c">8.4 mo</td>
+      <td class="c">2</td>
+    </tr>
+</tbody>
+<tfoot>
+<tr><td colspan="2">Total</td><td class="r">$16,976.00</td><td class="r">$16,976.00</td>
+<td colspan="5"></td></tr>
+</tfoot>
+</table>
+</div>
+<p class="note">All six rows are the same underlying debtor relationship. "Activity Count" reflects
+notes logged directly against that AGYID; ongoing outreach to the five billing-alias entities (created
+03/17/2026) is logged under the parent account (SWRS577264) since it targets the same operation's
+contacts. See Section 2 for the full timeline.</p>
+</section>
+
+<section id="s4">
+<h2><span class="num">4.</span> Industry Benchmark Context</h2>
+<p>The figures below are the standard commercial-collections industry references SWRS uses to frame
+every client status report — they are general industry data, not numbers specific to Go Logistics.</p>
+
+<h3>Collectability by age at placement (Commercial Collection Agencies of America)</h3>
+<div class="tbl-wrap curve-tbl">
+<table>
+<thead><tr><th>Age when placed</th><th class="c">Collectability</th></tr></thead>
+<tbody>
+<tr><td>1 month</td><td class="c">88.7%</td></tr>
+<tr><td>3 months</td><td class="c">68.9%</td></tr>
+<tr><td>6 months</td><td class="c">51.3%</td></tr>
+<tr><td>9 months</td><td class="c">37.5%</td></tr>
+<tr><td>12 months</td><td class="c">21.4%</td></tr>
+<tr><td>18 months</td><td class="c">15.2%</td></tr>
+<tr><td>24 months</td><td class="c">8.9%</td></tr>
+</tbody>
+</table>
+</div>
+<p class="cite">Source: Commercial Collection Agencies of America, published in the Credit Research
+Foundation's "Benchmarking the Collectability of Your Accounts Receivable" (Nancy Seiverd).</p>
+
+<p>Corroborating data points from other industry sources:</p>
+<ul class="dset">
+<li>Dun &amp; Bradstreet: an account 90 days past due has a 69.6% chance of being paid; 52.1% at six
+months; 22.8% at one year.</li>
+<li>The Kaplan Group / Commercial Law League of America: industry success rate falls to 50% at only
+seven months past due, with write-off likelihood rising roughly 1% per additional week past due.</li>
+<li>Right-party-contact (RPC) rate industry-wide averages roughly 26% — meaning a large share of
+outbound collection contact never reaches the person who can actually authorize payment. This is the
+most common explanation for high activity with no payment, as with 360 Health Services above.</li>
+<li>Commercial (B2B) recovery generally runs 30–70% when accounts are fresh and well-documented, versus
+consumer-adjacent categories like healthcare billing, which typically run lower (15–25%) due to disputes
+and longer payment cycles — relevant here since all six debtors are healthcare/pharmacy accounts.</li>
+</ul>
+
+<div class="box">
+<b>A note on this book specifically:</b>
+<p>A side-by-side comparison against other SWRS clients in the same trade (the standard "peer benchmark"
+section of this report) was not run this cycle — it requires a current book-wide yield pull that wasn't
+available for this turnaround. Happy to add it as a follow-up if useful.</p>
+</div>
+</section>
+
+<section id="s5">
+<h2><span class="num">5.</span> Recommended Next Steps</h2>
+<ul class="dset">
+<li><b>Try the untried phone channel first.</b> Fresh accounts-payable numbers are on file for all five
+billing entities (Astor, Revive Med, VRC Medical, Integrity Compounding, IV Nutrition) and have not yet
+actually been dialed — outreach to them so far has been email-only. That's a live, low-cost next step
+before escalating further.</li>
+<li><b>If that doesn't move it, this is a legal-referral / skip-trace conversation.</b> The pattern here
+— disconnected numbers across multiple contacts, denial of association, and one operation billing under
+several names — is the kind of situation where a formal legal demand or entity investigation typically
+does more than continued collector calling. Steven can walk through what that would look like against a
+$16,976 balance.</li>
+<li><b>If Go Logistics has any updated contact</b> (a billing manager, a working number, or documentation
+supporting the charge) that SWRS hasn't tried, sending it over directly would help target the next round
+of outreach.</li>
+<li><b>Going forward, on new placements:</b> the highest-leverage change available industry-wide is
+placing receivables sooner — files referred at 30–90 days past due collect meaningfully better than
+files aged several months, independent of everything else in this report.</li>
+</ul>
+</section>
+
+<section id="s6">
+<h2><span class="num">6.</span> Sources &amp; Methodology</h2>
+<p>Account balances, status, dates of referral/assignment, and activity counts are pulled directly from
+SWRS's internal collection system (ADS) as of September 17, 2026. "Age at placement" is the number of days
+between the invoice/referral date (DOR) and the date SWRS was assigned the account (DOA). "Expected
+collectability at placement" applies the CCA of A age-of-debt curve above to each account's age at
+placement, weighted by dollar amount, and represents a benchmark expectation — not a guarantee or a
+measure of SWRS's own performance on the file.</p>
+<p class="cite">Sources: Commercial Collection Agencies of America (CCA of A); Credit Research
+Foundation, "Benchmarking the Collectability of Your Accounts Receivable"; Dun &amp; Bradstreet,
+"Data-Driven Accounts Collections"; The Kaplan Group / Commercial Law League of America; DROS.ai,
+NCRi — right-party-contact data; Moveo.ai / Tratta.io — B2B vs. consumer recovery bands.</p>
+<div class="src">Southwest Recovery Services, LLC &middot; 16200 Addison Rd #260, Addison, TX 75001
+&middot; (214) 387-8068 &middot; This communication is from a debt collector regarding the status of
+accounts your company placed for collection; it is not an attempt to collect a debt from the recipient.</div>
+</div>
+</div>
+</body>
+</html>
