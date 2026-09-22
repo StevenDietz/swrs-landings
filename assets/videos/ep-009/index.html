@@ -68,20 +68,29 @@
   Providing Creative Solutions to Common Problems
 </footer>
 <script>
-/* 2026-09-22: the vendor poster images have a play button DRAWN INTO them, so
-   viewers click the picture of a button and nothing happens - the only working
-   control was the small play icon in the native control bar. Make the whole
-   frame click-to-play/pause. Native controls still work as before. */
+/* 2026-09-22 (v2): click-to-play.
+   v1 was broken: it listened in the CAPTURE phase, so clicking the NATIVE play
+   control fired this handler first (play) and then the browser's own control
+   (pause) - the video appeared to do nothing at all. Fixes:
+     - bubble phase, not capture
+     - ignore the whole native control strip (bottom 80px, not 45)
+     - only ever START playback from a click on the picture; never pause,
+       so a double-fire can't cancel itself
+     - do nothing once the video has started; native controls own it from there */
 (function(){
   document.addEventListener('click', function(e){
     var v = e.target;
     if (!v || v.tagName !== 'VIDEO') return;
+    if (!v.paused) return;                       // already playing: leave it to native controls
     var r = v.getBoundingClientRect();
-    if (e.clientY > r.bottom - 45) return;   /* leave the control bar alone */
-    if (v.paused) { v.play().catch(function(){}); } else { v.pause(); }
-  }, true);
-  document.addEventListener('DOMContentLoaded', function(){
-    document.querySelectorAll('video').forEach(function(v){ v.style.cursor='pointer'; });
+    if (e.clientY > r.bottom - 80) return;       // native control strip
+    v.play().catch(function(){});
+  }, false);
+  window.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('video').forEach(function(v){
+      v.style.cursor = 'pointer';
+      if (v.getAttribute('preload') === 'none') v.setAttribute('preload','metadata');
+    });
   });
 })();
 </script>
