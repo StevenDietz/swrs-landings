@@ -69,5 +69,23 @@
   <a href="tel:8668373065">866-837-3065</a> &middot; <a href="mailto:info@swrecovery.com">info@swrecovery.com</a> &middot; Mon–Fri, 8 AM – 5 PM CT<br>
   Providing Creative Solutions to Common Problems
 </footer>
+<script>
+/* 2026-09-22: the vendor poster images have a play button DRAWN INTO them, so
+   viewers click the picture of a button and nothing happens - the only working
+   control was the small play icon in the native control bar. Make the whole
+   frame click-to-play/pause. Native controls still work as before. */
+(function(){
+  document.addEventListener('click', function(e){
+    var v = e.target;
+    if (!v || v.tagName !== 'VIDEO') return;
+    var r = v.getBoundingClientRect();
+    if (e.clientY > r.bottom - 45) return;   /* leave the control bar alone */
+    if (v.paused) { v.play().catch(function(){}); } else { v.pause(); }
+  }, true);
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('video').forEach(function(v){ v.style.cursor='pointer'; });
+  });
+})();
+</script>
 </body>
 </html>
