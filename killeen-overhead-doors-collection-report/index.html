@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Killeen Overhead Doors — Activity &amp; Collection Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:#070731; --pnavy:#070B97; --pblue:#0446F1; --sky:#0495F1; --lblue:#82CCFA;
+    --slate:#3D3D52; --hair:#D9DEE3; --bg:#f5f7fb; --card:#ffffff; --red:#C0392B; --green:#1E8E5A;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Fira Sans', sans-serif; margin:0; background:var(--bg); color:var(--navy);
+    -webkit-text-size-adjust:100%;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#0d0f1a; --card:#161a2b; --navy:#eef1fa; --hair:#2a2f45; }
+    :root:not([data-theme="light"]) body { color:#eef1fa; }
+  }
+  :root[data-theme="dark"] { --bg:#0d0f1a; --card:#161a2b; --navy:#eef1fa; --hair:#2a2f45; }
+
+  header.top {
+    background:linear-gradient(135deg,var(--navy),var(--pnavy) 60%,var(--pblue));
+    color:#fff; padding:28px 20px 24px; padding-top:calc(28px + env(safe-area-inset-top,0px));
+  }
+  header.top .eyebrow { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--lblue); font-weight:600; }
+  header.top h1 { margin:6px 0 4px; font-size:26px; font-weight:700; }
+  header.top .meta { font-size:13px; color:#c7d6f5; font-weight:300; }
+
+  .wrap { max-width:1080px; margin:0 auto; padding:20px 16px 60px; }
+
+  .flag-alert {
+    background:#fcece9; border:1px solid var(--red); border-left:5px solid var(--red);
+    border-radius:8px; padding:16px 18px; margin:20px 0; color:#7a2015;
+  }
+  :root:not([data-theme="light"]) .flag-alert { background:#2b1512; color:#f5b8ac; }
+  .flag-alert .fhead { font-weight:700; font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:var(--red); margin-bottom:6px; }
+  .flag-alert p { margin:6px 0; font-size:14px; line-height:1.5; }
+  .flag-alert code { background:rgba(0,0,0,.06); padding:1px 5px; border-radius:4px; font-size:12.5px; }
+
+  .kpi-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:22px 0; }
+  .kpi { background:var(--card); border:1px solid var(--hair); border-radius:10px; padding:14px 16px; }
+  .kpi .lbl { font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--slate); font-weight:600; }
+  .kpi .val { font-size:22px; font-weight:700; color:var(--pnavy); margin-top:4px; display:block; }
+  :root:not([data-theme="light"]) .kpi .val { color:var(--lblue); }
+
+  h2.sec { font-size:18px; font-weight:700; color:var(--pnavy); border-bottom:2px solid var(--sky); padding-bottom:6px; margin:34px 0 14px; }
+  :root:not([data-theme="light"]) h2.sec { color:var(--lblue); }
+
+  table.summary { width:100%; border-collapse:collapse; background:var(--card); border-radius:10px; overflow:hidden; font-size:13px; }
+  table.summary th { background:var(--navy); color:#fff; text-align:left; padding:9px 10px; font-weight:600; font-size:11.5px; text-transform:uppercase; letter-spacing:.03em; }
+  table.summary td { padding:9px 10px; border-bottom:1px solid var(--hair); vertical-align:top; }
+  table.summary tr:last-child td { border-bottom:none; }
+  .num { text-align:right; font-variant-numeric:tabular-nums; }
+  .mono { font-family:ui-monospace,'SFMono-Regular',Menlo,monospace; font-size:12px; }
+  .sub { font-size:11px; color:var(--slate); }
+  .table-scroll { overflow-x:auto; }
+
+  .badge { display:inline-block; padding:2px 9px; border-radius:99px; font-size:11.5px; font-weight:600; white-space:nowrap; }
+
+  .acct-card { background:var(--card); border:1px solid var(--hair); border-radius:10px; margin-bottom:10px; overflow:hidden; }
+  .acct-card summary { cursor:pointer; list-style:none; padding:14px 16px; }
+  .acct-card summary::-webkit-details-marker { display:none; }
+  .acct-summary { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .agyid { color:var(--slate); font-size:12px; }
+  .debtor-name { font-weight:700; font-size:15px; flex:1; min-width:140px; }
+  .bal { font-weight:700; color:var(--pblue); font-size:13px; }
+  :root:not([data-theme="light"]) .bal { color:var(--sky); }
+  .chev { color:var(--slate); transition:transform .15s; }
+  details[open] .chev { transform:rotate(180deg); }
+  .acct-body { padding:0 16px 18px; border-top:1px solid var(--hair); }
+
+  .flagbox { background:#fcece9; border:1px solid var(--red); border-radius:6px; padding:10px 12px; font-size:13px; color:#7a2015; margin:12px 0; }
+  :root:not([data-theme="light"]) .flagbox { background:#2b1512; color:#f5b8ac; }
+
+  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:14px 0; }
+  .stat-grid > div { display:flex; flex-direction:column; }
+  .stat-grid .lbl { font-size:10.5px; text-transform:uppercase; color:var(--slate); letter-spacing:.04em; }
+  .stat-grid .val { font-size:14px; font-weight:600; }
+
+  h4 { font-size:12.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--pblue); margin:18px 0 8px; }
+  :root:not([data-theme="light"]) h4 { color:var(--sky); }
+
+  table.mini { width:100%; border-collapse:collapse; font-size:12.5px; }
+  table.mini th { text-align:left; padding:6px 8px; background:var(--bg); font-weight:600; color:var(--slate); font-size:10.5px; text-transform:uppercase; }
+  table.mini td { padding:6px 8px; border-bottom:1px solid var(--hair); }
+
+  .sess-log { max-height:420px; overflow-y:auto; border:1px solid var(--hair); border-radius:8px; padding:4px 0; background:var(--bg); }
+  .sess { display:flex; gap:10px; padding:6px 12px; font-size:12.5px; border-bottom:1px solid var(--hair); }
+  .sess:last-child { border-bottom:none; }
+  .ts { flex:0 0 140px; color:var(--slate); font-family:ui-monospace,monospace; font-size:11px; padding-top:1px; }
+  .sesstxt { flex:1; line-height:1.4; }
+
+  footer { text-align:center; font-size:11.5px; color:var(--slate); margin-top:40px; padding-bottom:20px; }
+
+  @media (max-width:600px) {
+    header.top h1 { font-size:21px; }
+    .kpi .val { font-size:19px; }
+    table.summary { font-size:11.5px; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="padding:0;">
+    <div class="eyebrow">Southwest Recovery Services · Client Collection Activity Report</div>
+    <h1>Killeen Overhead Doors — Detailed Activity &amp; Collection Report</h1>
+    <div class="meta">Prepared for: Laurie Luster &nbsp;·&nbsp; Report generated 9/25/2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h2 class="sec">Portfolio Status</h2>
+  <div class="kpi-row">
+    <div class="kpi"><span class="lbl">Accounts Placed</span><span class="val">9</span></div>
+    <div class="kpi"><span class="lbl">Total Placed</span><span class="val">$21,326.65</span></div>
+    <div class="kpi"><span class="lbl">Collected</span><span class="val" style="color:var(--green)">$7,244.63</span></div>
+    <div class="kpi"><span class="lbl">Open Balance</span><span class="val">$14,082.02</span></div>
+    <div class="kpi"><span class="lbl">Liquidation</span><span class="val">34.0%</span></div>
+    <div class="kpi"><span class="lbl">Total Notes Logged</span><span class="val">841</span></div>
+  </div>
+  <p class="sub" style="font-size:13px;line-height:1.5;">
+    9 placements across 8 distinct debtors (Triple R Funding appears twice under this client). Two accounts fully resolved via settlement
+    (<strong>Eagle Ridge Builders</strong> — $6,222.00 paid, and <strong>Bridgemoor Apartments</strong> — $1,022.63 paid), accounting for the entire $7,244.63 collected to date.
+    The remaining seven accounts are open with no payments logged. Client onboarded 4/17/2026; the bulk of the book was placed 4/20–4/21/2026, with underlying debts ranging from
+    August 2024 through March 2026 in original due date (DOR) — i.e. several accounts were already 1–2 years old when first placed with SWRS.
+  </p>
+
+  <h2 class="sec">Account Summary</h2>
+  <div class="table-scroll">
+  <table class="summary">
+    <thead><tr>
+      <th>AGYID</th><th>Debtor / Acct #</th><th>Status</th><th>Original</th><th>Balance</th><th>Collected</th>
+      <th>DOR</th><th>DOA</th><th>Age@Place</th><th>Age Now</th><th>Notes</th><th>Last Note</th>
+    </tr></thead>
+    <tbody>
+    <tr>
+      <td class="mono">SWRS640484</td>
+      <td>VISTA ROOFTOPS<div class="sub">Acct #165039</div></td>
+      <td><span class="badge" style="background:#0495F11a;color:#0495F1;border:1px solid #0495F155;">New Business</span></td>
+      <td class="num">$714.95</td>
+      <td class="num">$714.95</td>
+      <td class="num" style="color:#8a94a3">—</td>
+      <td>1/22/2025</td>
+      <td>4/20/2026</td>
+      <td class="num">453d</td>
+      <td class="num">611d</td>
+      <td class="num">119</td>
+      <td>9/24/2026</td>
+    </tr>
+    <tr>
+      <td class="mono">SWRS640485</td>
+      <td>TRIPLE R FUNDING<div class="sub">Acct #165662</div></td>
+      <td><span class="badge" style="background:#C0392B1a;color:#C0392B;border:1px solid #C0392B55;">Cease and Desist</span></td>
+      <td class="num">$983.00</td>
+      <td class="num">$983.00</td>
+      <td class="num" style="color:#8a94a3">—</td>
+      <td>3/13/2025</td>
+      <td>4/20/2026</td>
+      <td class="num">403d</td>
+      <td class="num">561d</td>
+      <td class="num">19</td>
+      <td>4/28/2026</td>
+    </tr>
+    <tr>
+      <td class="mono">SWRS640489</td>
+      <td>EAGLE RIDGE BUILDERS<div class="sub">Acct #165311/166332</div></td>
+      <td><span class="badge" style="background:#1E8E5A1a;color:#1E8E5A;border:1px solid #1E8E5A55;">PAID/SIF</span></td>
+      <td class="num">$6,222.00</td>
+      <td class="num">$0.00</td>
+      <td class="num" style="color:#1E8E5A">$6,222.00</td>
+      <td>3/5/2025</td>
+      <td>4/20/2026</td>
+      <td class="num">411d</td>
+      <td class="num">569d</td>
+      <td class="num">25</td>
+      <td>5/18/2026</td>
+    </tr>
+    <tr>
+      <td class="mono">SWRS683484</td>
+      <td>TRIPLE R FUNDING LLC<div class="sub">Acct #165662</div></td>
+      <td><span class="badge" style="background:#0446F11a;color:#0446F1;border:1px solid #0446F155;">Follow Up</span></td>
+      <td class="num">$983.00</td>
+      <td class="num">$983.00</td>
+      <td class="num" style="color:#8a94a3">—</td>
+      <td>4/21/2026</td>
+      <td>8/3/2026</td>
+      <td class="num">104d</td>
+      <td class="num">157d</td>
+      <td class="num">56</td>
+      <td>9/23/2026</td>
+    </tr>
+    <tr>
+      <td class="mono">SWRS640487</td>
+      <td>BT RENTALS<div class="sub">Acct #167362</div></td>
+      <td><span class="badge" style="background:#0446F11a;color:#0446F1;border:1px solid #0446F155;">Follow Up</span></td>
+      <td class="num">$749.91</td>
+      <td class="num">$749.91</td>
+      <td class="num" style="color:#8a94a3">—</td>
+      <td>5/19/2025</td>
+      <td>4/20/2026</td>
+      <td class="num">336d</td>
+      <td class="num">494d</td>
+      <td class="num">150</td>
+      <td>9/24/2026</td>
+    </tr>
+    <tr>
+      <td class="mono">SWRS640486</td>
+      <td>JKG BUILDERS<div class="sub">Acct #168580</div></td>
+      <td><span class="badge" style="background:#0495F11a;color:#0495F1;border:1px solid #0495F155;">New Business</span></td>
+      <td class="num">$8,519.40</td>
+      <td class="num">$8,519.40</td>
+      <td class="num" style="color:#8a94a3">—</td>
+      <td>7/30/2025</td>
+      <td>4/20/2026</td>
+      <td class="num">264d</td>
+      <td class="num">422d</td>
+      <td class="num">188</td>
+      <td>9/24/2026</td>
+    </tr>
+    <tr>
+      <td class="mono">SWRS640490</td>
+      <td>BRIDGEMOOR APARTMENTS<div class="sub">Acct #168480/170049</div></td>
+      <td><span class="badge" style="background:#1E8E5A1a;color:#1E8E5A;border:1px solid #1E8E5A55;">PAID/SIF</span></td>
+      <td class="num">$1,022.63</td>
+      <td class="num">$0.00</td>
+      <td class="num" style="color:#1E8E5A">$1,022.63</td>
+      <td>7/7/2025</td>
+      <td>4/20/2026</td>
+      <td class="num">287d</td>
+      <td class="num">445d</td>
+      <td class="num">52</td>
+      <td>5/21/2026</td>
+    </tr>
+    <tr>
+      <td class="mono">SWRS640488</td>
+      <td>SANCHEZ BOBIE<div class="sub">Acct #168172</div></td>
+      <td><span class="badge" style="background:#0495F11a;color:#0495F1;border:1px solid #0495F155;">New Business</span></td>
+      <td class="num">$732.81</td>
+      <td class="num">$732.81</td>
+      <td class="num" style="color:#8a94a3">—</td>
+      <td>7/7/2025</td>
+      <td>4/20/2026</td>
+      <td class="num">287d</td>
+      <td class="num">445d</td>
+      <td class="num">60</td>
+      <td>9/8/2026</td>
+    </tr>
+    <tr>
+      <td class="mono">SWRS640483</td>
+      <td>CHRISTINA WOOD<div class="sub">Acct #161940</div></td>
+      <td><span class="badge" style="background:#0446F11a;color:#0446F1;border:1px solid #0446F155;">Follow Up</span></td>
+      <td class="num">$1,398.95</td>
+      <td class="num">$1,398.95</td>
+      <td class="num" style="color:#8a94a3">—</td>
+      <td>8/16/2024</td>
+      <td>4/20/2026</td>
+      <td class="num">612d</td>
+      <td class="num">770d</td>
+      <td class="num">172</td>
+      <td>9/24/2026</td>
+    </tr></tbody>
+  </table>
+  </div>
+
+  <h2 class="sec">Per-Account Detail &amp; Full Activity Log</h2>
+  <p class="sub" style="font-size:13px;">Tap any account to expand its complete collection log — dial attempts and every note on file, grouped into activity sessions (consecutive same-second entries from one collector action merged for readability).</p>
+  
+    <details class="acct-card">
+      <summary>
+        <div class="acct-summary">
+          <span class="mono agyid">SWRS640484</span>
+          <span class="debtor-name">VISTA ROOFTOPS</span>
+          <span class="badge" style="background:#0495F11a;color:#0495F1;border:1px solid #0495F155;">New Business</span>
+          <span class="bal">$714.95 open</span>
+          <span class="chev">▾</span>
+        </div>
+      </summary>
+      <div class="acct-body">
+        
+        <div class="stat-grid">
+          <div><span class="lbl">Original Debt</span><span class="val">$714.95</span></div>
+          <div><span class="lbl">Collected</span><span class="val">$0.00</span></div>
+          <div><span class="lbl">Open Balance</span><span class="val">$714.95</span></div>
+          <div><span class="lbl">DOR (orig. due)</span><span class="val">1/22/2025</span></div>
+          <div><span class="lbl">DOA (placed)</span><span class="val">4/20/2026</span></div>
+          <div><span class="lbl">Age at Placement</span><span class="val">453 days</span></div>
+          <div><span class="lbl">Current Age</span><span class="val">611 days</span></div>
+          <div><span class="lbl">Total Notes</span><span class="val">119</span></div>
+          <div><span class="lbl">Last Letter Sent</span><span class="val">2026-09-08</span></div>
+          <div><span class="lbl">Last Worked</span><span class="val">2026-05-28</span></div>
+        </div>
+        <h4>Phone / Dial Attempts</h4>
+        
+      <table class="mini">
+        <thead><tr><th>Contact</th><th>Number</th><th>Type</th><th>Dials</th><th>Good #</th><th>Last Contact</th></tr></thead>
+        <tbody><tr>
+          <td>VISTA ROOFTOPS</td>
+          <td class="mono">2547807111</td>
+          <td>Other w/ perm</td>
+          <td class="num">2</td>
+          <td><span style="color:#8a94a3">no</span></td>
+          <td>2026-04-20</td>
+        </tr><tr>
+          <td>VISTA ROOFTOPS</td>
+          <td class="mono">2542316276</td>
+          <td>Business w/ perm</td>
+          <td class="num">10</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-05-28</td>
+        </tr><tr>
+          <td>Leasing Office</td>
+          <td class="mono">2542310213</td>
+          <td>Home</td>
+          <td class="num">6</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-05-28</td>
+        </tr></tbody>
+      </table>
+        <h4>Full Activity Log (73 sessions from 119 raw notes)</h4>
+        <div class="sess-log"><div class="sess"><span class="ts">4/20/26 3:27pm</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call — Phoned:  VISTA ROOFTOPS at Other w/ perm dialed: 2547807111 — Number is Bad</span></div><div class="sess"><span class="ts">4/20/26 4:07pm</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Other w/ perm dialed: 2547807111 — Call in stated an accident</span></div><div class="sess"><span class="ts">4/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 1</span></div><div class="sess"><span class="ts">4/22/26 12:00am</span><span class="sesstxt">Validation Email Sent to rentfromrooftop@yahoo.com — Validation Message sent via Email to</span></div><div class="sess"><span class="ts">4/23/26 11:30am</span><span class="sesstxt">Response to Hot List sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">4/24/26 12:57pm</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call</span></div><div class="sess"><span class="ts">4/28/26 2:38pm</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call</span></div><div class="sess"><span class="ts">5/4/26 4:57pm</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call</span></div><div class="sess"><span class="ts">5/8/26 11:42am</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call</span></div><div class="sess"><span class="ts">5/12/26 10:18am</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call</span></div><div class="sess"><span class="ts">5/12/26 10:41am</span><span class="sesstxt">Phoned: Leasing Office at Home dialed: 2542310213 — Left Message to call</span></div><div class="sess"><span class="ts">5/12/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 2</span></div><div class="sess"><span class="ts">5/13/26 8:10am</span><span class="sesstxt">WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">5/14/26 4:40pm</span><span class="sesstxt">Doc req Sent to randy.m@swrecovery.com</span></div><div class="sess"><span class="ts">5/14/26 4:42pm</span><span class="sesstxt">Phoned: Leasing Office at Home dialed: 2542310213 — Requested Documents</span></div><div class="sess"><span class="ts">5/14/26 4:43pm</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call</span></div><div class="sess"><span class="ts">5/14/26 4:44pm</span><span class="sesstxt">Emailed Client for statement</span></div><div class="sess"><span class="ts">5/14/26 4:45pm</span><span class="sesstxt">*** . VISTA ROOFTOPS Debtor record changed by: mitchell</span></div><div class="sess"><span class="ts">5/14/26 4:45pm</span><span class="sesstxt">Statement Request Email Sent to kodinstalls@yahoo.com — Emailed Client for statement</span></div><div class="sess"><span class="ts">5/15/26 8:51am</span><span class="sesstxt">Client - , I will work on that today. May be Monday before I can get it back to</span></div><div class="sess"><span class="ts">5/15/26 9:20am</span><span class="sesstxt">Document Received</span></div><div class="sess"><span class="ts">5/19/26 1:42pm</span><span class="sesstxt">Phoned: Leasing Office at Home dialed: 2542310213 — Left Message to call</span></div><div class="sess"><span class="ts">5/19/26 1:46pm</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call</span></div><div class="sess"><span class="ts">5/22/26 2:20pm</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call — Phoned: Leasing Office at Home dialed: 2542310213 — Left Message to call</span></div><div class="sess"><span class="ts">5/22/26 7:05pm</span><span class="sesstxt">*** Letter series sent letter #: 3</span></div><div class="sess"><span class="ts">5/26/26 9:08am</span><span class="sesstxt">WorkFlow Email Sent to rentfromrooftop@yahoo.com</span></div><div class="sess"><span class="ts">5/28/26 10:41am</span><span class="sesstxt">Phoned:  VISTA ROOFTOPS at Business w/ perm dialed: 2542316276 — Left Message to call</span></div><div class="sess"><span class="ts">5/28/26 10:42am</span><span class="sesstxt">Phoned: Leasing Office at Home dialed: 2542310213 — Left Message to call</span></div><div class="sess"><span class="ts">5/28/26 10:44am</span><span class="sesstxt">Collector Wants to Move to Skit or Dialer</span></div><div class="sess"><span class="ts">6/1/26 1:54pm</span><span class="sesstxt">TCN OutBound call to; 2542310213 Machine Delivered</span></div><div class="sess"><span class="ts">6/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 4</span></div><div class="sess"><span class="ts">6/23/26 10:01am</span><span class="sesstxt">WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">7/22/26 3:29pm</span><span class="sesstxt">Email sent to  rentfromrooftop@yahoo.com — WorkFlow Email Sent to rentfromrooftop@yahoo.com</span></div><div class="sess"><span class="ts">7/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 5</span></div><div class="sess"><span class="ts">7/23/26 10:03am</span><span class="sesstxt">WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">7/24/26 9:46am</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">7/25/26 9:44am</span><span class="sesstxt">WorkFlow Email Sent to tiamc254@aol.com — Email sent to  tiamc254@aol.com</span></div><div class="sess"><span class="ts">7/28/26 9:17am</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">7/30/26 9:25am</span><span class="sesstxt">Email sent to  rentfromrooftop@yahoo.com — WorkFlow Email Sent to rentfromrooftop@yahoo.com</span></div><div class="sess"><span class="ts">7/31/26 9:17am</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/1/26 9:23am</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/4/26 10:47am</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/4/26 5:56pm</span><span class="sesstxt">WorkFlow Email Sent to tiamc254@aol.com — Email sent to  tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/7/26 9:59am</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/8/26 9:05am</span><span class="sesstxt">WorkFlow Email Sent to rentfromrooftop@yahoo.com — Email sent to  rentfromrooftop@yahoo.com</span></div><div class="sess"><span class="ts">8/12/26 2:56pm</span><span class="sesstxt">Email sent to  rentfromrooftop@yahoo.com — WorkFlow Email Sent to rentfromrooftop@yahoo.com</span></div><div class="sess"><span class="ts">8/12/26 5:17pm</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/13/26 5:43pm</span><span class="sesstxt">WorkFlow Email Sent to tiamc254@aol.com — Email sent to  tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/18/26 9:04am</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/19/26 5:55pm</span><span class="sesstxt">Email sent to  rentfromrooftop@yahoo.com — WorkFlow Email Sent to rentfromrooftop@yahoo.com</span></div><div class="sess"><span class="ts">8/20/26 12:39pm</span><span class="sesstxt">CON Early – Convenience - Email sent - rentfromrooftop@yahoo.com</span></div><div class="sess"><span class="ts">8/21/26 9:13am</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 6</span></div><div class="sess"><span class="ts">8/22/26 2:39pm</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/24/26 9:32am</span><span class="sesstxt">WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/27/26 5:36pm</span><span class="sesstxt">WorkFlow Email Sent to tiamc254@aol.com — Email sent to  tiamc254@aol.com</span></div><div class="sess"><span class="ts">8/28/26 5:30pm</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">9/2/26 12:20pm</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">9/3/26 9:48am</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">9/3/26 5:56pm</span><span class="sesstxt">Email sent to  tiamc254@aol.com — WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">9/4/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 7 — *** Letter series killed due to end of series.</span></div><div class="sess"><span class="ts">9/8/26 9:49am</span><span class="sesstxt">WorkFlow Email Sent to tiamc254@aol.com</span></div><div class="sess"><span class="ts">9/10/26 2:32pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/14/26 1:12pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/15/26 2:38pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/16/26 1:17pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/17/26 1:11pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/18/26 1:13pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/21/26 1:20pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/22/26 1:18pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/23/26 12:49pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: COM Mid – Business Credit — Impact Warning)</span></div><div class="sess"><span class="ts">9/23/26 1:15pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/24/26 1:17pm</span><span class="sesstxt">Email sent to rentfromrooftop@yahoo.com (Template: In Collections - 161)</span></div></div>
+      </div>
+    </details>
+    <details class="acct-card">
+      <summary>
+        <div class="acct-summary">
+          <span class="mono agyid">SWRS640485</span>
+          <span class="debtor-name">TRIPLE R FUNDING</span>
+          <span class="badge" style="background:#C0392B1a;color:#C0392B;border:1px solid #C0392B55;">Cease and Desist</span>
+          <span class="bal">$983.00 open</span>
+          <span class="chev">▾</span>
+        </div>
+      </summary>
+      <div class="acct-body">
+        <div class="flagbox">⚠ Cease &amp; Desist on file 4/28/2026 — phones 2547687937 &amp; 2542891472 disabled here per debtor request.</div>
+        <div class="stat-grid">
+          <div><span class="lbl">Original Debt</span><span class="val">$983.00</span></div>
+          <div><span class="lbl">Collected</span><span class="val">$0.00</span></div>
+          <div><span class="lbl">Open Balance</span><span class="val">$983.00</span></div>
+          <div><span class="lbl">DOR (orig. due)</span><span class="val">3/13/2025</span></div>
+          <div><span class="lbl">DOA (placed)</span><span class="val">4/20/2026</span></div>
+          <div><span class="lbl">Age at Placement</span><span class="val">403 days</span></div>
+          <div><span class="lbl">Current Age</span><span class="val">561 days</span></div>
+          <div><span class="lbl">Total Notes</span><span class="val">19</span></div>
+          <div><span class="lbl">Last Letter Sent</span><span class="val">2026-04-21</span></div>
+          <div><span class="lbl">Last Worked</span><span class="val">2026-04-28</span></div>
+        </div>
+        <h4>Phone / Dial Attempts</h4>
+        
+      <table class="mini">
+        <thead><tr><th>Contact</th><th>Number</th><th>Type</th><th>Dials</th><th>Good #</th><th>Last Contact</th></tr></thead>
+        <tbody><tr>
+          <td>TRIPLE R FUNDING</td>
+          <td class="mono">2542891472</td>
+          <td>Other w/ perm</td>
+          <td class="num">2</td>
+          <td><span style="color:#8a94a3">no</span></td>
+          <td>2026-04-27</td>
+        </tr><tr>
+          <td>TRIPLE R FUNDING</td>
+          <td class="mono">2547687937</td>
+          <td>Home w/ perm</td>
+          <td class="num">2</td>
+          <td><span style="color:#8a94a3">no</span></td>
+          <td>2026-04-20</td>
+        </tr></tbody>
+      </table>
+        <h4>Full Activity Log (7 sessions from 19 raw notes)</h4>
+        <div class="sess-log"><div class="sess"><span class="ts">4/20/26 3:20pm</span><span class="sesstxt">Phoned:  TRIPLE R FUNDING at Home w/ perm dialed: 2547687937 — Left Message to call — Phoned:  TRIPLE R FUNDING at Other w/ perm dialed: 2542891472 Lady answered — stated this was a flip she didnt have it long the door were already done I — advised who is J &amp; A Managemnt she stated she will contact the owner — Follow Up</span></div><div class="sess"><span class="ts">4/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 1</span></div><div class="sess"><span class="ts">4/22/26 12:00am</span><span class="sesstxt">Validation Email Sent to TRIPLERCONSTRUCTIONTX@YAHOO.COM — Validation Message sent via Email to</span></div><div class="sess"><span class="ts">4/27/26 8:52am</span><span class="sesstxt">Phoned:  TRIPLE R FUNDING at Other w/ perm dialed: 2542891472 — Left Message to call</span></div><div class="sess"><span class="ts">4/27/26 8:52am</span><span class="sesstxt">Phoned:  TRIPLE R FUNDING at Home w/ perm dialed: 2547687937 man answered — stated he dosent own the property and hung up — Hung Up</span></div><div class="sess"><span class="ts">4/28/26 8:54am</span><span class="sesstxt">ACCOUNT REMOVED FROM LETTER SERIES: CBR -  Letter Series — Disabled Emails; alexplatacis@gmail.com,devans@swrecovery.com — Disabled Phone: 2547687937 — Disabled Phone: 2542891472</span></div><div class="sess"><span class="ts">4/28/26 8:54am</span><span class="sesstxt">Cease and Desist</span></div></div>
+      </div>
+    </details>
+    <details class="acct-card">
+      <summary>
+        <div class="acct-summary">
+          <span class="mono agyid">SWRS640489</span>
+          <span class="debtor-name">EAGLE RIDGE BUILDERS</span>
+          <span class="badge" style="background:#1E8E5A1a;color:#1E8E5A;border:1px solid #1E8E5A55;">PAID/SIF</span>
+          <span class="bal">$0.00 open</span>
+          <span class="chev">▾</span>
+        </div>
+      </summary>
+      <div class="acct-body">
+        
+        <div class="stat-grid">
+          <div><span class="lbl">Original Debt</span><span class="val">$6,222.00</span></div>
+          <div><span class="lbl">Collected</span><span class="val">$6,222.00</span></div>
+          <div><span class="lbl">Open Balance</span><span class="val">$0.00</span></div>
+          <div><span class="lbl">DOR (orig. due)</span><span class="val">3/5/2025</span></div>
+          <div><span class="lbl">DOA (placed)</span><span class="val">4/20/2026</span></div>
+          <div><span class="lbl">Age at Placement</span><span class="val">411 days</span></div>
+          <div><span class="lbl">Current Age</span><span class="val">569 days</span></div>
+          <div><span class="lbl">Total Notes</span><span class="val">25</span></div>
+          <div><span class="lbl">Last Letter Sent</span><span class="val">2026-05-13</span></div>
+          <div><span class="lbl">Last Worked</span><span class="val">2026-05-06</span></div>
+        </div>
+        <h4>Phone / Dial Attempts</h4>
+        
+      <table class="mini">
+        <thead><tr><th>Contact</th><th>Number</th><th>Type</th><th>Dials</th><th>Good #</th><th>Last Contact</th></tr></thead>
+        <tbody><tr>
+          <td>EAGLE RIDGE BUILDERS</td>
+          <td class="mono">2549311222</td>
+          <td>Business w/ perm</td>
+          <td class="num">2</td>
+          <td><span style="color:#8a94a3">no</span></td>
+          <td>2026-04-25</td>
+        </tr><tr>
+          <td>EAGLE RIDGE BUILDERS</td>
+          <td class="mono">2547602668</td>
+          <td>Other w/ perm</td>
+          <td class="num">3</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-04-29</td>
+        </tr></tbody>
+      </table>
+        <h4>Full Activity Log (11 sessions from 25 raw notes)</h4>
+        <div class="sess-log"><div class="sess"><span class="ts">4/20/26 7:45pm</span><span class="sesstxt">Account Worked — d1 w/inv mediation OFFICE@EAGLERIDGEBUILDERS.NET</span></div><div class="sess"><span class="ts">4/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 1</span></div><div class="sess"><span class="ts">4/22/26 12:00am</span><span class="sesstxt">Validation Email Sent to OFFICE@EAGLERIDGEBUILDERS.NET — Validation Message sent via Email to</span></div><div class="sess"><span class="ts">4/25/26 11:04am</span><span class="sesstxt">Phoned:  EAGLE RIDGE BUILDERS at Business w/ perm dialed: 2549311222 — Left Message to call — Phoned:  EAGLE RIDGE BUILDERS at Other w/ perm dialed: 2547602668 — Left Message to call</span></div><div class="sess"><span class="ts">4/29/26 6:26pm</span><span class="sesstxt">Phoned:  EAGLE RIDGE BUILDERS at Business w/ perm dialed: 2549311222 — Disconnected — Phoned:  EAGLE RIDGE BUILDERS at Other w/ perm dialed: 2547602668 — Left Message to call</span></div><div class="sess"><span class="ts">5/6/26 12:28pm</span><span class="sesstxt">Phoned:  EAGLE RIDGE BUILDERS at Other w/ perm dialed: 2547602668 — Account Worked tt db he sd he tt dennis last week and thy reached a deal at — tht time; didnt go into any detail</span></div><div class="sess"><span class="ts">5/6/26 12:30pm</span><span class="sesstxt">Client Follow up — emailed hunter to gt w/clt abt wht deal ws reached</span></div><div class="sess"><span class="ts">5/12/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 2</span></div><div class="sess"><span class="ts">5/13/26 8:10am</span><span class="sesstxt">WorkFlow Email Sent to OFFICE@EAGLERIDGEBUILDERS.NET</span></div><div class="sess"><span class="ts">5/15/26 8:04pm</span><span class="sesstxt">per client via portal &quot;Recd two checks from Eagle Ridge Builders, invoice — 165311 paid $2837 on 5/15/26 and invoice 166332 paid $3385 on 5/15/26. There — is no longer a balance due with Killeen Overhead Doors for Eagle Ridge — Builders. &quot;</span></div><div class="sess"><span class="ts">5/18/26 7:17am</span><span class="sesstxt">Paid\Settled</span></div></div>
+      </div>
+    </details>
+    <details class="acct-card">
+      <summary>
+        <div class="acct-summary">
+          <span class="mono agyid">SWRS683484</span>
+          <span class="debtor-name">TRIPLE R FUNDING LLC</span>
+          <span class="badge" style="background:#0446F11a;color:#0446F1;border:1px solid #0446F155;">Follow Up</span>
+          <span class="bal">$983.00 open</span>
+          <span class="chev">▾</span>
+        </div>
+      </summary>
+      <div class="acct-body">
+        <div class="stat-grid">
+          <div><span class="lbl">Original Debt</span><span class="val">$983.00</span></div>
+          <div><span class="lbl">Collected</span><span class="val">$0.00</span></div>
+          <div><span class="lbl">Open Balance</span><span class="val">$983.00</span></div>
+          <div><span class="lbl">DOR (orig. due)</span><span class="val">4/21/2026</span></div>
+          <div><span class="lbl">DOA (placed)</span><span class="val">8/3/2026</span></div>
+          <div><span class="lbl">Age at Placement</span><span class="val">104 days</span></div>
+          <div><span class="lbl">Current Age</span><span class="val">157 days</span></div>
+          <div><span class="lbl">Total Notes</span><span class="val">56</span></div>
+          <div><span class="lbl">Last Letter Sent</span><span class="val">2026-09-03</span></div>
+          <div><span class="lbl">Last Worked</span><span class="val">2026-09-23</span></div>
+        </div>
+        <h4>Phone / Dial Attempts</h4>
+        
+      <table class="mini">
+        <thead><tr><th>Contact</th><th>Number</th><th>Type</th><th>Dials</th><th>Good #</th><th>Last Contact</th></tr></thead>
+        <tbody><tr>
+          <td>Eduardo Robles</td>
+          <td class="mono">2543197715</td>
+          <td>Home</td>
+          <td class="num">6</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-09-18</td>
+        </tr><tr>
+          <td>David Robles</td>
+          <td class="mono">2547687937</td>
+          <td>Home</td>
+          <td class="num">14</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-09-23</td>
+        </tr></tbody>
+      </table>
+        <h4>Full Activity Log (48 sessions from 56 raw notes)</h4>
+        <div class="sess-log"><div class="sess"><span class="ts">8/3/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 1</span></div><div class="sess"><span class="ts">8/4/26 12:00am</span><span class="sesstxt">Validation Letter sent</span></div><div class="sess"><span class="ts">8/4/26 2:44pm</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937 — acc #-- got David. he sd thats not paid yet? adv no, is why calling. lookslike c</span></div><div class="sess"><span class="ts">8/4/26 2:45pm</span><span class="sesstxt">lient filed lien due to nonpayment. he sd he dont owen the property. adv idk, wa</span></div><div class="sess"><span class="ts">8/4/26 2:45pm</span><span class="sesstxt">s filed. he sd let me call my son see whats going on.</span></div><div class="sess"><span class="ts">8/4/26 2:45pm</span><span class="sesstxt">Account Worked</span></div><div class="sess"><span class="ts">8/7/26 3:26pm</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">8/7/26 3:26pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">8/12/26 3:48pm</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">8/12/26 3:48pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">8/17/26 9:22am</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">8/17/26 9:22am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">8/20/26 11:50am</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">8/20/26 11:50am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">8/24/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 2</span></div><div class="sess"><span class="ts">8/25/26 9:27am</span><span class="sesstxt">Workflow Email send failed Invalid email address .</span></div><div class="sess"><span class="ts">8/25/26 3:59pm</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">8/25/26 3:59pm</span><span class="sesstxt">Left Message to call  - 432 phone</span></div><div class="sess"><span class="ts">8/28/26 3:35pm</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">8/28/26 3:35pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">8/28/26 3:39pm</span><span class="sesstxt">Phoned: Eduardo Robles at Home dialed: 2543197715 — unkwn pu wouldnt talk hu x2</span></div><div class="sess"><span class="ts">8/28/26 3:39pm</span><span class="sesstxt">Account Worked — Phoned: Eduardo Robles at Home dialed: 2543197715 — got Eduardo he apologize phn was cutting out. xpln.he ask date? gv him. he ask w</span></div><div class="sess"><span class="ts">8/28/26 3:39pm</span><span class="sesstxt">hat they did? gv him. adv how spk to David andhe was to talk to you, but never h</span></div><div class="sess"><span class="ts">8/28/26 3:40pm</span><span class="sesstxt">eard back. he sd he will call David right now.</span></div><div class="sess"><span class="ts">8/28/26 3:40pm</span><span class="sesstxt">Account Worked</span></div><div class="sess"><span class="ts">9/2/26 3:42pm</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">9/2/26 3:42pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">9/2/26 3:44pm</span><span class="sesstxt">Phoned: Eduardo Robles at Home dialed: 2543197715</span></div><div class="sess"><span class="ts">9/2/26 3:46pm</span><span class="sesstxt">No Answer</span></div><div class="sess"><span class="ts">9/3/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 3</span></div><div class="sess"><span class="ts">9/8/26 10:04am</span><span class="sesstxt">Workflow Email send failed Invalid email address .</span></div><div class="sess"><span class="ts">9/9/26 9:53am</span><span class="sesstxt">Phoned: Eduardo Robles at Home dialed: 2543197715</span></div><div class="sess"><span class="ts">9/9/26 9:53am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">9/9/26 9:57am</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">9/9/26 9:57am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">9/15/26 4:22pm</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">9/15/26 4:22pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">9/15/26 4:22pm</span><span class="sesstxt">Phoned: Eduardo Robles at Home dialed: 2543197715</span></div><div class="sess"><span class="ts">9/15/26 4:22pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">9/18/26 8:24am</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937 — got David xpln he claim i told you we dont own that property. adv you were the o</span></div><div class="sess"><span class="ts">9/18/26 8:24am</span><span class="sesstxt">ne had the work done. he hu... - 8329 phone</span></div><div class="sess"><span class="ts">9/18/26 8:25am</span><span class="sesstxt">Account Worked — Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">9/18/26 8:25am</span><span class="sesstxt">Left Message to call -8329 phone</span></div><div class="sess"><span class="ts">9/18/26 8:25am</span><span class="sesstxt">Phoned: Eduardo Robles at Home dialed: 2543197715</span></div><div class="sess"><span class="ts">9/18/26 8:25am</span><span class="sesstxt">Left Message to call - 8329 phone</span></div><div class="sess"><span class="ts">9/23/26 3:31pm</span><span class="sesstxt">Phoned: David Robles at Home dialed: 2547687937 — pu hu on 5068 phone</span></div><div class="sess"><span class="ts">9/23/26 3:31pm</span><span class="sesstxt">No Answer — Phoned: David Robles at Home dialed: 2547687937</span></div><div class="sess"><span class="ts">9/23/26 3:31pm</span><span class="sesstxt">Left Message to call - 5068 phone</span></div></div>
+      </div>
+    </details>
+    <details class="acct-card">
+      <summary>
+        <div class="acct-summary">
+          <span class="mono agyid">SWRS640487</span>
+          <span class="debtor-name">BT RENTALS</span>
+          <span class="badge" style="background:#0446F11a;color:#0446F1;border:1px solid #0446F155;">Follow Up</span>
+          <span class="bal">$749.91 open</span>
+          <span class="chev">▾</span>
+        </div>
+      </summary>
+      <div class="acct-body">
+        
+        <div class="stat-grid">
+          <div><span class="lbl">Original Debt</span><span class="val">$749.91</span></div>
+          <div><span class="lbl">Collected</span><span class="val">$0.00</span></div>
+          <div><span class="lbl">Open Balance</span><span class="val">$749.91</span></div>
+          <div><span class="lbl">DOR (orig. due)</span><span class="val">5/19/2025</span></div>
+          <div><span class="lbl">DOA (placed)</span><span class="val">4/20/2026</span></div>
+          <div><span class="lbl">Age at Placement</span><span class="val">336 days</span></div>
+          <div><span class="lbl">Current Age</span><span class="val">494 days</span></div>
+          <div><span class="lbl">Total Notes</span><span class="val">150</span></div>
+          <div><span class="lbl">Last Letter Sent</span><span class="val">2026-09-08</span></div>
+          <div><span class="lbl">Last Worked</span><span class="val">2026-06-12</span></div>
+        </div>
+        <h4>Phone / Dial Attempts</h4>
+        
+      <table class="mini">
+        <thead><tr><th>Contact</th><th>Number</th><th>Type</th><th>Dials</th><th>Good #</th><th>Last Contact</th></tr></thead>
+        <tbody><tr>
+          <td>Jessica Thomas</td>
+          <td class="mono">9515140962</td>
+          <td>Home</td>
+          <td class="num">5</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-06-09</td>
+        </tr><tr>
+          <td>BT RENTALS</td>
+          <td class="mono">2545695888</td>
+          <td>Other w/ perm</td>
+          <td class="num">10</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-05-04</td>
+        </tr><tr>
+          <td>Brian</td>
+          <td class="mono">2542892824</td>
+          <td>Home</td>
+          <td class="num">3</td>
+          <td><span style="color:#8a94a3">no</span></td>
+          <td>2026-06-09</td>
+        </tr><tr>
+          <td>Brian Thomas</td>
+          <td class="mono">8455418839</td>
+          <td>Home</td>
+          <td class="num">11</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-06-12</td>
+        </tr></tbody>
+      </table>
+        <h4>Full Activity Log (107 sessions from 150 raw notes)</h4>
+        <div class="sess-log"><div class="sess"><span class="ts">4/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 1</span></div><div class="sess"><span class="ts">4/22/26 12:00am</span><span class="sesstxt">Validation Email Sent to BTRENTALS254@GMAIL.COM — Validation Message sent via Email to</span></div><div class="sess"><span class="ts">4/22/26 8:58am</span><span class="sesstxt">Phoned:  BT RENTALS at Home w/ perm dialed: 8455418839 — Left Message to call — Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888 — Left Message to call</span></div><div class="sess"><span class="ts">4/23/26 2:49pm</span><span class="sesstxt">Phoned:  BT RENTALS at Home w/ perm dialed: 8455418839 — Left Message to call</span></div><div class="sess"><span class="ts">4/23/26 2:51pm</span><span class="sesstxt">Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888 — Left Message to call</span></div><div class="sess"><span class="ts">4/27/26 2:52pm</span><span class="sesstxt">Phoned:  BT RENTALS at Home w/ perm dialed: 8455418839 — No Answer</span></div><div class="sess"><span class="ts">4/27/26 2:54pm</span><span class="sesstxt">Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888 — VM Full/Not set up</span></div><div class="sess"><span class="ts">4/28/26 2:03pm</span><span class="sesstxt">Phoned:  BT RENTALS at Home w/ perm dialed: 8455418839 — Left Message to call</span></div><div class="sess"><span class="ts">4/28/26 2:04pm</span><span class="sesstxt">Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888 — VM Full/Not set up</span></div><div class="sess"><span class="ts">5/4/26 4:48pm</span><span class="sesstxt">Phoned:  BT RENTALS at Home w/ perm dialed: 8455418839 — Left Message to call</span></div><div class="sess"><span class="ts">5/4/26 4:49pm</span><span class="sesstxt">Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888 — Left Message to call</span></div><div class="sess"><span class="ts">5/4/26 4:51pm</span><span class="sesstxt">Collector Wants to Move to Skit or Dialer</span></div><div class="sess"><span class="ts">5/12/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 2</span></div><div class="sess"><span class="ts">5/13/26 8:10am</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">5/20/26 2:44pm</span><span class="sesstxt">will fup - been over 14days</span></div><div class="sess"><span class="ts">5/20/26 2:45pm</span><span class="sesstxt">Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888 — vm not setup</span></div><div class="sess"><span class="ts">5/20/26 2:45pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">5/20/26 2:48pm</span><span class="sesstxt">Phoned:  BT RENTALS at Home w/ perm dialed: 8455418839</span></div><div class="sess"><span class="ts">5/20/26 2:48pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">5/20/26 2:50pm</span><span class="sesstxt">sent email - w DOC</span></div><div class="sess"><span class="ts">5/20/26 2:53pm</span><span class="sesstxt">fwd email - w DOC to inbox@brianthomas.realtor -- found on excel sheet</span></div><div class="sess"><span class="ts">5/20/26 2:55pm</span><span class="sesstxt">Phoned: Jessica Thomas at Home dialed: 9515140962 — # on excel sheet -- — Left Message to call</span></div><div class="sess"><span class="ts">5/22/26 2:33pm</span><span class="sesstxt">Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888</span></div><div class="sess"><span class="ts">5/22/26 2:33pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">5/22/26 2:35pm</span><span class="sesstxt">Phoned: Brian Thomas at Home dialed: 8455418839</span></div><div class="sess"><span class="ts">5/22/26 2:35pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">5/22/26 2:37pm</span><span class="sesstxt">Phoned: Jessica Thomas at Home dialed: 9515140962</span></div><div class="sess"><span class="ts">5/22/26 2:37pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">5/22/26 7:05pm</span><span class="sesstxt">*** Letter series sent letter #: 3</span></div><div class="sess"><span class="ts">5/26/26 9:10am</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">5/28/26 9:28am</span><span class="sesstxt">Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888</span></div><div class="sess"><span class="ts">5/28/26 9:28am</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">5/28/26 9:29am</span><span class="sesstxt">Phoned: Brian Thomas at Home dialed: 8455418839</span></div><div class="sess"><span class="ts">5/28/26 9:29am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">5/28/26 10:29am</span><span class="sesstxt">Phoned: Jessica Thomas at Home dialed: 9515140962</span></div><div class="sess"><span class="ts">5/28/26 10:29am</span><span class="sesstxt">Left Message to call — fwd email - w DOC to both emails - x2</span></div><div class="sess"><span class="ts">6/3/26 1:33pm</span><span class="sesstxt">Phoned: Brian Thomas at Home dialed: 8455418839</span></div><div class="sess"><span class="ts">6/3/26 1:33pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/3/26 1:36pm</span><span class="sesstxt">Phoned: Jessica Thomas at Home dialed: 9515140962</span></div><div class="sess"><span class="ts">6/3/26 1:36pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/3/26 1:36pm</span><span class="sesstxt">Phoned: Brian at Home dialed: 2542892824 — # on client sheet for Brian</span></div><div class="sess"><span class="ts">6/3/26 1:37pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/3/26 1:40pm</span><span class="sesstxt">Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888</span></div><div class="sess"><span class="ts">6/3/26 1:40pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">6/9/26 1:17pm</span><span class="sesstxt">Phoned: Brian at Home dialed: 2542892824</span></div><div class="sess"><span class="ts">6/9/26 1:17pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/9/26 1:18pm</span><span class="sesstxt">Phoned: Brian Thomas at Home dialed: 8455418839</span></div><div class="sess"><span class="ts">6/9/26 1:18pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/9/26 1:23pm</span><span class="sesstxt">Phoned: Jessica Thomas at Home dialed: 9515140962</span></div><div class="sess"><span class="ts">6/9/26 1:23pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/9/26 1:23pm</span><span class="sesstxt">Phoned:  BT RENTALS at Other w/ perm dialed: 2545695888</span></div><div class="sess"><span class="ts">6/9/26 1:23pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">6/9/26 1:48pm</span><span class="sesstxt">Phoned: Brian at Home dialed: 2542892824 — cid 2824 Bryan ci (not thomas... other guy Bryan client was calling). he sd wasn</span></div><div class="sess"><span class="ts">6/9/26 1:48pm</span><span class="sesstxt">t gonna pay. adv thats fine that doesnt stop anything. he asked why calling him?</span></div><div class="sess"><span class="ts">6/9/26 1:49pm</span><span class="sesstxt">adv because client has all 3 of you as people to call. if nto the case, probabl</span></div><div class="sess"><span class="ts">6/9/26 1:49pm</span><span class="sesstxt">y wanna speak to client. he sd hes not gonna do that. adv ok then colllections w</span></div><div class="sess"><span class="ts">6/9/26 1:50pm</span><span class="sesstxt">ould continure.</span></div><div class="sess"><span class="ts">6/9/26 1:50pm</span><span class="sesstxt">Call in</span></div><div class="sess"><span class="ts">6/9/26 1:51pm</span><span class="sesstxt">looks as if Brian THomas is a part of black label manegement group which the oth</span></div><div class="sess"><span class="ts">6/9/26 1:52pm</span><span class="sesstxt">er Bryan is part of also which is why client was calling Bryan w a Y.</span></div><div class="sess"><span class="ts">6/12/26 10:35am</span><span class="sesstxt">Phoned: Brian Thomas at Home dialed: 8455418839</span></div><div class="sess"><span class="ts">6/12/26 10:35am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/12/26 10:35am</span><span class="sesstxt">Collector Wants to Move to Skit or Dialer — nonresponsive. small bal</span></div><div class="sess"><span class="ts">6/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 4</span></div><div class="sess"><span class="ts">6/23/26 9:58am</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">7/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 5</span></div><div class="sess"><span class="ts">7/23/26 10:03am</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">7/24/26 9:46am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">7/25/26 9:44am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">7/28/26 9:17am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">7/30/26 9:25am</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM — Email sent to  BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">7/31/26 9:17am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/1/26 9:23am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/4/26 10:47am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/4/26 5:56pm</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/7/26 9:59am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/8/26 9:05am</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM — Email sent to  BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/12/26 2:56pm</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/12/26 5:17pm</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/13/26 12:58pm</span><span class="sesstxt">COM Early – Reminder - Email sent - BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/13/26 5:43pm</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM — Email sent to  BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/14/26 10:08am</span><span class="sesstxt">COM Mid – Re-Engagement - Email sent - BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/18/26 9:04am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/18/26 1:58pm</span><span class="sesstxt">COM Late – Deadline-Framed - Email sent - BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/19/26 5:55pm</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/21/26 9:13am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 6</span></div><div class="sess"><span class="ts">8/22/26 2:39pm</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/24/26 9:46am</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/27/26 5:36pm</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM — Email sent to  BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">8/28/26 5:30pm</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM — Email sent to  BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">9/2/26 12:20pm</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">9/3/26 9:48am</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">9/3/26 5:56pm</span><span class="sesstxt">Email sent to  BTRENTALS254@GMAIL.COM — WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">9/4/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 7 — *** Letter series killed due to end of series.</span></div><div class="sess"><span class="ts">9/8/26 9:50am</span><span class="sesstxt">WorkFlow Email Sent to BTRENTALS254@GMAIL.COM</span></div><div class="sess"><span class="ts">9/10/26 2:32pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/14/26 1:12pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/15/26 2:38pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/16/26 1:17pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/17/26 1:11pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/18/26 1:13pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/21/26 1:20pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/22/26 1:18pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/23/26 12:49pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: COM Late – Pre-Litigation — Notice)</span></div><div class="sess"><span class="ts">9/23/26 1:15pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/24/26 1:17pm</span><span class="sesstxt">Email sent to BTRENTALS254@GMAIL.COM (Template: In Collections - 161)</span></div></div>
+      </div>
+    </details>
+    <details class="acct-card">
+      <summary>
+        <div class="acct-summary">
+          <span class="mono agyid">SWRS640486</span>
+          <span class="debtor-name">JKG BUILDERS</span>
+          <span class="badge" style="background:#0495F11a;color:#0495F1;border:1px solid #0495F155;">New Business</span>
+          <span class="bal">$8,519.40 open</span>
+          <span class="chev">▾</span>
+        </div>
+      </summary>
+      <div class="acct-body">
+        
+        <div class="stat-grid">
+          <div><span class="lbl">Original Debt</span><span class="val">$8,519.40</span></div>
+          <div><span class="lbl">Collected</span><span class="val">$0.00</span></div>
+          <div><span class="lbl">Open Balance</span><span class="val">$8,519.40</span></div>
+          <div><span class="lbl">DOR (orig. due)</span><span class="val">7/30/2025</span></div>
+          <div><span class="lbl">DOA (placed)</span><span class="val">4/20/2026</span></div>
+          <div><span class="lbl">Age at Placement</span><span class="val">264 days</span></div>
+          <div><span class="lbl">Current Age</span><span class="val">422 days</span></div>
+          <div><span class="lbl">Total Notes</span><span class="val">188</span></div>
+          <div><span class="lbl">Last Letter Sent</span><span class="val">2026-09-08</span></div>
+          <div><span class="lbl">Last Worked</span><span class="val">2026-07-17</span></div>
+        </div>
+        <h4>Phone / Dial Attempts</h4>
+        
+      <table class="mini">
+        <thead><tr><th>Contact</th><th>Number</th><th>Type</th><th>Dials</th><th>Good #</th><th>Last Contact</th></tr></thead>
+        <tbody><tr>
+          <td>Jerome</td>
+          <td class="mono">2542898282</td>
+          <td>Home</td>
+          <td class="num">0</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td></td>
+        </tr><tr>
+          <td>Biz</td>
+          <td class="mono">2545192422</td>
+          <td>Home</td>
+          <td class="num">14</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-07-14</td>
+        </tr><tr>
+          <td>Jerome</td>
+          <td class="mono">2542898282</td>
+          <td>Home</td>
+          <td class="num">15</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-05-05</td>
+        </tr><tr>
+          <td>Derrick Dewald</td>
+          <td class="mono">2542904575</td>
+          <td>Home</td>
+          <td class="num">12</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-07-17</td>
+        </tr></tbody>
+      </table>
+        <h4>Full Activity Log (144 sessions from 188 raw notes)</h4>
+        <div class="sess-log"><div class="sess"><span class="ts">4/21/26 8:19am</span><span class="sesstxt">sent email - w DOCS</span></div><div class="sess"><span class="ts">4/21/26 8:33am</span><span class="sesstxt">Phoned:  JKG BUILDERS at Business w/ perm dialed: 2545192422</span></div><div class="sess"><span class="ts">4/21/26 8:33am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">4/21/26 8:34am</span><span class="sesstxt">Phoned:  JKG BUILDERS at Other w/ perm dialed: 2542898282 — vm full</span></div><div class="sess"><span class="ts">4/21/26 8:34am</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">4/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 1</span></div><div class="sess"><span class="ts">4/22/26 12:00am</span><span class="sesstxt">Validation Message sent via Email to</span></div><div class="sess"><span class="ts">4/24/26 2:28pm</span><span class="sesstxt">Phoned:  JKG BUILDERS at Business w/ perm dialed: 2545192422 — girl sd no one there. aks when someone would return a call or reply to an email</span></div><div class="sess"><span class="ts">4/24/26 2:28pm</span><span class="sesstxt">from earlier this week? she sd probably monday????</span></div><div class="sess"><span class="ts">4/24/26 2:29pm</span><span class="sesstxt">Account Worked</span></div><div class="sess"><span class="ts">4/24/26 2:40pm</span><span class="sesstxt">Phoned:  JKG BUILDERS at Other w/ perm dialed: 2542898282</span></div><div class="sess"><span class="ts">4/24/26 2:40pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">4/30/26 4:30pm</span><span class="sesstxt">Phoned:  JKG BUILDERS at Business w/ perm dialed: 2545192422 — Left Message to call</span></div><div class="sess"><span class="ts">4/30/26 4:31pm</span><span class="sesstxt">Phoned:  JKG BUILDERS at Other w/ perm dialed: 2542898282</span></div><div class="sess"><span class="ts">4/30/26 4:31pm</span><span class="sesstxt">VM Full/Not set up — sent email - w DOCS x2</span></div><div class="sess"><span class="ts">5/5/26 10:26am</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422</span></div><div class="sess"><span class="ts">5/5/26 10:26am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">5/5/26 10:27am</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575 — # on client docs -- per client Arrowhead Developers and Derrick Dewald also part</span></div><div class="sess"><span class="ts">5/5/26 10:27am</span><span class="sesstxt">of this -- lmtc vm --- vm id Derrick Dewald</span></div><div class="sess"><span class="ts">5/5/26 10:27am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">5/5/26 10:37am</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282 — got Jerome xpln. claim has 2properties to be sold 1 on 5-15 and other on 5-20. S</span></div><div class="sess"><span class="ts">5/5/26 10:38am</span><span class="sesstxt">aid he apologized for being late. sd has sold some other thigns but bank ends up</span></div><div class="sess"><span class="ts">5/5/26 10:38am</span><span class="sesstxt">holding $$ in interest etc. adv would note and fup later on this motnh.</span></div><div class="sess"><span class="ts">5/5/26 10:38am</span><span class="sesstxt">Follow Up</span></div><div class="sess"><span class="ts">5/5/26 10:38am</span><span class="sesstxt">fup 5-20</span></div><div class="sess"><span class="ts">5/12/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 2</span></div><div class="sess"><span class="ts">5/13/26 8:11am</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">5/20/26 2:39pm</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">5/20/26 2:39pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">5/20/26 2:40pm</span><span class="sesstxt">*** JKG BUILDERS Debtor record changed by: jgoldstein</span></div><div class="sess"><span class="ts">5/20/26 2:41pm</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575 — got Derrick xpln. he claim he thought they already paid that. he ask if can cb t</span></div><div class="sess"><span class="ts">5/20/26 2:42pm</span><span class="sesstxt">his same #? adv yes. he sd he gonna make a call.</span></div><div class="sess"><span class="ts">5/20/26 2:42pm</span><span class="sesstxt">Account Worked</span></div><div class="sess"><span class="ts">5/20/26 2:42pm</span><span class="sesstxt">Direct Pay Email Sent to kodinstalls@yahoo.com — Emailed Client for DP</span></div><div class="sess"><span class="ts">5/22/26 7:05pm</span><span class="sesstxt">*** Letter series sent letter #: 3</span></div><div class="sess"><span class="ts">5/26/26 9:10am</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">5/26/26 1:06pm</span><span class="sesstxt">Direct Pay Email Sent to kodinstalls@yahoo.com — Emailed Client for DP</span></div><div class="sess"><span class="ts">5/27/26 4:11pm</span><span class="sesstxt">per client - Nope, no payment received as of this moment</span></div><div class="sess"><span class="ts">5/27/26 4:12pm</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575</span></div><div class="sess"><span class="ts">5/27/26 4:12pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">5/27/26 4:13pm</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">5/27/26 4:13pm</span><span class="sesstxt">VM Full/Not set up — client email loaded</span></div><div class="sess"><span class="ts">5/27/26 4:15pm</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422</span></div><div class="sess"><span class="ts">5/27/26 4:15pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/1/26 11:08am</span><span class="sesstxt">fwd email - w DOCS x4</span></div><div class="sess"><span class="ts">6/1/26 11:11am</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422</span></div><div class="sess"><span class="ts">6/1/26 11:11am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/1/26 11:14am</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">6/1/26 11:15am</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">6/1/26 11:15am</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575 — got Derrick xpln adv we checked and client not showing anything paid. Derrick sd</span></div><div class="sess"><span class="ts">6/1/26 11:16am</span><span class="sesstxt">oh s*** im out of towne, but he was s supposed to pay that. let me clal him rig</span></div><div class="sess"><span class="ts">6/1/26 11:16am</span><span class="sesstxt">ht now.. adv ok</span></div><div class="sess"><span class="ts">6/1/26 11:16am</span><span class="sesstxt">Follow Up</span></div><div class="sess"><span class="ts">6/9/26 2:23pm</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422 — pu hu?</span></div><div class="sess"><span class="ts">6/9/26 2:23pm</span><span class="sesstxt">Account Worked</span></div><div class="sess"><span class="ts">6/9/26 2:24pm</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422</span></div><div class="sess"><span class="ts">6/9/26 2:24pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/9/26 2:24pm</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">6/9/26 2:24pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">6/9/26 2:25pm</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575 — got Derrick xpln. he sd  he just talked to Jeroma and claimed they were supposed</span></div><div class="sess"><span class="ts">6/9/26 2:25pm</span><span class="sesstxt">to be done yesterday. adv yea nothing. He sd he will call Jerome right now</span></div><div class="sess"><span class="ts">6/9/26 2:26pm</span><span class="sesstxt">Account Worked</span></div><div class="sess"><span class="ts">6/15/26 10:58am</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422 — lady sd AP out all week bc he husband is having surgery</span></div><div class="sess"><span class="ts">6/15/26 10:58am</span><span class="sesstxt">Account Worked</span></div><div class="sess"><span class="ts">6/15/26 11:04am</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">6/15/26 11:04am</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">6/18/26 4:19pm</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282 — vm full - 432 phone. didnt go straight to vm though</span></div><div class="sess"><span class="ts">6/18/26 4:19pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">6/19/26 2:51pm</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575 — guy sd hello then hu when ask for Derrick?</span></div><div class="sess"><span class="ts">6/19/26 2:51pm</span><span class="sesstxt">Account Worked — Phoned: Derrick Dewald at Home dialed: 2542904575</span></div><div class="sess"><span class="ts">6/19/26 2:51pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 4</span></div><div class="sess"><span class="ts">6/23/26 9:58am</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">6/24/26 2:52pm</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422</span></div><div class="sess"><span class="ts">6/24/26 2:53pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/24/26 3:19pm</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">6/24/26 3:19pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">6/24/26 3:19pm</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575</span></div><div class="sess"><span class="ts">6/24/26 3:19pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">6/29/26 4:39pm</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">6/29/26 4:39pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">6/29/26 4:40pm</span><span class="sesstxt">fwd email - w DOCS x5</span></div><div class="sess"><span class="ts">6/29/26 4:41pm</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575</span></div><div class="sess"><span class="ts">6/29/26 4:41pm</span><span class="sesstxt">Left Message to call - 432 phone</span></div><div class="sess"><span class="ts">7/6/26 2:52pm</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422 — guy took msg. sd AP still out sick</span></div><div class="sess"><span class="ts">7/6/26 2:52pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">7/6/26 2:56pm</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575</span></div><div class="sess"><span class="ts">7/6/26 2:56pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">7/6/26 2:59pm</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">7/6/26 2:59pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">7/9/26 2:43pm</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422</span></div><div class="sess"><span class="ts">7/9/26 2:43pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">7/9/26 2:46pm</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575</span></div><div class="sess"><span class="ts">7/9/26 2:46pm</span><span class="sesstxt">Left Message to call - 432 phone</span></div><div class="sess"><span class="ts">7/9/26 2:46pm</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">7/9/26 2:46pm</span><span class="sesstxt">VM Full/Not set up - 432 phone</span></div><div class="sess"><span class="ts">7/14/26 9:55am</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422</span></div><div class="sess"><span class="ts">7/14/26 9:55am</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">7/17/26 2:48pm</span><span class="sesstxt">Phoned: Biz at Home dialed: 2545192422 — gy sd boss not intoday. be back monday</span></div><div class="sess"><span class="ts">7/17/26 2:48pm</span><span class="sesstxt">Account Worked</span></div><div class="sess"><span class="ts">7/17/26 2:52pm</span><span class="sesstxt">Phoned: Jerome at Home dialed: 2542898282</span></div><div class="sess"><span class="ts">7/17/26 2:52pm</span><span class="sesstxt">VM Full/Not set up</span></div><div class="sess"><span class="ts">7/17/26 2:59pm</span><span class="sesstxt">Phoned: Derrick Dewald at Home dialed: 2542904575</span></div><div class="sess"><span class="ts">7/17/26 2:59pm</span><span class="sesstxt">Left Message to call</span></div><div class="sess"><span class="ts">7/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 5</span></div><div class="sess"><span class="ts">7/23/26 10:03am</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">7/23/26 4:11pm</span><span class="sesstxt">Collector Wants to Move to Skit or Dialer — now nonresponsive</span></div><div class="sess"><span class="ts">7/28/26 9:17am</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM, — Email sent to  JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">7/30/26 9:25am</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM, — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">7/31/26 9:17am</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM, — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/1/26 9:23am</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM, — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/4/26 10:47am</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM, — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/4/26 5:56pm</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM, — Email sent to  JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/7/26 9:59am</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM, — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/8/26 9:05am</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM, — Email sent to  JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/12/26 2:56pm</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM, — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/12/26 5:17pm</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM, — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/13/26 12:53pm</span><span class="sesstxt">SQL Error: The specified &#x27;@recipients&#x27; cannot use commas (,) to separate — addresses: &#x27;JKG3BUILDERS@GMAIL.COM,&#x27;. To continue, use semicolons (;) to — separate addresses. (Line 36)</span></div><div class="sess"><span class="ts">8/13/26 5:43pm</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM, — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/18/26 9:04am</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM, — Email sent to  JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/18/26 1:58pm</span><span class="sesstxt">COM Late – Deadline-Framed - Email sent - JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/19/26 5:55pm</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM, — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM,</span></div><div class="sess"><span class="ts">8/21/26 9:13am</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM</span></div><div class="sess"><span class="ts">8/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 6</span></div><div class="sess"><span class="ts">8/22/26 2:39pm</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM</span></div><div class="sess"><span class="ts">8/24/26 9:46am</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM</span></div><div class="sess"><span class="ts">8/27/26 5:36pm</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM</span></div><div class="sess"><span class="ts">8/28/26 5:30pm</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM — Email sent to  JKG3BUILDERS@GMAIL.COM</span></div><div class="sess"><span class="ts">9/2/26 12:20pm</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM</span></div><div class="sess"><span class="ts">9/3/26 9:48am</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM</span></div><div class="sess"><span class="ts">9/3/26 5:56pm</span><span class="sesstxt">Email sent to  JKG3BUILDERS@GMAIL.COM — WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM</span></div><div class="sess"><span class="ts">9/4/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 7 — *** Letter series killed due to end of series.</span></div><div class="sess"><span class="ts">9/8/26 9:50am</span><span class="sesstxt">WorkFlow Email Sent to JKG3BUILDERS@GMAIL.COM</span></div><div class="sess"><span class="ts">9/10/26 2:32pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/14/26 1:12pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/15/26 2:38pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/16/26 1:17pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/17/26 1:11pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/18/26 1:13pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/21/26 1:20pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/22/26 1:18pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/23/26 12:49pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: COM Early – Pay or Plan (No — Third Option))</span></div><div class="sess"><span class="ts">9/23/26 1:15pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/24/26 1:17pm</span><span class="sesstxt">Email sent to JKG3BUILDERS@GMAIL.COM (Template: In Collections - 161)</span></div></div>
+      </div>
+    </details>
+    <details class="acct-card">
+      <summary>
+        <div class="acct-summary">
+          <span class="mono agyid">SWRS640490</span>
+          <span class="debtor-name">BRIDGEMOOR APARTMENTS</span>
+          <span class="badge" style="background:#1E8E5A1a;color:#1E8E5A;border:1px solid #1E8E5A55;">PAID/SIF</span>
+          <span class="bal">$0.00 open</span>
+          <span class="chev">▾</span>
+        </div>
+      </summary>
+      <div class="acct-body">
+        
+        <div class="stat-grid">
+          <div><span class="lbl">Original Debt</span><span class="val">$1,022.63</span></div>
+          <div><span class="lbl">Collected</span><span class="val">$1,022.63</span></div>
+          <div><span class="lbl">Open Balance</span><span class="val">$0.00</span></div>
+          <div><span class="lbl">DOR (orig. due)</span><span class="val">7/7/2025</span></div>
+          <div><span class="lbl">DOA (placed)</span><span class="val">4/20/2026</span></div>
+          <div><span class="lbl">Age at Placement</span><span class="val">287 days</span></div>
+          <div><span class="lbl">Current Age</span><span class="val">445 days</span></div>
+          <div><span class="lbl">Total Notes</span><span class="val">52</span></div>
+          <div><span class="lbl">Last Letter Sent</span><span class="val">2026-05-16</span></div>
+          <div><span class="lbl">Last Worked</span><span class="val">2026-05-18</span></div>
+        </div>
+        <h4>Phone / Dial Attempts</h4>
+        
+      <table class="mini">
+        <thead><tr><th>Contact</th><th>Number</th><th>Type</th><th>Dials</th><th>Good #</th><th>Last Contact</th></tr></thead>
+        <tbody><tr>
+          <td>BRIDGEMOOR APARTMENTS</td>
+          <td class="mono">2546302617</td>
+          <td>Other w/ perm</td>
+          <td class="num">0</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td></td>
+        </tr><tr>
+          <td>BRIDGEMOOR APARTMENTS</td>
+          <td class="mono">2546280070</td>
+          <td>Home w/ perm</td>
+          <td class="num">7</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-05-13</td>
+        </tr><tr>
+          <td>BRIDGEMOOR APARTMENTS</td>
+          <td class="mono">2546302617</td>
+          <td>Business w/ perm</td>
+          <td class="num">6</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-05-18</td>
+        </tr></tbody>
+      </table>
+        <h4>Full Activity Log (23 sessions from 52 raw notes)</h4>
+        <div class="sess-log"><div class="sess"><span class="ts">4/20/26 3:21pm</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Home w/ perm dialed: 2546280070 — Phone Busy</span></div><div class="sess"><span class="ts">4/20/26 3:25pm</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Business w/ perm dialed: 2546302617 Spoke — with James — stated he is the maintance man and the internet is currently down call back in — 20 mins or so — Follow Up</span></div><div class="sess"><span class="ts">4/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 1</span></div><div class="sess"><span class="ts">4/21/26 7:38pm</span><span class="sesstxt">*** Promise: There were 2 totaling $1,023.00 between 04/22/2026 and 05/22/2026</span></div><div class="sess"><span class="ts">4/21/26 7:39pm</span><span class="sesstxt">per client via portal &quot;paid online via our Hyfin payment app. Hyfin payment — receipt submitted for reference.  &quot; — pmt rcvd 004/20 $515.68 via portal — portal pmt rcd 04/21 8:25 am</span></div><div class="sess"><span class="ts">4/22/26 12:00am</span><span class="sesstxt">Validation Email Sent to ap@rpmliving.com — Validation Message sent via Email to</span></div><div class="sess"><span class="ts">4/22/26 12:52am</span><span class="sesstxt">*** Promise Received ($515.68). Promised $515.68 by Wed 04-22-2026.</span></div><div class="sess"><span class="ts">4/22/26 10:08am</span><span class="sesstxt">Is this a settlement?</span></div><div class="sess"><span class="ts">4/24/26 11:08am</span><span class="sesstxt">Phone Busy — Phoned:  BRIDGEMOOR APARTMENTS at Home w/ perm dialed: 2546280070 — Phone Busy</span></div><div class="sess"><span class="ts">4/24/26 11:09am</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Business w/ perm dialed: 2546302617 — Left Message to call</span></div><div class="sess"><span class="ts">4/28/26 11:36am</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Home w/ perm dialed: 2546280070 — Phone Busy</span></div><div class="sess"><span class="ts">4/28/26 11:39am</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Business w/ perm dialed: 2546302617 — Left Message to call</span></div><div class="sess"><span class="ts">5/4/26 2:53pm</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Home w/ perm dialed: 2546280070 — Left Message to call</span></div><div class="sess"><span class="ts">5/7/26 4:21pm</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Business w/ perm dialed: 2546302617 — Left Message to call</span></div><div class="sess"><span class="ts">5/7/26 4:24pm</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Home w/ perm dialed: 2546280070 — Left Message to call</span></div><div class="sess"><span class="ts">5/7/26 4:27pm</span><span class="sesstxt">Emailed debtor following up one invoice still unpaid</span></div><div class="sess"><span class="ts">5/11/26 9:03am</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Business w/ perm dialed: 2546302617 — Left Message to call</span></div><div class="sess"><span class="ts">5/13/26 1:59pm</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Business w/ perm dialed: 2546302617 — Left Message to call</span></div><div class="sess"><span class="ts">5/13/26 2:09pm</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Home w/ perm dialed: 2546280070 lADY — ANSWERED STATED SHE WILL RELAY THE MSG AND HAVE THE PROPERTY MANGER CALL ME — BCK — Left Message to call</span></div><div class="sess"><span class="ts">5/18/26 2:15pm</span><span class="sesstxt">Phoned:  BRIDGEMOOR APARTMENTS at Home w/ perm dialed: 2546280070 — Phone Busy — Phoned:  BRIDGEMOOR APARTMENTS at Business w/ perm dialed: 2546302617 — Left Message to call</span></div><div class="sess"><span class="ts">5/20/26 7:18pm</span><span class="sesstxt">per client via porrtal &quot;Bridgemoor Apts paid off balance of 506.95 for invoice — 170049 dated 10/16/25 and was due by 11/15/25. Paid via our Hyfin online card — payment app 5/19/26. Payment receipt attached.&quot; — pmt rcvd 05/29 $506.95 via portal — portal pmt rcvd 05/20 9:29 am</span></div><div class="sess"><span class="ts">5/21/26 4:54am</span><span class="sesstxt">*** Promise Received ($506.95). Promised $506.95 by Fri 05-22-2026.</span></div><div class="sess"><span class="ts">5/21/26 7:16am</span><span class="sesstxt">Paid\Settled</span></div></div>
+      </div>
+    </details>
+    <details class="acct-card">
+      <summary>
+        <div class="acct-summary">
+          <span class="mono agyid">SWRS640488</span>
+          <span class="debtor-name">SANCHEZ BOBIE</span>
+          <span class="badge" style="background:#0495F11a;color:#0495F1;border:1px solid #0495F155;">New Business</span>
+          <span class="bal">$732.81 open</span>
+          <span class="chev">▾</span>
+        </div>
+      </summary>
+      <div class="acct-body">
+        
+        <div class="stat-grid">
+          <div><span class="lbl">Original Debt</span><span class="val">$732.81</span></div>
+          <div><span class="lbl">Collected</span><span class="val">$0.00</span></div>
+          <div><span class="lbl">Open Balance</span><span class="val">$732.81</span></div>
+          <div><span class="lbl">DOR (orig. due)</span><span class="val">7/7/2025</span></div>
+          <div><span class="lbl">DOA (placed)</span><span class="val">4/20/2026</span></div>
+          <div><span class="lbl">Age at Placement</span><span class="val">287 days</span></div>
+          <div><span class="lbl">Current Age</span><span class="val">445 days</span></div>
+          <div><span class="lbl">Total Notes</span><span class="val">60</span></div>
+          <div><span class="lbl">Last Letter Sent</span><span class="val">2026-09-04</span></div>
+          <div><span class="lbl">Last Worked</span><span class="val">2026-05-18</span></div>
+        </div>
+        <h4>Phone / Dial Attempts</h4>
+        
+      <table class="mini">
+        <thead><tr><th>Contact</th><th>Number</th><th>Type</th><th>Dials</th><th>Good #</th><th>Last Contact</th></tr></thead>
+        <tbody><tr>
+          <td>SANCHEZ BOBIE</td>
+          <td class="mono">2542894861</td>
+          <td>Home w/ perm</td>
+          <td class="num">11</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-05-18</td>
+        </tr></tbody>
+      </table>
+        <h4>Full Activity Log (46 sessions from 60 raw notes)</h4>
+        <div class="sess-log"><div class="sess"><span class="ts">4/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 1</span></div><div class="sess"><span class="ts">4/22/26 12:00am</span><span class="sesstxt">Validation Letter sent</span></div><div class="sess"><span class="ts">4/22/26 2:36pm</span><span class="sesstxt">Phoned: SANCHEZ BOBIE at Home w/ perm dialed: 2542894861 — Left Message to call</span></div><div class="sess"><span class="ts">5/12/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 2</span></div><div class="sess"><span class="ts">5/13/26 8:10am</span><span class="sesstxt">Workflow Email send failed Invalid email address .</span></div><div class="sess"><span class="ts">5/15/26 4:36pm</span><span class="sesstxt">Phoned: SANCHEZ BOBIE at Home w/ perm dialed: 2542894861 — Left Message to call</span></div><div class="sess"><span class="ts">5/18/26 3:25pm</span><span class="sesstxt">Phoned: SANCHEZ BOBIE at Home w/ perm dialed: 2542894861 — Left Message to call</span></div><div class="sess"><span class="ts">5/18/26 3:25pm</span><span class="sesstxt">Collector Wants to Move to Skit or Dialer</span></div><div class="sess"><span class="ts">5/22/26 7:05pm</span><span class="sesstxt">*** Letter series sent letter #: 3</span></div><div class="sess"><span class="ts">5/26/26 9:10am</span><span class="sesstxt">Workflow Email send failed Invalid email address .</span></div><div class="sess"><span class="ts">6/1/26 1:54pm</span><span class="sesstxt">TCN OutBound call to; 2542894861 Machine Delivered</span></div><div class="sess"><span class="ts">6/3/26 11:32am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail — Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">6/4/26 10:54am</span><span class="sesstxt">Skit outgoing call outcome for number 2542894861 outcome NA — Skit outgoing call outcome for number 2542894861 outcome NA</span></div><div class="sess"><span class="ts">6/11/26 10:42am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">6/12/26 11:14am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">6/13/26 10:19am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">6/15/26 11:08am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">6/16/26 10:44am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">6/17/26 11:52am</span><span class="sesstxt">Skit outgoing call outcome for number 2542894861 outcome NA</span></div><div class="sess"><span class="ts">6/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 4</span></div><div class="sess"><span class="ts">6/23/26 9:58am</span><span class="sesstxt">Workflow Email send failed Invalid email address .</span></div><div class="sess"><span class="ts">6/24/26 11:03am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">6/26/26 11:02am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">6/27/26 11:22am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">6/29/26 11:00am</span><span class="sesstxt">Skit outgoing call outcome for number 2542894861 outcome NA</span></div><div class="sess"><span class="ts">7/6/26 10:45am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail — Skit outgoing call outcome outcome notification sent to tjackson@swrecovery.com</span></div><div class="sess"><span class="ts">7/7/26 10:53am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">7/8/26 1:48pm</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">7/9/26 10:27am</span><span class="sesstxt">Skit outgoing call outcome for number 2542894861 outcome NA — Skit outgoing call outcome outcome notification sent to tjackson@swrecovery.com</span></div><div class="sess"><span class="ts">7/17/26 11:20am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail — Skit outgoing call outcome outcome notification sent to — SkitOutcomes@swrecovery.com</span></div><div class="sess"><span class="ts">7/18/26 10:59am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail</span></div><div class="sess"><span class="ts">7/20/26 11:19am</span><span class="sesstxt">Skit outgoing call outcome for number 2542894861 outcome NA — Skit outgoing call outcome outcome notification sent to ytorres25@swrecovery.com</span></div><div class="sess"><span class="ts">7/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 5</span></div><div class="sess"><span class="ts">7/23/26 10:03am</span><span class="sesstxt">Workflow Email send failed Invalid email address .</span></div><div class="sess"><span class="ts">7/27/26 12:00am</span><span class="sesstxt">Error: Email Address is empty or Email is not configured correctly. Sending — Email Failed.</span></div><div class="sess"><span class="ts">7/28/26 10:00am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/29/26 10:29am</span><span class="sesstxt">Skit outgoing call outcome for number 2542894861 outcome NA</span></div><div class="sess"><span class="ts">8/6/26 10:28am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome Voice Mail — Skit outgoing call outcome outcome notification sent to — SkitOutcomes@swrecovery.com</span></div><div class="sess"><span class="ts">8/7/26 10:12am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/8/26 11:17am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/10/26 11:12am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/11/26 10:40am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 6</span></div><div class="sess"><span class="ts">8/24/26 9:46am</span><span class="sesstxt">Workflow Email send failed Invalid email address .</span></div><div class="sess"><span class="ts">9/4/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 7 — *** Letter series killed due to end of series.</span></div><div class="sess"><span class="ts">9/8/26 9:50am</span><span class="sesstxt">Workflow Email send failed Invalid email address .</span></div></div>
+      </div>
+    </details>
+    <details class="acct-card">
+      <summary>
+        <div class="acct-summary">
+          <span class="mono agyid">SWRS640483</span>
+          <span class="debtor-name">CHRISTINA WOOD</span>
+          <span class="badge" style="background:#0446F11a;color:#0446F1;border:1px solid #0446F155;">Follow Up</span>
+          <span class="bal">$1,398.95 open</span>
+          <span class="chev">▾</span>
+        </div>
+      </summary>
+      <div class="acct-body">
+        
+        <div class="stat-grid">
+          <div><span class="lbl">Original Debt</span><span class="val">$1,398.95</span></div>
+          <div><span class="lbl">Collected</span><span class="val">$0.00</span></div>
+          <div><span class="lbl">Open Balance</span><span class="val">$1,398.95</span></div>
+          <div><span class="lbl">DOR (orig. due)</span><span class="val">8/16/2024</span></div>
+          <div><span class="lbl">DOA (placed)</span><span class="val">4/20/2026</span></div>
+          <div><span class="lbl">Age at Placement</span><span class="val">612 days</span></div>
+          <div><span class="lbl">Current Age</span><span class="val">770 days</span></div>
+          <div><span class="lbl">Total Notes</span><span class="val">172</span></div>
+          <div><span class="lbl">Last Letter Sent</span><span class="val">2026-09-08</span></div>
+          <div><span class="lbl">Last Worked</span><span class="val">2026-06-05</span></div>
+        </div>
+        <h4>Phone / Dial Attempts</h4>
+        
+      <table class="mini">
+        <thead><tr><th>Contact</th><th>Number</th><th>Type</th><th>Dials</th><th>Good #</th><th>Last Contact</th></tr></thead>
+        <tbody><tr>
+          <td>WOOD CHRISTOPHER J</td>
+          <td class="mono">7122435384</td>
+          <td>Home w/ perm</td>
+          <td class="num">3</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-05-20</td>
+        </tr><tr>
+          <td>CHRISTINA WOOD</td>
+          <td class="mono">2543406985</td>
+          <td>Business w/ perm</td>
+          <td class="num">3</td>
+          <td><span style="color:#8a94a3">no</span></td>
+          <td></td>
+        </tr><tr>
+          <td>CHRISTINA T WOOD</td>
+          <td class="mono">2524598900</td>
+          <td>Cell w/ perm</td>
+          <td class="num">2</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td></td>
+        </tr><tr>
+          <td>CHRISTINA WOOD</td>
+          <td class="mono">2545989008</td>
+          <td>Home w/ perm</td>
+          <td class="num">5</td>
+          <td><span style="color:#1E8E5A">good</span></td>
+          <td>2026-06-05</td>
+        </tr></tbody>
+      </table>
+        <h4>Full Activity Log (110 sessions from 172 raw notes)</h4>
+        <div class="sess-log"><div class="sess"><span class="ts">4/20/26 3:39pm</span><span class="sesstxt">Phoned: CHRISTINA WOOD at Home w/ perm dialed: 2545989008 — Left Message to call — Phoned: CHRISTINA WOOD at Business w/ perm dialed: 2543406985 — No Answer</span></div><div class="sess"><span class="ts">4/20/26 4:01pm</span><span class="sesstxt">LN Phone Number added: 2524598900 — LN Phone Number added: 7122435384 — LN Address Updated. last seen 202602</span></div><div class="sess"><span class="ts">4/20/26 4:10pm</span><span class="sesstxt">Follow Up</span></div><div class="sess"><span class="ts">4/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 1</span></div><div class="sess"><span class="ts">4/22/26 12:00am</span><span class="sesstxt">Validation Email Sent to TWIGGYTEXAS66@YAHOO.COM — Validation Message sent via Email to</span></div><div class="sess"><span class="ts">4/22/26 9:02am</span><span class="sesstxt">Unable to send Validation Letter invalid Zip field</span></div><div class="sess"><span class="ts">5/7/26 2:56pm</span><span class="sesstxt">Phoned: WOOD CHRISTOPHER J at Home w/ perm dialed: 7122435384 — Left Message to call — Phoned: CHRISTINA WOOD at Home w/ perm dialed: 2545989008 — Follow Up spoke to dbtr mm verf I adv her of the bal and acct snd she said I — will reach out to them and hng up</span></div><div class="sess"><span class="ts">5/11/26 10:05am</span><span class="sesstxt">DP Req sent</span></div><div class="sess"><span class="ts">5/11/26 10:08am</span><span class="sesstxt">Direct Pay Email Sent to kodinstalls@yahoo.com — Emailed Client for DP</span></div><div class="sess"><span class="ts">5/11/26 11:37am</span><span class="sesstxt">Phoned: WOOD CHRISTOPHER J at Home w/ perm dialed: 7122435384 — Left Message to call — Phoned: CHRISTINA WOOD at Home w/ perm dialed: 2545989008 — Left Message to call — Phoned: CHRISTINA WOOD at Business w/ perm dialed: 2543406985 — No Answer</span></div><div class="sess"><span class="ts">5/11/26 11:38am</span><span class="sesstxt">Phoned: CHRISTINA T WOOD at Cell w/ perm dialed: 2524598900 — No Answer jst rnging</span></div><div class="sess"><span class="ts">5/12/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 2</span></div><div class="sess"><span class="ts">5/13/26 8:10am</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">5/20/26 9:13am</span><span class="sesstxt">Phoned: WOOD CHRISTOPHER J at Home w/ perm dialed: 7122435384 — Left Message to call — Phoned: CHRISTINA WOOD at Home w/ perm dialed: 2545989008 — Left Message to call — Phoned: CHRISTINA WOOD at Business w/ perm dialed: 2543406985 — Number is Bad — Phoned: CHRISTINA T WOOD at Cell w/ perm dialed: 2524598900 — No Answer no vm</span></div><div class="sess"><span class="ts">5/22/26 7:05pm</span><span class="sesstxt">*** Letter series sent letter #: 3</span></div><div class="sess"><span class="ts">5/26/26 9:10am</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">5/27/26 4:19pm</span><span class="sesstxt">Client - no payment</span></div><div class="sess"><span class="ts">6/5/26 4:06pm</span><span class="sesstxt">Phoned: CHRISTINA WOOD at Home w/ perm dialed: 2545989008 — Left Message to call</span></div><div class="sess"><span class="ts">6/5/26 4:26pm</span><span class="sesstxt">Collector Wants to Move to Skit or Dialer</span></div><div class="sess"><span class="ts">6/6/26 10:00am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/8/26 9:24am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/9/26 9:17am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/11/26 9:29am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/12/26 9:23am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/13/26 9:15am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/15/26 9:22am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/16/26 9:18am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/17/26 9:36am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/18/26 9:16am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/19/26 9:22am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/20/26 9:45am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/22/26 9:18am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 4</span></div><div class="sess"><span class="ts">6/23/26 9:15am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/23/26 10:00am</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">6/24/26 9:22am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/26/26 9:21am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/27/26 10:03am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/29/26 9:21am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">6/30/26 9:15am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/1/26 9:34am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/2/26 9:23am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/3/26 9:19am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/6/26 9:21am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to tjackson@swrecovery.com</span></div><div class="sess"><span class="ts">7/7/26 9:19am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/8/26 9:55am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/9/26 9:28am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to tjackson@swrecovery.com</span></div><div class="sess"><span class="ts">7/10/26 9:20am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/11/26 9:14am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to ytorres25@swrecovery.com</span></div><div class="sess"><span class="ts">7/13/26 9:23am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to tjackson@swrecovery.com</span></div><div class="sess"><span class="ts">7/14/26 9:20am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/15/26 9:27am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/16/26 9:21am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/17/26 9:59am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to — SkitOutcomes@swrecovery.com</span></div><div class="sess"><span class="ts">7/18/26 9:44am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/20/26 9:51am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to ytorres25@swrecovery.com</span></div><div class="sess"><span class="ts">7/21/26 9:41am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/22/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 5</span></div><div class="sess"><span class="ts">7/23/26 9:18am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/23/26 10:02am</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">7/24/26 9:30am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/24/26 9:46am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">7/25/26 9:19am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/25/26 9:44am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">7/27/26 9:22am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">7/28/26 9:17am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">7/29/26 9:53am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to LHardage@swrecovery.com</span></div><div class="sess"><span class="ts">7/30/26 9:20am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to tjackson@swrecovery.com</span></div><div class="sess"><span class="ts">7/30/26 9:25am</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM — Email sent to  TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">7/31/26 9:17am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">7/31/26 9:17am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/1/26 9:23am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/4/26 10:47am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/4/26 11:41am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/4/26 5:56pm</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM — Email sent to  TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/5/26 9:25am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/6/26 9:17am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to LHardage@swrecovery.com</span></div><div class="sess"><span class="ts">8/7/26 9:13am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/7/26 9:59am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/8/26 9:05am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/8/26 9:17am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer — Skit outgoing call outcome outcome notification sent to tjackson@swrecovery.com</span></div><div class="sess"><span class="ts">8/10/26 9:26am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/11/26 9:18am</span><span class="sesstxt">Skit outgoing call outcome for number UNKNOWN outcome No Answer</span></div><div class="sess"><span class="ts">8/12/26 2:56pm</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM — Email sent to  TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/12/26 5:17pm</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/13/26 5:43pm</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/18/26 9:04am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/19/26 5:55pm</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM — Email sent to  TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/20/26 12:39pm</span><span class="sesstxt">CON Early – Convenience - Email sent - TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/21/26 9:13am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/21/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 6</span></div><div class="sess"><span class="ts">8/22/26 2:39pm</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/24/26 10:19am</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/27/26 5:36pm</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM — Email sent to  TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">8/28/26 5:30pm</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM — Email sent to  TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">9/2/26 12:20pm</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">9/3/26 9:48am</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">9/3/26 5:56pm</span><span class="sesstxt">Email sent to  TWIGGYTEXAS66@YAHOO.COM — WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">9/4/26 7:00pm</span><span class="sesstxt">*** Letter series sent letter #: 7 — *** Letter series killed due to end of series.</span></div><div class="sess"><span class="ts">9/8/26 9:49am</span><span class="sesstxt">WorkFlow Email Sent to TWIGGYTEXAS66@YAHOO.COM</span></div><div class="sess"><span class="ts">9/10/26 2:32pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/14/26 1:12pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/15/26 2:38pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/16/26 1:17pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/17/26 1:11pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/18/26 1:13pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/21/26 1:20pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/22/26 1:18pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/23/26 1:15pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div><div class="sess"><span class="ts">9/24/26 1:17pm</span><span class="sesstxt">Email sent to TWIGGYTEXAS66@YAHOO.COM (Template: In Collections - 161)</span></div></div>
+      </div>
+    </details>
+
+  <footer>Southwest Recovery Services · 16200 Addison Rd, Suite 260, Addison, TX 75001 · (866) 837-3065 · Report generated 9/25/2026</footer>
+</div>
+</body>
+</html>
