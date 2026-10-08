@@ -1,43 +1,43 @@
 {
- "generated": "2026-10-08T17:52:58+00:00",
- "lead_count_actual": 16012,
+ "generated": "2026-10-08T22:06:54+00:00",
+ "lead_count_actual": 16023,
  "status": {
   "cancelled": 5239,
   "lost": 513,
-  "open": 7178,
+  "open": 7188,
   "pending": 59,
-  "won": 3023
+  "won": 3024
  },
  "win_rate": 34.5,
- "won": 3023,
+ "won": 3024,
  "lost": 5752,
- "open_value": 60982815.51,
- "avg_cycle_days": 68,
+ "open_value": 61014462.11,
+ "avg_cycle_days": 69,
  "aging": {
-  "open": 7178,
+  "open": 7188,
   "stale_60": 6140,
   "stale_threshold_days": 60,
-  "never_contacted": 3060,
-  "overdue": 2380
+  "never_contacted": 3062,
+  "overdue": 2384
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4492,
+   "open": 4498,
    "value": 22381665.25,
-   "overdue": 413,
+   "overdue": 412,
    "d0_30": 211,
    "d31_90": 595,
-   "d91_180": 342,
-   "d180_plus": 562,
-   "never": 2782
+   "d91_180": 339,
+   "d180_plus": 566,
+   "never": 2787
   },
   "Hunter Howard": {
-   "open": 2180,
-   "value": 17993302.51,
-   "overdue": 1681,
-   "d0_30": 149,
-   "d31_90": 165,
-   "d91_180": 145,
+   "open": 2182,
+   "value": 18013949.110000003,
+   "overdue": 1683,
+   "d0_30": 151,
+   "d31_90": 157,
+   "d91_180": 153,
    "d180_plus": 1716,
    "never": 5
   },
@@ -62,19 +62,19 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 115,
+   "open": 117,
    "value": 17086895.77,
-   "overdue": 71,
-   "d0_30": 71,
-   "d31_90": 34,
+   "overdue": 73,
+   "d0_30": 75,
+   "d31_90": 35,
    "d91_180": 3,
    "d180_plus": 0,
-   "never": 7
+   "never": 4
   },
   "Raymond Davidson": {
    "open": 66,
-   "value": 3007151.98,
-   "overdue": 49,
+   "value": 3018151.98,
+   "overdue": 50,
    "d0_30": 54,
    "d31_90": 8,
    "d91_180": 1,
@@ -104,10 +104,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3672,
+   "open": 3677,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3672
+    "CallRail Stage": 3677
    }
   },
   "AimLogic - Visited Website": {
@@ -119,24 +119,24 @@
    }
   },
   "Default Pipeline": {
-   "open": 592,
-   "value": 34808838.48,
+   "open": 595,
+   "value": 34840485.08,
    "stages": {
     "Lead": 268,
-    "Pitch": 120,
-    "Contract Review": 81,
+    "Pitch": 121,
+    "Contract Review": 82,
     "Virtual Meeting Booked": 63,
-    "Quote": 53,
+    "Quote": 54,
     "Ready To Onboard": 4,
     "Closed": 2,
     "Placement(s) Confirmed": 1
    }
   },
   "Nurture": {
-   "open": 486,
+   "open": 488,
    "value": 20710856.6,
    "stages": {
-    "Nurture": 486
+    "Nurture": 488
    }
   },
   "Viewed Website Cold Lead": {
@@ -201,6 +201,17 @@
  },
  "stale": [
   {
+   "name": "STEVEN DIETZ",
+   "number": "28981",
+   "url": "https://app.nutshell.com/lead/28981",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 190,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "Home Instead",
    "number": "32483",
    "url": "https://app.nutshell.com/lead/32483",
@@ -245,6 +256,28 @@
    "value": 0.0
   },
   {
+   "name": "Kido Psychiatry",
+   "number": "31244",
+   "url": "https://app.nutshell.com/lead/31244",
+   "owner": "Brenn Morrow",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 98,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "SpeedyDollar",
+   "number": "33390",
+   "url": "https://app.nutshell.com/lead/33390",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 98,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "KarKey",
    "number": "23347",
    "url": "https://app.nutshell.com/lead/23347",
@@ -256,35 +289,13 @@
    "value": 500000.0
   },
   {
-   "name": "Kido Psychiatry",
-   "number": "31244",
-   "url": "https://app.nutshell.com/lead/31244",
-   "owner": "Brenn Morrow",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 97,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "SpeedyDollar",
-   "number": "33390",
-   "url": "https://app.nutshell.com/lead/33390",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 97,
-   "never": false,
-   "value": 0.0
-  },
-  {
    "name": "Empress Ambulance Services",
    "number": "22269",
    "url": "https://app.nutshell.com/lead/22269",
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 91,
+   "days": 92,
    "never": false,
    "value": 0.0
   },
@@ -295,7 +306,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 89,
+   "days": 90,
    "never": false,
    "value": 0.0
   },
@@ -1367,6 +1378,17 @@
    "value": 0.0
   },
   {
+   "name": "Diamond Door Realty",
+   "number": "28704",
+   "url": "https://app.nutshell.com/lead/28704",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 84,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "Gulf Winds International",
    "number": "33786",
    "url": "https://app.nutshell.com/lead/33786",
@@ -1406,17 +1428,6 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 83,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Diamond Door Realty",
-   "number": "28704",
-   "url": "https://app.nutshell.com/lead/28704",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
    "days": 83,
    "never": false,
    "value": 0.0
@@ -1719,6 +1730,50 @@
    "value": 0.0
   },
   {
+   "name": "ONA.NCPROP, LLC",
+   "number": "17401",
+   "url": "https://app.nutshell.com/lead/17401",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 79,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Infinite Learning Academy",
+   "number": "17596",
+   "url": "https://app.nutshell.com/lead/17596",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 79,
+   "never": false,
+   "value": 2500.0
+  },
+  {
+   "name": "Vorwerk LLC",
+   "number": "17906",
+   "url": "https://app.nutshell.com/lead/17906",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 79,
+   "never": false,
+   "value": 150000.0
+  },
+  {
+   "name": "Truck Masters",
+   "number": "21803",
+   "url": "https://app.nutshell.com/lead/21803",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 79,
+   "never": false,
+   "value": 2000000.0
+  },
+  {
    "name": "SERVPRO\u00ae Team Landers",
    "number": "23226",
    "url": "https://app.nutshell.com/lead/23226",
@@ -1741,26 +1796,15 @@
    "value": 0.0
   },
   {
-   "name": "ONA.NCPROP, LLC",
-   "number": "17401",
-   "url": "https://app.nutshell.com/lead/17401",
+   "name": "Cornerstone HVAC LLC",
+   "number": "17409",
+   "url": "https://app.nutshell.com/lead/17409",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
    "days": 78,
    "never": false,
    "value": 0.0
-  },
-  {
-   "name": "Infinite Learning Academy",
-   "number": "17596",
-   "url": "https://app.nutshell.com/lead/17596",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 78,
-   "never": false,
-   "value": 2500.0
   },
   {
    "name": "The Club at Berry Creek",
@@ -1785,28 +1829,6 @@
    "value": 300000.0
   },
   {
-   "name": "Vorwerk LLC",
-   "number": "17906",
-   "url": "https://app.nutshell.com/lead/17906",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 78,
-   "never": false,
-   "value": 150000.0
-  },
-  {
-   "name": "Truck Masters",
-   "number": "21803",
-   "url": "https://app.nutshell.com/lead/21803",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 78,
-   "never": false,
-   "value": 2000000.0
-  },
-  {
    "name": "G Orthodontics",
    "number": "21817",
    "url": "https://app.nutshell.com/lead/21817",
@@ -1827,57 +1849,35 @@
    "days": 78,
    "never": false,
    "value": 0.0
-  },
-  {
-   "name": "Cornerstone HVAC LLC",
-   "number": "17409",
-   "url": "https://app.nutshell.com/lead/17409",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 77,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "A-1 Inc. Exterminators & Tidewater Crawl",
-   "number": "32757",
-   "url": "https://app.nutshell.com/lead/32757",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 77,
-   "never": false,
-   "value": 0.0
   }
  ],
  "stale_scope": [
   "Default Pipeline"
  ],
- "stale_scope_total": 167,
+ "stale_scope_total": 168,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1528,
-   "won": 287,
-   "value": 15265657.600000001
+   "leads": 1531,
+   "won": 286,
+   "value": 15429904.200000001
   },
   "organic": {
-   "leads": 244,
-   "won": 61,
-   "value": 105175130.13000001
+   "leads": 242,
+   "won": 60,
+   "value": 105174607.13000001
   },
   "google": {
-   "leads": 174,
-   "won": 50,
-   "value": 104604055.38000001
+   "leads": 172,
+   "won": 49,
+   "value": 104592532.38000001
   },
   "chatgpt.com": {
    "leads": 76,
    "won": 9,
-   "value": 514706.0
+   "value": 525706.0
   },
   "gmb": {
-   "leads": 30,
+   "leads": 29,
    "won": 5,
    "value": 190300.0
   },
@@ -1921,17 +1921,17 @@
    "won": 0,
    "value": 100.0
   },
+  "referral": {
+   "leads": 3,
+   "won": 0,
+   "value": 0.0
+  },
   "chatgpt": {
    "leads": 2,
    "won": 0,
    "value": 0.0
   },
   "www.yellowpages.com": {
-   "leads": 2,
-   "won": 0,
-   "value": 0.0
-  },
-  "referral": {
    "leads": 2,
    "won": 0,
    "value": 0.0
@@ -1971,6 +1971,11 @@
    "won": 0,
    "value": 0.0
   },
+  "sw-recovery-services-com-y83jhps.gamma.site": {
+   "leads": 1,
+   "won": 0,
+   "value": 0.0
+  },
   "duckduckgo": {
    "leads": 1,
    "won": 1,
@@ -1983,12 +1988,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 1781,
-  "with_source": 253,
-  "pct": 14.2
+  "leads": 1783,
+  "with_source": 252,
+  "pct": 14.1
  },
  "new_leads_by_week": {
-  "2026-07-13": 36,
+  "2026-07-13": 32,
   "2026-07-20": 143,
   "2026-07-27": 107,
   "2026-08-03": 101,
@@ -2000,6 +2005,6 @@
   "2026-09-14": 133,
   "2026-09-21": 126,
   "2026-09-28": 134,
-  "2026-10-05": 83
+  "2026-10-05": 94
  }
 }
