@@ -1,53 +1,53 @@
 {
- "generated": "2026-10-07T22:00:58+00:00",
- "lead_count_actual": 16003,
+ "generated": "2026-10-08T17:52:58+00:00",
+ "lead_count_actual": 16012,
  "status": {
-  "cancelled": 5237,
+  "cancelled": 5239,
   "lost": 513,
-  "open": 7175,
+  "open": 7178,
   "pending": 59,
-  "won": 3019
+  "won": 3023
  },
- "win_rate": 34.4,
- "won": 3019,
- "lost": 5750,
- "open_value": 60821215.51,
- "avg_cycle_days": 69,
+ "win_rate": 34.5,
+ "won": 3023,
+ "lost": 5752,
+ "open_value": 60982815.51,
+ "avg_cycle_days": 68,
  "aging": {
-  "open": 7175,
+  "open": 7178,
   "stale_60": 6140,
   "stale_threshold_days": 60,
-  "never_contacted": 3061,
-  "overdue": 2381
+  "never_contacted": 3060,
+  "overdue": 2380
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4490,
+   "open": 4492,
    "value": 22381665.25,
    "overdue": 413,
-   "d0_30": 212,
-   "d31_90": 597,
-   "d91_180": 343,
-   "d180_plus": 558,
-   "never": 2780
+   "d0_30": 211,
+   "d31_90": 595,
+   "d91_180": 342,
+   "d180_plus": 562,
+   "never": 2782
   },
   "Hunter Howard": {
    "open": 2180,
-   "value": 17893402.51,
-   "overdue": 1682,
-   "d0_30": 145,
-   "d31_90": 168,
-   "d91_180": 142,
+   "value": 17993302.51,
+   "overdue": 1681,
+   "d0_30": 149,
+   "d31_90": 165,
+   "d91_180": 145,
    "d180_plus": 1716,
-   "never": 9
+   "never": 5
   },
   "Bryson Stevens": {
    "open": 166,
    "value": 513800.0,
    "overdue": 161,
    "d0_30": 2,
-   "d31_90": 31,
-   "d91_180": 24,
+   "d31_90": 29,
+   "d91_180": 26,
    "d180_plus": 0,
    "never": 109
   },
@@ -62,20 +62,20 @@
    "never": 151
   },
   "Brenn Morrow": {
-   "open": 113,
-   "value": 17005695.77,
+   "open": 115,
+   "value": 17086895.77,
    "overdue": 71,
-   "d0_30": 70,
+   "d0_30": 71,
    "d31_90": 34,
    "d91_180": 3,
    "d180_plus": 0,
-   "never": 6
+   "never": 7
   },
   "Raymond Davidson": {
-   "open": 67,
-   "value": 3026651.98,
+   "open": 66,
+   "value": 3007151.98,
    "overdue": 49,
-   "d0_30": 55,
+   "d0_30": 54,
    "d31_90": 8,
    "d91_180": 1,
    "d180_plus": 0,
@@ -104,10 +104,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3670,
+   "open": 3672,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3670
+    "CallRail Stage": 3672
    }
   },
   "AimLogic - Visited Website": {
@@ -119,13 +119,13 @@
    }
   },
   "Default Pipeline": {
-   "open": 591,
-   "value": 34647238.48,
+   "open": 592,
+   "value": 34808838.48,
    "stages": {
-    "Lead": 266,
+    "Lead": 268,
     "Pitch": 120,
-    "Contract Review": 85,
-    "Virtual Meeting Booked": 60,
+    "Contract Review": 81,
+    "Virtual Meeting Booked": 63,
     "Quote": 53,
     "Ready To Onboard": 4,
     "Closed": 2,
@@ -207,7 +207,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 127,
+   "days": 128,
    "never": true,
    "value": 0.0
   },
@@ -218,7 +218,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 104,
+   "days": 105,
    "never": true,
    "value": 0.0
   },
@@ -229,7 +229,7 @@
    "owner": "Paid Media CFATX",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 103,
+   "days": 104,
    "never": true,
    "value": 0.0
   },
@@ -240,9 +240,20 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 101,
+   "days": 102,
    "never": true,
    "value": 0.0
+  },
+  {
+   "name": "KarKey",
+   "number": "23347",
+   "url": "https://app.nutshell.com/lead/23347",
+   "owner": "Bryson Stevens",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 97,
+   "never": false,
+   "value": 500000.0
   },
   {
    "name": "Kido Psychiatry",
@@ -265,17 +276,6 @@
    "days": 97,
    "never": false,
    "value": 0.0
-  },
-  {
-   "name": "KarKey",
-   "number": "23347",
-   "url": "https://app.nutshell.com/lead/23347",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 96,
-   "never": false,
-   "value": 500000.0
   },
   {
    "name": "Empress Ambulance Services",
@@ -306,7 +306,7 @@
    "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 86,
+   "days": 87,
    "never": false,
    "value": 0.0
   },
@@ -317,7 +317,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 85,
+   "days": 86,
    "never": false,
    "value": 0.0
   },
@@ -328,7 +328,7 @@
    "owner": "Hunter Howard",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -339,7 +339,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -350,7 +350,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -361,7 +361,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -372,7 +372,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Ready To Onboard",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -383,7 +383,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -394,7 +394,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -405,7 +405,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -416,7 +416,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Ready To Onboard",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -427,7 +427,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -438,7 +438,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -449,7 +449,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -460,7 +460,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 10000.0
   },
@@ -471,7 +471,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -482,7 +482,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -493,7 +493,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -504,7 +504,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -515,7 +515,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 5000.0
   },
@@ -526,7 +526,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 15000.0
   },
@@ -537,7 +537,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -548,7 +548,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -559,7 +559,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -570,7 +570,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -581,7 +581,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 9024.31
   },
@@ -592,7 +592,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -603,7 +603,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -614,7 +614,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -625,7 +625,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -636,7 +636,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -647,7 +647,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -658,7 +658,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 10000.0
   },
@@ -669,7 +669,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 30000.0
   },
@@ -680,7 +680,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -691,7 +691,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -702,7 +702,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -713,7 +713,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 30000.0
   },
@@ -724,7 +724,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -735,7 +735,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -746,7 +746,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -757,7 +757,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -768,7 +768,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -779,7 +779,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -790,7 +790,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -801,7 +801,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -812,7 +812,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 195242.92
   },
@@ -823,7 +823,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -834,7 +834,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -845,7 +845,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 100000.0
   },
@@ -856,7 +856,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -867,7 +867,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -878,7 +878,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -889,7 +889,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 6000.0
   },
@@ -900,7 +900,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -911,7 +911,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -922,7 +922,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 6000.0
   },
@@ -933,7 +933,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -944,7 +944,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -955,7 +955,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 10000.0
   },
@@ -966,7 +966,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -977,7 +977,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -988,7 +988,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 15000.0
   },
@@ -999,7 +999,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1010,7 +1010,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1021,7 +1021,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1032,7 +1032,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1043,7 +1043,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1054,7 +1054,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 100000.0
   },
@@ -1065,7 +1065,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1076,7 +1076,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Ready To Onboard",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 15000.0
   },
@@ -1087,7 +1087,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1098,7 +1098,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 51000.0
   },
@@ -1109,7 +1109,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 10000.0
   },
@@ -1120,7 +1120,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1131,7 +1131,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 10000.0
   },
@@ -1142,7 +1142,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1153,7 +1153,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1164,7 +1164,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1175,7 +1175,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1186,7 +1186,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1197,7 +1197,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1208,7 +1208,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Closed",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1219,7 +1219,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 84,
+   "days": 85,
    "never": false,
    "value": 0.0
   },
@@ -1230,7 +1230,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 0.0
   },
@@ -1241,7 +1241,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 0.0
   },
@@ -1252,7 +1252,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 0.0
   },
@@ -1263,7 +1263,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 0.0
   },
@@ -1274,7 +1274,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 0.0
   },
@@ -1285,7 +1285,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 0.0
   },
@@ -1296,7 +1296,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 80000.0
   },
@@ -1307,7 +1307,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 20000.0
   },
@@ -1318,7 +1318,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 40000.0
   },
@@ -1329,7 +1329,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 0.0
   },
@@ -1340,7 +1340,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 0.0
   },
@@ -1351,7 +1351,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 83,
+   "days": 84,
    "never": false,
    "value": 0.0
   },
@@ -1362,6 +1362,50 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
+   "days": 84,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Gulf Winds International",
+   "number": "33786",
+   "url": "https://app.nutshell.com/lead/33786",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 84,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "CCI Holdings 2",
+   "number": "33986",
+   "url": "https://app.nutshell.com/lead/33986",
+   "owner": "Bryson Stevens",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 84,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Haroks Management Company",
+   "number": "17069",
+   "url": "https://app.nutshell.com/lead/17069",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 83,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Promont Dental",
+   "number": "17420",
+   "url": "https://app.nutshell.com/lead/17420",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
    "days": 83,
    "never": false,
    "value": 0.0
@@ -1378,57 +1422,13 @@
    "value": 0.0
   },
   {
-   "name": "Gulf Winds International",
-   "number": "33786",
-   "url": "https://app.nutshell.com/lead/33786",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 83,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "CCI Holdings 2",
-   "number": "33986",
-   "url": "https://app.nutshell.com/lead/33986",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 83,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Haroks Management Company",
-   "number": "17069",
-   "url": "https://app.nutshell.com/lead/17069",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 82,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Promont Dental",
-   "number": "17420",
-   "url": "https://app.nutshell.com/lead/17420",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 82,
-   "never": false,
-   "value": 0.0
-  },
-  {
    "name": "Family Dentistry & Orthodontics",
    "number": "20862",
    "url": "https://app.nutshell.com/lead/20862",
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1439,7 +1439,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1450,7 +1450,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1461,7 +1461,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1472,7 +1472,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1483,7 +1483,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1494,7 +1494,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1505,7 +1505,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 11000.0
   },
@@ -1516,7 +1516,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1527,7 +1527,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1538,7 +1538,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1549,7 +1549,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1560,7 +1560,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1571,7 +1571,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1582,7 +1582,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1593,7 +1593,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1604,7 +1604,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 9000.0
   },
@@ -1615,7 +1615,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 10500.0
   },
@@ -1626,7 +1626,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1637,7 +1637,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 50000.0
   },
@@ -1648,7 +1648,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1659,7 +1659,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 500004.0
   },
@@ -1670,7 +1670,7 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1681,7 +1681,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1692,7 +1692,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 0.0
   },
@@ -1703,7 +1703,7 @@
    "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 79,
+   "days": 80,
    "never": false,
    "value": 30000.0
   },
@@ -1714,6 +1714,28 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
+   "days": 80,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "SERVPRO\u00ae Team Landers",
+   "number": "23226",
+   "url": "https://app.nutshell.com/lead/23226",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 79,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Innovative Alternatives Inc.",
+   "number": "33379",
+   "url": "https://app.nutshell.com/lead/33379",
+   "owner": "Raymond Davidson",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
    "days": 79,
    "never": false,
    "value": 0.0
@@ -1741,6 +1763,28 @@
    "value": 2500.0
   },
   {
+   "name": "The Club at Berry Creek",
+   "number": "17646",
+   "url": "https://app.nutshell.com/lead/17646",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 78,
+   "never": false,
+   "value": 105000.0
+  },
+  {
+   "name": "USA Dental",
+   "number": "17726",
+   "url": "https://app.nutshell.com/lead/17726",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 78,
+   "never": false,
+   "value": 300000.0
+  },
+  {
    "name": "Vorwerk LLC",
    "number": "17906",
    "url": "https://app.nutshell.com/lead/17906",
@@ -1763,21 +1807,21 @@
    "value": 2000000.0
   },
   {
-   "name": "SERVPRO\u00ae Team Landers",
-   "number": "23226",
-   "url": "https://app.nutshell.com/lead/23226",
+   "name": "G Orthodontics",
+   "number": "21817",
+   "url": "https://app.nutshell.com/lead/21817",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
-   "stage": "Lead",
+   "stage": "Pitch",
    "days": 78,
    "never": false,
-   "value": 0.0
+   "value": 600000.0
   },
   {
-   "name": "Innovative Alternatives Inc.",
-   "number": "33379",
-   "url": "https://app.nutshell.com/lead/33379",
-   "owner": "Raymond Davidson",
+   "name": "Gateway To You",
+   "number": "33824",
+   "url": "https://app.nutshell.com/lead/33824",
+   "owner": "Brenn Morrow",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
    "days": 78,
@@ -1796,57 +1840,13 @@
    "value": 0.0
   },
   {
-   "name": "The Club at Berry Creek",
-   "number": "17646",
-   "url": "https://app.nutshell.com/lead/17646",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 77,
-   "never": false,
-   "value": 105000.0
-  },
-  {
-   "name": "USA Dental",
-   "number": "17726",
-   "url": "https://app.nutshell.com/lead/17726",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 77,
-   "never": false,
-   "value": 300000.0
-  },
-  {
-   "name": "G Orthodontics",
-   "number": "21817",
-   "url": "https://app.nutshell.com/lead/21817",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 77,
-   "never": false,
-   "value": 600000.0
-  },
-  {
-   "name": "Gateway To You",
-   "number": "33824",
-   "url": "https://app.nutshell.com/lead/33824",
-   "owner": "Brenn Morrow",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 77,
-   "never": false,
-   "value": 0.0
-  },
-  {
    "name": "A-1 Inc. Exterminators & Tidewater Crawl",
    "number": "32757",
    "url": "https://app.nutshell.com/lead/32757",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 76,
+   "days": 77,
    "never": false,
    "value": 0.0
   }
@@ -1857,19 +1857,19 @@
  "stale_scope_total": 167,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1523,
-   "won": 283,
-   "value": 15155657.600000001
+   "leads": 1528,
+   "won": 287,
+   "value": 15265657.600000001
   },
   "organic": {
-   "leads": 245,
+   "leads": 244,
    "won": 61,
-   "value": 105093930.13000001
+   "value": 105175130.13000001
   },
   "google": {
-   "leads": 175,
+   "leads": 174,
    "won": 50,
-   "value": 104522855.38000001
+   "value": 104604055.38000001
   },
   "chatgpt.com": {
    "leads": 76,
@@ -1877,7 +1877,7 @@
    "value": 514706.0
   },
   "gmb": {
-   "leads": 29,
+   "leads": 30,
    "won": 5,
    "value": 190300.0
   },
@@ -1906,15 +1906,15 @@
    "won": 1,
    "value": 10000.0
   },
-  "facebook": {
-   "leads": 4,
-   "won": 1,
-   "value": 27845.0
-  },
   "gbp": {
    "leads": 4,
    "won": 2,
    "value": 90100.0
+  },
+  "facebook": {
+   "leads": 3,
+   "won": 1,
+   "value": 27845.0
   },
   "yahoo": {
    "leads": 3,
@@ -1983,12 +1983,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 1778,
-  "with_source": 255,
-  "pct": 14.3
+  "leads": 1781,
+  "with_source": 253,
+  "pct": 14.2
  },
  "new_leads_by_week": {
-  "2026-07-13": 82,
+  "2026-07-13": 36,
   "2026-07-20": 143,
   "2026-07-27": 107,
   "2026-08-03": 101,
@@ -2000,6 +2000,6 @@
   "2026-09-14": 133,
   "2026-09-21": 126,
   "2026-09-28": 134,
-  "2026-10-05": 74
+  "2026-10-05": 83
  }
 }
