@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What a low PAYDEX score means for your business | Southwest Recovery Services</title>
+<meta name="description" content="PAYDEX is Dun & Bradstreet's 1 to 100 measure of how promptly a company pays its suppliers. Here is what it means and where a low score shows up.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#070731; --navy:#070B97; --blue:#0446F1; --sky:#0495F1; --light:#82CCFA;
+  --bg:#ffffff; --surface:#F4F7FC; --tint:#E9F3FE; --ink:#26303B; --muted:#3D3D52; --line:#D9DEE3;
+  --head:#070731; --link:#0446F1; --late:#B8790A; --risk:#C0392B;
+  --hero-bg:#070731; --hero-ink:#ffffff; --hero-soft:#C9D3EE; --cta-bg:#070B97;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B0D2A; --surface:#12153A; --tint:#12153A; --ink:#E4E8F5; --muted:#B4BCD6; --line:#2A2F5C;
+    --head:#FFFFFF; --link:#82CCFA; --hero-bg:#05051F; --cta-bg:#0A0F7A; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B0D2A; --surface:#12153A; --tint:#12153A; --ink:#E4E8F5; --muted:#B4BCD6; --line:#2A2F5C;
+  --head:#FFFFFF; --link:#82CCFA; --hero-bg:#05051F; --cta-bg:#0A0F7A; color-scheme: dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Fira Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:400;font-size:17px;line-height:1.6;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:10}
+a{color:var(--link)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.wrap.narrow > *{max-width:720px}
+/* header always light so the full-colour logo keeps its clear space */
+.top{background:#fff;border-bottom:1px solid #D9DEE3}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+.top img{display:block;width:210px;max-width:52vw;height:auto}
+.top a.call{font-weight:500;text-decoration:none;color:#070B97;font-size:15px;white-space:nowrap}
+/* hero */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:56px 0 44px}
+.hero h1{font-weight:700;font-size:clamp(30px,5.2vw,50px);line-height:1.08;margin:0 0 18px;letter-spacing:-0.01em;max-width:16em}
+.hero p.lead{font-weight:300;font-size:clamp(18px,2.2vw,21px);line-height:1.5;color:var(--hero-soft);max-width:36em;margin:0}
+.scalehead{margin:44px 0 12px;font-weight:500;font-size:15px;color:var(--hero-soft)}
+ol.scale{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(10,1fr);gap:0;border-radius:3px;overflow:hidden}
+ol.scale li{padding:14px 8px 14px;border-top:5px solid var(--light);background:rgba(255,255,255,.06);min-width:0}
+ol.scale li b{display:block;font-weight:700;font-size:26px;line-height:1}
+ol.scale li span{display:block;font-weight:300;font-size:13.5px;line-height:1.3;margin-top:8px;color:var(--hero-soft)}
+ol.scale li.on{border-top-color:#4FB0FF}
+ol.scale li.prompt{border-top-color:#fff;background:#0446F1}
+ol.scale li.prompt span{color:#fff}
+ol.scale li.l1{border-top-color:#E0A53A} ol.scale li.l2{border-top-color:#DE8B2E} ol.scale li.l3{border-top-color:#D9702A}
+ol.scale li.l4{border-top-color:#D4562B} ol.scale li.l5{border-top-color:#CC4130} ol.scale li.l6{border-top-color:#C0392B}
+.scalenote{margin:14px 0 0;font-weight:300;font-size:14px;color:var(--hero-soft)}
+@media (max-width:780px){
+  ol.scale{grid-template-columns:1fr;border-radius:3px}
+  ol.scale li{display:flex;align-items:baseline;gap:14px;border-top:0;border-left:5px solid var(--light);padding:10px 14px}
+  ol.scale li b{min-width:52px;font-size:22px}
+  ol.scale li span{margin:0}
+  ol.scale li.on{border-left-color:#4FB0FF} ol.scale li.prompt{border-left-color:#fff}
+  ol.scale li.l1{border-left-color:#E0A53A} ol.scale li.l2{border-left-color:#DE8B2E} ol.scale li.l3{border-left-color:#D9702A}
+  ol.scale li.l4{border-left-color:#D4562B} ol.scale li.l5{border-left-color:#CC4130} ol.scale li.l6{border-left-color:#C0392B}
+}
+/* sections */
+section{padding:52px 0 0}
+h2{font-weight:700;font-size:clamp(25px,3.4vw,33px);line-height:1.15;margin:0 0 12px;color:var(--head);letter-spacing:-0.005em}
+h2::after{content:"";display:block;width:56px;height:3px;background:var(--blue);margin-top:14px}
+p{margin:0 0 14px}
+.lede{font-size:19px;line-height:1.55}
+dl.impact{margin:26px 0 0;border-top:1px solid var(--line)}
+.impact .row{display:grid;grid-template-columns:230px 1fr;gap:6px 28px;padding:20px 0;border-bottom:1px solid var(--line)}
+.impact dt{font-weight:700;color:var(--head);font-size:18px;line-height:1.3}
+.impact dd{margin:0}
+@media (max-width:700px){.impact .row{grid-template-columns:1fr}}
+table.cmp{width:100%;border-collapse:collapse;margin:24px 0 0;font-size:16px}
+table.cmp th,table.cmp td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+table.cmp thead th{background:var(--deep);color:#fff;font-weight:500;border-bottom:0}
+:root[data-theme="dark"] table.cmp thead th{background:#1B2060}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) table.cmp thead th{background:#1B2060}}
+table.cmp tbody th{font-weight:700;color:var(--head);width:24%}
+.tablewrap{overflow-x:auto}
+ol.steps{margin:24px 0 0;padding:0;list-style:none;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 22px 56px}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;display:grid;place-items:center;font-size:18px}
+ol.steps li b{display:block;color:var(--head);font-size:18px;margin-bottom:2px}
+.cta{margin-top:56px;background:var(--cta-bg);color:#fff}
+.cta .wrap{padding-top:40px;padding-bottom:40px;display:grid;grid-template-columns:1fr auto;gap:20px 36px;align-items:center}
+.cta h2{color:#fff;margin:0 0 8px}.cta h2::after{background:var(--light)}
+.cta p{margin:0;color:#DCE6FF;font-weight:300;font-size:18px}
+.cta a.btn{display:inline-block;background:#fff;color:#070B97;text-decoration:none;font-weight:700;font-size:21px;padding:15px 28px;border-radius:3px;white-space:nowrap}
+.cta a.btn:focus-visible,a:focus-visible{outline:3px solid #82CCFA;outline-offset:3px}
+@media (max-width:760px){.cta .wrap{grid-template-columns:1fr}}
+ul.links{margin:18px 0 0;padding:0;list-style:none}
+ul.links li{padding:10px 0;border-bottom:1px solid var(--line)}
+ul.links li:first-child{border-top:1px solid var(--line)}
+footer{padding:30px 0 40px;font-size:13.5px;line-height:1.55;color:var(--muted)}
+footer .tag{font-weight:500;color:var(--head);font-size:14.5px;margin-bottom:10px}
+footer p{margin:0 0 10px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjUuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MzEgMTAzLjkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUzMSAxMDMuOTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMwNjBBOTI7fQoJLnN0MXtmaWxsOiMwNzQ2RUQ7fQoJLnN0MntmaWxsOiM4MEM3RjU7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02Ni43LDQzLjFjLTQuNi0xLjUtOC0yLjctMTAuMy0zLjhjLTIuMy0xLjEtMy45LTIuMi00LjgtMy40Yy0wLjktMS4yLTEuMy0yLjctMS4zLTQuNmMwLTIuNywxLTQuOCwzLjEtNi4yCgkJYzItMS40LDQuOC0yLjEsOC4zLTIuMWM2LjYsMCwxMi44LDIuNCwxOC42LDcuMWw5LjMtMTAuOWMtMy44LTMuNy04LjEtNi40LTEyLjgtOC4yYy00LjctMS44LTEwLjItMi43LTE2LjYtMi43CgkJYy01LjksMC0xMS4xLDEtMTUuOCwzYy00LjcsMi04LjMsNC45LTEwLjksOC42Yy0yLjYsMy43LTMuOSw4LTMuOSwxMi45YzAsNi40LDIsMTEuNiw1LjksMTUuOGM0LDQuMiwxMC42LDcuNywyMCwxMC41CgkJYzQuMiwxLjMsNy4zLDIuNSw5LjUsMy43YzIuMiwxLjEsMy44LDIuNCw0LjcsMy45YzAuOSwxLjQsMS4zLDMuMiwxLjMsNS4zYzAsMy4zLTEuMiw1LjgtMy42LDcuN2MtMi40LDEuOC01LjcsMi44LTkuOSwyLjgKCQljLTQuMSwwLTcuOS0wLjctMTEuMy0yLjFjLTMuNS0xLjQtNi44LTMuNS0xMC4xLTYuMkwyNi4xLDg1LjNjMy44LDMuNyw4LjQsNi42LDEzLjgsOC44YzUuMywyLjIsMTEuNSwzLjMsMTguNCwzLjMKCQljNi45LDAsMTIuOS0xLjEsMTgtMy40YzUuMS0yLjIsOC45LTUuNCwxMS42LTkuNHM0LTguNyw0LTE0YzAtNy40LTItMTMuMi02LjEtMTcuMkM4MS43LDQ5LjMsNzUuMyw0NS45LDY2LjcsNDMuMXoiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTY3LjIsODAuMSAxNTYuMiwxMC41IDEzNS4xLDEwLjUgMTIzLjQsODAuMSAxMTQuOSwxMC41IDk0LjksMTAuNSAxMDguOCw5NS4zIDEzNC4zLDk1LjMgMTQ1LjQsMzAuNSAKCQkxNTUuOSw5NS4zIDE4Miw5NS4zIDE5Ni4yLDEwLjUgMTc3LjEsMTAuNSAJIi8+Cgk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMzMyLjcsNTMuNGMtNC4xLTQtMTAuNC03LjQtMTkuMS0xMC4yYy00LjYtMS41LTgtMi43LTEwLjMtMy44Yy0yLjMtMS4xLTMuOS0yLjItNC44LTMuNAoJCWMtMC45LTEuMi0xLjMtMi43LTEuMy00LjZjMC0yLjcsMS00LjgsMy4xLTYuMmMyLTEuNCw0LjgtMi4xLDguMy0yLjFjNi42LDAsMTIuOCwyLjQsMTguNiw3LjFsOS4zLTEwLjljLTMuOC0zLjctOC4xLTYuNC0xMi44LTguMgoJCWMtNC43LTEuOC0xMC4yLTIuNy0xNi42LTIuN2MtNS45LDAtMTEuMSwxLTE1LjgsM2MtNC43LDItOC4zLDQuOS0xMC45LDguNmMtMi42LDMuNy0zLjksOC0zLjksMTIuOWMwLDYuNCwyLDExLjYsNS45LDE1LjgKCQljNCw0LjIsMTAuNiw3LjcsMjAsMTAuNWM0LjIsMS4zLDcuMywyLjUsOS41LDMuN2MyLjIsMS4xLDMuOCwyLjQsNC43LDMuOWMwLjksMS40LDEuMywzLjIsMS4zLDUuM2MwLDMuMy0xLjIsNS44LTMuNiw3LjcKCQlzLTUuNywyLjgtOS45LDIuOGMtNC4xLDAtNy45LTAuNy0xMS4zLTIuMWMtMy41LTEuNC02LjgtMy41LTEwLjEtNi4yTDI3Myw4NS4zYzMuOCwzLjcsOC40LDYuNiwxMy44LDguOAoJCWM1LjMsMi4yLDExLjUsMy4zLDE4LjQsMy4zYzYuOSwwLDEyLjktMS4xLDE4LTMuNGM1LjEtMi4yLDguOS01LjQsMTEuNi05LjRzNC04LjcsNC0xNEMzMzguOCw2My4xLDMzNi44LDU3LjQsMzMyLjcsNTMuNHoiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDIiIHBvaW50cz0iMjMzLjIsMTguNiAyMTcuOCw1Mi4xIDI1MC45LDM2LjUgMjMzLjEsMzYuNiAJIi8+Cgk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjUxLjIsNTkuM2M1LjYtMi41LDkuNi01LjYsMTIuMi05LjJjMi42LTMuNiwzLjktOC4yLDMuOS0xMy42YzAtOC43LTIuOS0xNS4yLTguNi0xOS40CgkJYy01LjgtNC4zLTE0LjMtNi40LTI1LjgtNi40aC0yNy40djg0LjZoMTkuOFY2Mi45aDcuN0wyNTAsOTUuM2gyMi4zTDI1MS4yLDU5LjN6IE0yNTAuOSwzNi41bC0zMy4yLDE1LjZsMTUuNC0zMy41bC0wLjEsMTgKCQlMMjUwLjksMzYuNXoiLz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0zNzguNywxOS44Yy0wLjEtMS4xLTAuNi0xLjktMS42LTIuNWMtMC45LTAuNi0yLTAuOS0zLjMtMC45Yy0xLDAtMS44LDAuMi0yLjUsMC41cy0xLjMsMC43LTEuNywxLjMKCQkJYy0wLjQsMC41LTAuNiwxLjItMC42LDEuOWMwLDAuNiwwLjEsMS4xLDAuNCwxLjVjMC4zLDAuNCwwLjYsMC44LDEuMSwxczAuOSwwLjUsMS40LDAuN2MwLjUsMC4yLDAuOSwwLjMsMS4zLDAuNGwyLjIsMC42CgkJCWMwLjYsMC4xLDEuMiwwLjQsMS45LDAuNnMxLjQsMC42LDIsMS4xczEuMiwxLDEuNiwxLjdzMC42LDEuNiwwLjYsMi42YzAsMS4yLTAuMywyLjItMC45LDMuMmMtMC42LDEtMS41LDEuNy0yLjcsMi4zCgkJCWMtMS4yLDAuNi0yLjYsMC44LTQuMywwLjhjLTEuNiwwLTIuOS0wLjMtNC4xLTAuOHMtMi0xLjItMi43LTIuMWMtMC43LTAuOS0xLTEuOS0xLjEtMy4xaDIuN2MwLjEsMC44LDAuMywxLjUsMC44LDIKCQkJczEuMSwwLjksMS45LDEuMmMwLjgsMC4zLDEuNiwwLjQsMi40LDAuNGMxLDAsMS45LTAuMiwyLjctMC41czEuNC0wLjgsMS45LTEuNGMwLjUtMC42LDAuNy0xLjMsMC43LTIuMWMwLTAuNy0wLjItMS4zLTAuNi0xLjgKCQkJYy0wLjQtMC41LTAuOS0wLjgtMS42LTEuMWMtMC43LTAuMy0xLjQtMC41LTIuMS0wLjdsLTIuNy0wLjhjLTEuNy0wLjUtMy4xLTEuMi00LTIuMWMtMS0wLjktMS41LTIuMS0xLjUtMy42YzAtMS4yLDAuMy0yLjMsMS0zLjIKCQkJYzAuNy0wLjksMS42LTEuNiwyLjctMi4xczIuNC0wLjgsMy44LTAuOGMxLjQsMCwyLjcsMC4yLDMuOCwwLjhzMiwxLjIsMi42LDIuMWMwLjYsMC45LDEsMS44LDEsM0gzNzguN3oiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMzkyLjIsMzYuNWMtMS41LDAtMi44LTAuNC0zLjktMS4xYy0xLjEtMC43LTItMS43LTIuNi0zYy0wLjYtMS4zLTAuOS0yLjctMC45LTQuNGMwLTEuNywwLjMtMy4yLDAuOS00LjUKCQkJYzAuNi0xLjMsMS41LTIuMywyLjYtM2MxLjEtMC43LDIuNC0xLjEsMy45LTEuMWMxLjUsMCwyLjgsMC40LDMuOSwxLjFzMiwxLjcsMi42LDNzMC45LDIuOCwwLjksNC41YzAsMS43LTAuMywzLjItMC45LDQuNAoJCQljLTAuNiwxLjMtMS41LDIuMi0yLjYsM1MzOTMuNywzNi41LDM5Mi4yLDM2LjV6IE0zOTIuMiwzNC4zYzEuMSwwLDItMC4zLDIuOC0wLjlzMS4zLTEuMywxLjYtMi4zYzAuMy0wLjksMC41LTIsMC41LTMKCQkJcy0wLjItMi4xLTAuNS0zLjFjLTAuMy0wLjktMC45LTEuNy0xLjYtMi4zYy0wLjctMC42LTEuNi0wLjktMi44LTAuOWMtMS4xLDAtMiwwLjMtMi44LDAuOWMtMC43LDAuNi0xLjMsMS4zLTEuNiwyLjMKCQkJYy0wLjMsMC45LTAuNSwyLTAuNSwzLjFzMC4yLDIuMSwwLjUsM3MwLjksMS43LDEuNiwyLjNDMzkwLjIsMzQsMzkxLjEsMzQuMywzOTIuMiwzNC4zeiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00MTMuOCwyOS41di05LjdoMi41djE2LjRoLTIuNXYtMi44aC0wLjJjLTAuNCwwLjgtMSwxLjUtMS44LDIuMXMtMS44LDAuOS0zLjEsMC45Yy0xLDAtMS45LTAuMi0yLjctMC43CgkJCWMtMC44LTAuNS0xLjQtMS4xLTEuOS0yYy0wLjUtMC45LTAuNy0yLjEtMC43LTMuNVYxOS44aDIuNXYxMC4yYzAsMS4yLDAuMywyLjEsMSwyLjlzMS41LDEuMSwyLjYsMS4xYzAuNiwwLDEuMy0wLjIsMS45LTAuNQoJCQljMC42LTAuMywxLjItMC44LDEuNi0xLjVDNDEzLjYsMzEuNCw0MTMuOCwzMC41LDQxMy44LDI5LjV6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTQyOCwxOS44VjIyaC04LjV2LTIuMUg0Mjh6IE00MjIsMTUuOWgyLjV2MTUuNmMwLDAuNywwLjEsMS4yLDAuMywxLjZjMC4yLDAuNCwwLjUsMC42LDAuOCwwLjcKCQkJczAuNywwLjIsMSwwLjJjMC4zLDAsMC41LDAsMC43LDBzMC4zLTAuMSwwLjQtMC4xbDAuNSwyLjNjLTAuMiwwLjEtMC40LDAuMS0wLjcsMC4yYy0wLjMsMC4xLTAuNywwLjEtMS4yLDAuMQoJCQljLTAuNywwLTEuNC0wLjItMi4xLTAuNWMtMC43LTAuMy0xLjItMC44LTEuNy0xLjRjLTAuNC0wLjYtMC43LTEuNC0wLjctMi40VjE1Ljl6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTQzNC43LDI2LjR2OS44aC0yLjVWMTQuNGgyLjV2OGgwLjJjMC40LTAuOCwxLTEuNSwxLjctMmMwLjgtMC41LDEuOC0wLjgsMy4xLTAuOGMxLjEsMCwyLjEsMC4yLDIuOSwwLjcKCQkJYzAuOCwwLjQsMS41LDEuMSwyLDJzMC43LDIuMSwwLjcsMy41djEwLjRoLTIuNVYyNmMwLTEuMy0wLjMtMi4zLTEtM2MtMC43LTAuNy0xLjYtMS4xLTIuOC0xLjFjLTAuOCwwLTEuNiwwLjItMi4yLDAuNQoJCQljLTAuNiwwLjMtMS4yLDAuOS0xLjUsMS41QzQzNC44LDI0LjYsNDM0LjcsMjUuNCw0MzQuNywyNi40eiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00NTMuNiwzNi4ybC01LTE2LjRoMi42bDMuNSwxMi41aDAuMmwzLjUtMTIuNWgyLjdsMy41LDEyLjVoMC4ybDMuNS0xMi41aDIuNmwtNSwxNi40aC0yLjVsLTMuNi0xMi42aC0wLjMKCQkJbC0zLjYsMTIuNkg0NTMuNnoiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDgwLjYsMzYuNWMtMS42LDAtMi45LTAuMy00LjEtMWMtMS4xLTAuNy0yLTEuNy0yLjYtMi45Yy0wLjYtMS4zLTAuOS0yLjctMC45LTQuNGMwLTEuNywwLjMtMy4yLDAuOS00LjQKCQkJYzAuNi0xLjMsMS41LTIuMywyLjYtM2MxLjEtMC43LDIuNC0xLjEsMy45LTEuMWMwLjksMCwxLjcsMC4xLDIuNSwwLjRjMC44LDAuMywxLjYsMC43LDIuMywxLjRzMS4yLDEuNSwxLjYsMi41CgkJCWMwLjQsMSwwLjYsMi4zLDAuNiwzLjl2MS4xaC0xMi42di0yLjJoMTAuMWMwLTAuOS0wLjItMS43LTAuNS0yLjVzLTAuOS0xLjMtMS42LTEuN2MtMC43LTAuNC0xLjUtMC42LTIuNC0wLjYKCQkJYy0xLDAtMS45LDAuMi0yLjYsMC43Yy0wLjcsMC41LTEuMywxLjEtMS43LDEuOWMtMC40LDAuOC0wLjYsMS42LTAuNiwyLjV2MS40YzAsMS4yLDAuMiwyLjMsMC42LDMuMWMwLjQsMC45LDEsMS41LDEuOCwyCgkJCWMwLjgsMC40LDEuNywwLjcsMi43LDAuN2MwLjcsMCwxLjMtMC4xLDEuOC0wLjNjMC41LTAuMiwxLTAuNSwxLjQtMC45czAuNy0wLjksMC45LTEuNGwyLjQsMC43Yy0wLjMsMC44LTAuNywxLjUtMS4zLDIuMgoJCQljLTAuNiwwLjYtMS4zLDEuMS0yLjIsMS40QzQ4Mi43LDM2LjQsNDgxLjcsMzYuNSw0ODAuNiwzNi41eiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik01MDIuOCwyMy41bC0yLjMsMC42Yy0wLjEtMC40LTAuMy0wLjctMC42LTEuMXMtMC42LTAuNy0xLjEtMC45cy0xLjEtMC40LTEuOC0wLjRjLTEsMC0xLjgsMC4yLTIuNSwwLjcKCQkJYy0wLjcsMC41LTEsMS0xLDEuN2MwLDAuNiwwLjIsMS4xLDAuNywxLjVjMC41LDAuNCwxLjIsMC43LDIuMSwwLjlsMi40LDAuNmMxLjUsMC40LDIuNiwwLjksMy4zLDEuNmMwLjcsMC43LDEuMSwxLjcsMS4xLDIuOAoJCQljMCwwLjktMC4zLDEuOC0wLjgsMi41Yy0wLjUsMC43LTEuMywxLjMtMi4yLDEuN2MtMSwwLjQtMi4xLDAuNi0zLjMsMC42Yy0xLjcsMC0zLjEtMC40LTQuMS0xLjFjLTEuMS0wLjctMS44LTEuOC0yLjEtMy4yCgkJCWwyLjQtMC42YzAuMiwwLjksMC43LDEuNSwxLjMsMnMxLjUsMC43LDIuNSwwLjdjMS4yLDAsMi4xLTAuMiwyLjgtMC44czEtMS4xLDEtMS44YzAtMC42LTAuMi0xLTAuNi0xLjRjLTAuNC0wLjQtMS0wLjctMS44LTAuOQoJCQlsLTIuNy0wLjZjLTEuNS0wLjQtMi42LTAuOS0zLjMtMS43Yy0wLjctMC44LTEtMS43LTEtMi44YzAtMC45LDAuMy0xLjcsMC44LTIuNWMwLjUtMC43LDEuMi0xLjMsMi4xLTEuN2MwLjktMC40LDEuOS0wLjYsMy4xLTAuNgoJCQljMS42LDAsMi45LDAuNCwzLjgsMS4xQzUwMS43LDIxLjQsNTAyLjQsMjIuMyw1MDIuOCwyMy41eiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik01MTQsMTkuOFYyMmgtOC41di0yLjFINTE0eiBNNTA4LDE1LjloMi41djE1LjZjMCwwLjcsMC4xLDEuMiwwLjMsMS42YzAuMiwwLjQsMC41LDAuNiwwLjgsMC43CgkJCXMwLjcsMC4yLDEsMC4yYzAuMywwLDAuNSwwLDAuNywwczAuMy0wLjEsMC40LTAuMWwwLjUsMi4zYy0wLjIsMC4xLTAuNCwwLjEtMC43LDAuMmMtMC4zLDAuMS0wLjcsMC4xLTEuMiwwLjEKCQkJYy0wLjcsMC0xLjQtMC4yLTIuMS0wLjVzLTEuMi0wLjgtMS43LTEuNHMtMC43LTEuNC0wLjctMi40VjE1Ljl6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTM2Ni44LDY1LjJWNDMuNGg3LjRjMS43LDAsMy4xLDAuMyw0LjIsMC45YzEuMSwwLjYsMS45LDEuNCwyLjQsMi40YzAuNSwxLDAuOCwyLjIsMC44LDMuNAoJCQljMCwxLjMtMC4zLDIuNC0wLjgsMy40Yy0wLjUsMS0xLjMsMS44LTIuNCwyLjNjLTEuMSwwLjYtMi41LDAuOC00LjIsMC44aC02di0yLjRoNS45YzEuMiwwLDIuMS0wLjIsMi44LTAuNQoJCQljMC43LTAuMywxLjItMC44LDEuNi0xLjVjMC4zLTAuNiwwLjUtMS40LDAuNS0yLjNjMC0wLjktMC4yLTEuNi0wLjUtMi4zcy0wLjgtMS4yLTEuNi0xLjVjLTAuNy0wLjQtMS43LTAuNS0yLjgtMC41aC00LjZ2MTkuNQoJCQlIMzY2Ljh6IE0zNzcsNTUuNGw1LjQsOS44aC0zLjFsLTUuMy05LjhIMzc3eiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0zOTIuMyw2NS41Yy0xLjYsMC0yLjktMC4zLTQuMS0xYy0xLjEtMC43LTItMS43LTIuNi0yLjljLTAuNi0xLjMtMC45LTIuNy0wLjktNC40YzAtMS43LDAuMy0zLjIsMC45LTQuNAoJCQljMC42LTEuMywxLjUtMi4zLDIuNi0zYzEuMS0wLjcsMi40LTEuMSwzLjktMS4xYzAuOSwwLDEuNywwLjEsMi41LDAuNGMwLjgsMC4zLDEuNiwwLjcsMi4zLDEuNHMxLjIsMS41LDEuNiwyLjUKCQkJYzAuNCwxLDAuNiwyLjMsMC42LDMuOXYxLjFoLTEyLjZ2LTIuMmgxMC4xYzAtMC45LTAuMi0xLjctMC41LTIuNXMtMC45LTEuMy0xLjYtMS43Yy0wLjctMC40LTEuNS0wLjYtMi40LTAuNgoJCQljLTEsMC0xLjksMC4yLTIuNiwwLjdjLTAuNywwLjUtMS4zLDEuMS0xLjcsMS45Yy0wLjQsMC44LTAuNiwxLjYtMC42LDIuNXYxLjRjMCwxLjIsMC4yLDIuMywwLjYsMy4xYzAuNCwwLjksMSwxLjUsMS44LDIKCQkJYzAuOCwwLjQsMS43LDAuNywyLjcsMC43YzAuNywwLDEuMy0wLjEsMS44LTAuM2MwLjUtMC4yLDEtMC41LDEuNC0wLjlzMC43LTAuOSwwLjktMS40bDIuNCwwLjdjLTAuMywwLjgtMC43LDEuNS0xLjMsMi4yCgkJCWMtMC42LDAuNi0xLjMsMS4xLTIuMiwxLjRDMzk0LjQsNjUuNCwzOTMuNCw2NS41LDM5Mi4zLDY1LjV6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTQwOS42LDY1LjVjLTEuNSwwLTIuOS0wLjQtNC0xLjFjLTEuMS0wLjctMi0xLjctMi42LTNjLTAuNi0xLjMtMC45LTIuNy0wLjktNC40YzAtMS43LDAuMy0zLjEsMC45LTQuNAoJCQljMC42LTEuMywxLjUtMi4zLDIuNi0zYzEuMS0wLjcsMi40LTEuMSwzLjktMS4xYzEuMiwwLDIuMiwwLjIsMy4xLDAuNmMwLjksMC40LDEuNywxLDIuMywxLjhjMC42LDAuOCwxLDEuNywxLjEsMi43aC0yLjUKCQkJYy0wLjItMC43LTAuNi0xLjQtMS4zLTJjLTAuNy0wLjYtMS41LTAuOS0yLjYtMC45Yy0xLDAtMS44LDAuMy0yLjYsMC44cy0xLjMsMS4yLTEuNywyLjFjLTAuNCwwLjktMC42LDItMC42LDMuMgoJCQljMCwxLjMsMC4yLDIuNCwwLjYsMy4zYzAuNCwwLjksMSwxLjcsMS43LDIuMmMwLjcsMC41LDEuNiwwLjgsMi42LDAuOGMwLjcsMCwxLjItMC4xLDEuOC0wLjNjMC41LTAuMiwxLTAuNiwxLjQtMQoJCQljMC40LTAuNCwwLjYtMC45LDAuOC0xLjVoMi41Yy0wLjEsMS0wLjUsMS44LTEsMi42cy0xLjMsMS40LTIuMiwxLjhDNDExLjgsNjUuMyw0MTAuOCw2NS41LDQwOS42LDY1LjV6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTQyNi4zLDY1LjVjLTEuNSwwLTIuOC0wLjQtMy45LTEuMXMtMi0xLjctMi42LTNjLTAuNi0xLjMtMC45LTIuNy0wLjktNC40YzAtMS43LDAuMy0zLjIsMC45LTQuNQoJCQlzMS41LTIuMywyLjYtM3MyLjQtMS4xLDMuOS0xLjFzMi44LDAuNCwzLjksMS4xczIsMS43LDIuNiwzczAuOSwyLjgsMC45LDQuNWMwLDEuNy0wLjMsMy4yLTAuOSw0LjRjLTAuNiwxLjMtMS41LDIuMi0yLjYsMwoJCQlTNDI3LjgsNjUuNSw0MjYuMyw2NS41eiBNNDI2LjMsNjMuM2MxLjEsMCwyLTAuMywyLjgtMC45czEuMy0xLjMsMS42LTIuM3MwLjUtMiwwLjUtM1M0MzEsNTUsNDMwLjcsNTRjLTAuMy0wLjktMC45LTEuNy0xLjYtMi4zCgkJCWMtMC43LTAuNi0xLjYtMC45LTIuOC0wLjlzLTIsMC4zLTIuOCwwLjljLTAuNywwLjYtMS4zLDEuMy0xLjYsMi4zYy0wLjMsMC45LTAuNSwyLTAuNSwzLjFzMC4yLDIuMSwwLjUsM3MwLjksMS43LDEuNiwyLjMKCQkJUzQyNS4yLDYzLjMsNDI2LjMsNjMuM3oiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDUwLjMsNDguOGwtNi4xLDE2LjRoLTIuNmwtNi4xLTE2LjRoMi43bDQuNSwxM2gwLjJsNC41LTEzSDQ1MC4zeiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00NTkuOSw2NS41Yy0xLjYsMC0yLjktMC4zLTQuMS0xYy0xLjEtMC43LTItMS43LTIuNi0yLjlzLTAuOS0yLjctMC45LTQuNGMwLTEuNywwLjMtMy4yLDAuOS00LjQKCQkJczEuNS0yLjMsMi42LTNzMi40LTEuMSwzLjktMS4xYzAuOSwwLDEuNywwLjEsMi41LDAuNHMxLjYsMC43LDIuMywxLjRjMC43LDAuNiwxLjIsMS41LDEuNiwyLjVjMC40LDEsMC42LDIuMywwLjYsMy45djEuMWgtMTIuNgoJCQl2LTIuMmgxMC4xYzAtMC45LTAuMi0xLjctMC41LTIuNWMtMC40LTAuNy0wLjktMS4zLTEuNi0xLjdzLTEuNS0wLjYtMi40LTAuNmMtMSwwLTEuOSwwLjItMi42LDAuN2MtMC43LDAuNS0xLjMsMS4xLTEuNywxLjkKCQkJYy0wLjQsMC44LTAuNiwxLjYtMC42LDIuNXYxLjRjMCwxLjIsMC4yLDIuMywwLjYsMy4xYzAuNCwwLjksMSwxLjUsMS44LDJjMC44LDAuNCwxLjcsMC43LDIuNywwLjdjMC43LDAsMS4zLTAuMSwxLjgtMC4zCgkJCWMwLjUtMC4yLDEtMC41LDEuNC0wLjlzMC43LTAuOSwwLjktMS40bDIuNCwwLjdjLTAuMywwLjgtMC43LDEuNS0xLjMsMi4yYy0wLjYsMC42LTEuMywxLjEtMi4yLDEuNFM0NjEsNjUuNSw0NTkuOSw2NS41eiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00NzAuNSw2NS4yVjQ4LjhoMi40djIuNWgwLjJjMC4zLTAuOCwwLjgtMS41LDEuNi0yYzAuOC0wLjUsMS43LTAuOCwyLjYtMC44YzAuMiwwLDAuNCwwLDAuNywwczAuNSwwLDAuNiwwCgkJCXYyLjZjLTAuMSwwLTAuMy0wLjEtMC42LTAuMXMtMC42LTAuMS0xLTAuMWMtMC44LDAtMS41LDAuMi0yLjEsMC41Yy0wLjYsMC4zLTEuMSwwLjgtMS41LDEuNGMtMC40LDAuNi0wLjUsMS4yLTAuNSwydjEwLjRINDcwLjV6CgkJCSIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00ODMuOCw3MS4zYy0wLjQsMC0wLjgsMC0xLjEtMC4xYy0wLjMtMC4xLTAuNi0wLjEtMC43LTAuMmwwLjYtMi4yYzAuOSwwLjIsMS43LDAuMiwyLjMsMHMxLjEtMSwxLjYtMi4yCgkJCWwwLjUtMS4zbC02LjEtMTYuNGgyLjdsNC41LDEzaDAuMmw0LjUtMTNsMi43LDBsLTcsMTguN2MtMC4zLDAuOC0wLjcsMS41LTEuMiwyLjFjLTAuNSwwLjYtMSwxLTEuNiwxLjIKCQkJQzQ4NS4zLDcxLjIsNDg0LjYsNzEuMyw0ODMuOCw3MS4zeiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0zNzguNyw3Ny44Yy0wLjEtMS4xLTAuNi0xLjktMS42LTIuNWMtMC45LTAuNi0yLTAuOS0zLjMtMC45Yy0xLDAtMS44LDAuMi0yLjUsMC41cy0xLjMsMC43LTEuNywxLjMKCQkJYy0wLjQsMC41LTAuNiwxLjItMC42LDEuOWMwLDAuNiwwLjEsMS4xLDAuNCwxLjVjMC4zLDAuNCwwLjYsMC44LDEuMSwxczAuOSwwLjUsMS40LDAuN2MwLjUsMC4yLDAuOSwwLjMsMS4zLDAuNGwyLjIsMC42CgkJCWMwLjYsMC4yLDEuMiwwLjQsMS45LDAuNmMwLjcsMC4zLDEuNCwwLjYsMiwxLjFzMS4yLDEsMS42LDEuN3MwLjYsMS42LDAuNiwyLjZjMCwxLjItMC4zLDIuMi0wLjksMy4ycy0xLjUsMS43LTIuNywyLjMKCQkJYy0xLjIsMC42LTIuNiwwLjgtNC4zLDAuOGMtMS42LDAtMi45LTAuMy00LjEtMC44cy0yLTEuMi0yLjctMi4xYy0wLjctMC45LTEtMS45LTEuMS0zLjFoMi43YzAuMSwwLjgsMC4zLDEuNSwwLjgsMgoJCQljMC41LDAuNSwxLjEsMC45LDEuOSwxLjJjMC44LDAuMywxLjYsMC40LDIuNCwwLjRjMSwwLDEuOS0wLjIsMi43LTAuNXMxLjQtMC44LDEuOS0xLjRzMC43LTEuMywwLjctMi4xYzAtMC43LTAuMi0xLjMtMC42LTEuOAoJCQljLTAuNC0wLjUtMC45LTAuOC0xLjYtMS4xYy0wLjctMC4zLTEuNC0wLjUtMi4xLTAuN2wtMi43LTAuOGMtMS43LTAuNS0zLjEtMS4yLTQtMi4xYy0xLTAuOS0xLjUtMi4xLTEuNS0zLjZjMC0xLjIsMC4zLTIuMywxLTMuMgoJCQljMC43LTAuOSwxLjYtMS42LDIuNy0yLjFzMi40LTAuOCwzLjgtMC44YzEuNCwwLDIuNywwLjIsMy44LDAuOGMxLjEsMC41LDIsMS4yLDIuNiwyLjFjMC42LDAuOSwxLDEuOCwxLDNIMzc4Ljd6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTM5Mi40LDk0LjVjLTEuNiwwLTIuOS0wLjMtNC4xLTFjLTEuMS0wLjctMi0xLjctMi42LTIuOWMtMC42LTEuMy0wLjktMi43LTAuOS00LjRjMC0xLjcsMC4zLTMuMiwwLjktNC40CgkJCWMwLjYtMS4zLDEuNS0yLjMsMi42LTNjMS4xLTAuNywyLjQtMS4xLDMuOS0xLjFjMC45LDAsMS43LDAuMSwyLjUsMC40YzAuOCwwLjMsMS42LDAuNywyLjMsMS40YzAuNywwLjYsMS4yLDEuNSwxLjYsMi41CgkJCWMwLjQsMSwwLjYsMi4zLDAuNiwzLjl2MS4xaC0xMi42di0yLjJoMTAuMWMwLTAuOS0wLjItMS43LTAuNS0yLjVzLTAuOS0xLjMtMS42LTEuN2MtMC43LTAuNC0xLjUtMC42LTIuNC0wLjYKCQkJYy0xLDAtMS45LDAuMi0yLjYsMC43Yy0wLjcsMC41LTEuMywxLjEtMS43LDEuOXMtMC42LDEuNi0wLjYsMi41djEuNGMwLDEuMiwwLjIsMi4zLDAuNiwzLjFjMC40LDAuOSwxLDEuNSwxLjgsMgoJCQljMC44LDAuNCwxLjcsMC43LDIuNywwLjdjMC43LDAsMS4zLTAuMSwxLjgtMC4zczEtMC41LDEuNC0wLjljMC40LTAuNCwwLjctMC45LDAuOS0xLjRsMi40LDAuN2MtMC4zLDAuOC0wLjcsMS41LTEuMywyLjIKCQkJYy0wLjYsMC42LTEuMywxLjEtMi4yLDEuNEMzOTQuNSw5NC40LDM5My41LDk0LjUsMzkyLjQsOTQuNXoiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDAzLDk0LjJWNzcuOGgyLjR2Mi41aDAuMmMwLjMtMC44LDAuOC0xLjUsMS42LTJjMC44LTAuNSwxLjctMC44LDIuNi0wLjhjMC4yLDAsMC40LDAsMC43LDAKCQkJYzAuMywwLDAuNSwwLDAuNiwwdjIuNmMtMC4xLDAtMC4zLTAuMS0wLjYtMC4xYy0wLjMsMC0wLjYtMC4xLTEtMC4xYy0wLjgsMC0xLjUsMC4yLTIuMSwwLjVjLTAuNiwwLjMtMS4xLDAuOC0xLjUsMS40CgkJCWMtMC40LDAuNi0wLjUsMS4yLTAuNSwydjEwLjRINDAzeiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00MjguMSw3Ny44TDQyMiw5NC4yaC0yLjZsLTYuMS0xNi40aDIuN2w0LjUsMTNoMC4ybDQuNS0xM0g0MjguMXoiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDMyLjcsNzUuMWMtMC41LDAtMC45LTAuMi0xLjMtMC41cy0wLjUtMC43LTAuNS0xLjJzMC4yLTAuOSwwLjUtMS4yczAuOC0wLjUsMS4zLTAuNXMwLjksMC4yLDEuMywwLjUKCQkJczAuNSwwLjcsMC41LDEuMnMtMC4yLDAuOS0wLjUsMS4yUzQzMy4yLDc1LjEsNDMyLjcsNzUuMXogTTQzMS40LDk0LjJWNzcuOGgyLjV2MTYuNEg0MzEuNHoiLz4KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNDQ1LjIsOTQuNWMtMS41LDAtMi45LTAuNC00LTEuMWMtMS4xLTAuNy0yLTEuNy0yLjYtM2MtMC42LTEuMy0wLjktMi43LTAuOS00LjRjMC0xLjcsMC4zLTMuMSwwLjktNC40CgkJCWMwLjYtMS4zLDEuNS0yLjMsMi42LTNjMS4xLTAuNywyLjQtMS4xLDMuOS0xLjFjMS4yLDAsMi4yLDAuMiwzLjEsMC42YzAuOSwwLjQsMS43LDEsMi4zLDEuOGMwLjYsMC44LDEsMS43LDEuMSwyLjdoLTIuNQoJCQljLTAuMi0wLjctMC42LTEuNC0xLjMtMmMtMC43LTAuNi0xLjUtMC45LTIuNi0wLjljLTEsMC0xLjgsMC4zLTIuNiwwLjhjLTAuNywwLjUtMS4zLDEuMi0xLjcsMi4xcy0wLjYsMi0wLjYsMy4yCgkJCWMwLDEuMywwLjIsMi40LDAuNiwzLjNzMSwxLjcsMS43LDIuMmMwLjcsMC41LDEuNiwwLjgsMi42LDAuOGMwLjcsMCwxLjItMC4xLDEuOC0wLjNjMC41LTAuMiwxLTAuNiwxLjQtMXMwLjYtMC45LDAuOC0xLjVoMi41CgkJCWMtMC4xLDEtMC41LDEuOC0xLDIuNmMtMC42LDAuOC0xLjMsMS40LTIuMiwxLjhDNDQ3LjUsOTQuMyw0NDYuNCw5NC41LDQ0NS4yLDk0LjV6Ii8+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTQ2Mi4xLDk0LjVjLTEuNiwwLTIuOS0wLjMtNC4xLTFjLTEuMS0wLjctMi0xLjctMi42LTIuOWMtMC42LTEuMy0wLjktMi43LTAuOS00LjRjMC0xLjcsMC4zLTMuMiwwLjktNC40CgkJCWMwLjYtMS4zLDEuNS0yLjMsMi42LTNzMi40LTEuMSwzLjktMS4xYzAuOSwwLDEuNywwLjEsMi41LDAuNGMwLjgsMC4zLDEuNiwwLjcsMi4zLDEuNGMwLjcsMC42LDEuMiwxLjUsMS42LDIuNQoJCQljMC40LDEsMC42LDIuMywwLjYsMy45djEuMWgtMTIuNnYtMi4yaDEwLjFjMC0wLjktMC4yLTEuNy0wLjUtMi41Yy0wLjQtMC43LTAuOS0xLjMtMS42LTEuN2MtMC43LTAuNC0xLjUtMC42LTIuNC0wLjYKCQkJYy0xLDAtMS45LDAuMi0yLjYsMC43Yy0wLjcsMC41LTEuMywxLjEtMS43LDEuOXMtMC42LDEuNi0wLjYsMi41djEuNGMwLDEuMiwwLjIsMi4zLDAuNiwzLjFjMC40LDAuOSwxLDEuNSwxLjgsMgoJCQljMC44LDAuNCwxLjcsMC43LDIuNywwLjdjMC43LDAsMS4zLTAuMSwxLjgtMC4zYzAuNS0wLjIsMS0wLjUsMS40LTAuOWMwLjQtMC40LDAuNy0wLjksMC45LTEuNGwyLjQsMC43Yy0wLjMsMC44LTAuNywxLjUtMS4zLDIuMgoJCQljLTAuNiwwLjYtMS4zLDEuMS0yLjIsMS40QzQ2NC4zLDk0LjQsNDYzLjMsOTQuNSw0NjIuMSw5NC41eiIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00ODQuMyw4MS41bC0yLjMsMC42Yy0wLjEtMC40LTAuMy0wLjctMC42LTEuMWMtMC4zLTAuNC0wLjYtMC43LTEuMS0wLjlzLTEuMS0wLjQtMS44LTAuNAoJCQljLTEsMC0xLjgsMC4yLTIuNSwwLjdjLTAuNywwLjUtMSwxLTEsMS43YzAsMC42LDAuMiwxLjEsMC43LDEuNWMwLjUsMC40LDEuMiwwLjcsMi4xLDAuOWwyLjQsMC42YzEuNSwwLjQsMi42LDAuOSwzLjMsMS42CgkJCWMwLjcsMC43LDEuMSwxLjcsMS4xLDIuOGMwLDAuOS0wLjMsMS44LTAuOCwyLjVjLTAuNSwwLjctMS4zLDEuMy0yLjIsMS43Yy0xLDAuNC0yLjEsMC42LTMuMywwLjZjLTEuNywwLTMuMS0wLjQtNC4xLTEuMQoJCQljLTEuMS0wLjctMS44LTEuOC0yLjEtMy4ybDIuNC0wLjZjMC4yLDAuOSwwLjcsMS41LDEuMywyYzAuNiwwLjQsMS41LDAuNywyLjUsMC43YzEuMiwwLDIuMS0wLjIsMi44LTAuOGMwLjctMC41LDEtMS4xLDEtMS44CgkJCWMwLTAuNi0wLjItMS0wLjYtMS40Yy0wLjQtMC40LTEtMC43LTEuOC0wLjlsLTIuNy0wLjZjLTEuNS0wLjQtMi42LTAuOS0zLjMtMS43Yy0wLjctMC44LTEtMS43LTEtMi44YzAtMC45LDAuMy0xLjcsMC44LTIuNQoJCQljMC41LTAuNywxLjItMS4zLDIuMS0xLjdzMS45LTAuNiwzLjEtMC42YzEuNiwwLDIuOSwwLjQsMy44LDEuMUM0ODMuMyw3OS40LDQ4NCw4MC4zLDQ4NC4zLDgxLjV6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg==" alt="Southwest Recovery Services" width="210" height="41">
+  <a class="call" href="tel:+18665583328">(866) 558-3328</a>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <h1>What a low PAYDEX score means for your business</h1>
+  <p class="lead">PAYDEX is Dun &amp; Bradstreet&rsquo;s 1 to 100 measure of how promptly a company pays its suppliers. Lenders, vendors and landlords can see it. Here is how it works and where a low score shows up.</p>
+
+  <p class="scalehead">How Dun &amp; Bradstreet reads the score</p>
+  <ol class="scale" aria-label="PAYDEX score scale">
+    <li class="on"><b>100</b><span>Anticipates</span></li>
+    <li class="on"><b>90</b><span>Discounts</span></li>
+    <li class="prompt"><b>80</b><span>Prompt: paid on time</span></li>
+    <li class="l1"><b>70</b><span>15 days beyond terms</span></li>
+    <li class="l2"><b>60</b><span>22 days beyond terms</span></li>
+    <li class="l3"><b>50</b><span>30 days beyond terms</span></li>
+    <li class="l4"><b>40</b><span>60 days beyond terms</span></li>
+    <li class="l5"><b>30</b><span>90 days beyond terms</span></li>
+    <li class="l5"><b>20</b><span>120 days beyond terms</span></li>
+    <li class="l6"><b>0&ndash;19</b><span>Over 120 days beyond terms</span></li>
+  </ol>
+  <p class="scalenote">Scale as published by Dun &amp; Bradstreet. &ldquo;Terms&rdquo; means the payment terms on the invoice, such as net 30.</p>
+</div></div>
+
+<section><div class="wrap narrow">
+  <h2>What the score measures</h2>
+  <p class="lede">One thing: how fast you pay your suppliers.</p>
+  <p>PAYDEX is built from the payment experiences that suppliers report about your company over the past 24 months, weighted by dollar amount. A score of 80 means bills are paid on time. Scores above 80 mean they are paid early. Every step below 80 means payments are running later.</p>
+  <p>Dun &amp; Bradstreet groups scores into three bands: 80 to 100 is low risk of late payment, 50 to 79 is moderate, and 0 to 49 is high. D&amp;B compares PAYDEX to an individual&rsquo;s credit score, and many suppliers, banks and customers check it before they take on a company.</p>
+  <p>Because it is a record of payment trends, it moves when payment habits change.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="narrow"><h2>PAYDEX is one of several scores in your D&amp;B file</h2>
+  <p>Lenders, vendors and customers use these scores and ratings to decide whether to do more business with your company and on what terms, or to work with someone else.</p></div>
+  <dl class="impact">
+    <div class="row"><dt>Delinquency Predictor Score</dt><dd>Looks ahead at how likely a company is to pay late. A rising or falling score can make other companies reconsider how stable you are.</dd></div>
+    <div class="row"><dt>Failure Score</dt><dd>Looks at the risk that a business will fail.</dd></div>
+    <div class="row"><dt>Supplier Evaluation Risk (SER) Rating</dt><dd>Rates a company as a supplier. Some large corporations require partners to hold a low-risk rating, so a medium or high rating can make it harder to join their supply chain.</dd></div>
+    <div class="row"><dt>Maximum Credit Recommendation</dt><dd>Suggests how much credit a vendor or lender might extend.</dd></div>
+    <div class="row"><dt>D&amp;B Rating</dt><dd>Indicates a company&rsquo;s size and credibility.</dd></div>
+    <div class="row"><dt>Cyber Risk Rating</dt><dd>Assesses how exposed a company is to attack and what a breach could do to its finances.</dd></div>
+    <div class="row"><dt>Payment history and legal events</dt><dd>Reports that other companies can pull include payment history and legal events such as judgments, liens and lawsuits.</dd></div>
+  </dl>
+</div></section>
+
+<section><div class="wrap">
+  <div class="narrow"><h2>Where a low score shows up</h2>
+  <p>Anyone who is deciding whether to extend credit to your company can pull a business credit report. A lower score gives them a reason to ask for more protection or to say no.</p></div>
+  <dl class="impact">
+    <div class="row"><dt>Loans and credit lines</dt><dd>Banks and online lenders often review business credit. A lower score can mean a smaller line, a higher rate, or a request for collateral or a personal guarantee from the owner.</dd></div>
+    <div class="row"><dt>Supplier terms</dt><dd>Vendors use the score to decide how much trade credit to give. A lower score can move you from net 30 or net 60 to cash on delivery or payment up front. That ties up working capital you would use for payroll and inventory.</dd></div>
+    <div class="row"><dt>Cost of borrowing</dt><dd>Lenders price by risk. When traditional lenders say no, companies often turn to costlier options such as merchant cash advances or invoice factoring.</dd></div>
+    <div class="row"><dt>Insurance</dt><dd>Some commercial insurers look at financial stability when they price or approve a policy. A weak credit profile can work against you.</dd></div>
+    <div class="row"><dt>Leases</dt><dd>Landlords often check a tenant&rsquo;s business credit. They may ask for a larger deposit or a guarantee, or decline the application.</dd></div>
+    <div class="row"><dt>Contracts and partners</dt><dd>Larger customers and public agencies often review a vendor&rsquo;s credit before they award work. A low score can cost you bids and slow new partnerships.</dd></div>
+  </dl>
+</div></section>
+
+<section><div class="wrap">
+  <div class="narrow"><h2>Strong score and weak score, side by side</h2></div>
+  <div class="tablewrap"><table class="cmp">
+    <thead><tr><th>Area</th><th>Score of 80 or higher</th><th>Score below 80</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Financing</th><td>Easier approvals, better rates, higher limits</td><td>More declines, higher rates, collateral or guarantees</td></tr>
+      <tr><th scope="row">Supplier terms</th><td>Net 30, 60 or 90 trade credit</td><td>Cash on delivery or payment in advance</td></tr>
+      <tr><th scope="row">Overhead</th><td>Standard deposits and premiums</td><td>Larger deposits, tighter terms, higher premiums in some cases</td></tr>
+      <tr><th scope="row">Growth</th><td>Open to larger customers and public contracts</td><td>Harder to qualify for bids and partnerships</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section><div class="wrap narrow">
+  <h2>What you can do now</h2>
+  <ol class="steps">
+    <li><b>Find the open balances.</b>Ask your accounts payable team which vendors are past due. Past-due balances are what pull the score down.</li>
+    <li><b>Resolve any account with us.</b>If you received a notice from Southwest Recovery Services, call us. Paying in full closes the account. If you cannot pay in full, call before the date in your notice to talk about terms.</li>
+    <li><b>Pay on time or early, and make sure it is reported.</b>Dun &amp; Bradstreet says paying on or ahead of time is one of the most effective ways to improve the score. It also says to make sure your suppliers and lenders report your payments to D&amp;B. A supplier can submit your paid invoices as a trade reference, and D&amp;B reviews it.</li>
+    <li><b>Check your file and fix what is wrong.</b>Order your own report or use D&amp;B Credit Insights to see what lenders and vendors see. You can update your company information for free with D&amp;B&rsquo;s D-U-N-S Manager, and use it to dispute late payments you believe are incorrect.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap narrow">
+  <h2>Learn more from Dun &amp; Bradstreet</h2>
+  <ul class="links">
+    <li><a href="https://www.dnb.com/en-us/smb/resources/credit-scores/db-credit-scores-ratings.html" rel="noopener">Business credit scores and ratings</a></li>
+    <li><a href="https://www.dnb.com/en-us/smb/resources/credit-scores/what-is-paydex-score.html" rel="noopener">What is a PAYDEX score</a></li>
+    <li><a href="https://www.dnb.com/en-us/smb/duns/duns-manager.html" rel="noopener">D-U-N-S Manager: update your company information or dispute a late payment</a></li>
+    <li><a href="https://www.dnb.com/en-us/products/dnb-credit-insights.html" rel="noopener">D&amp;B Credit Insights: see and monitor your own scores</a></li>
+  </ul>
+</div></section>
+
+<div class="cta"><div class="wrap">
+  <div>
+    <h2>Have an open account with Southwest Recovery Services?</h2>
+    <p>Call us, or use the Make a Payment button in your notice. We are available Monday through Friday, 8 a.m. to 5 p.m. Central.</p>
+  </div>
+  <a class="btn" href="tel:+18665583328">(866) 558-3328</a>
+</div></div>
+</main>
+
+<footer><div class="wrap narrow">
+  <div class="tag">Providing Creative Solutions to Common Problems</div>
+  <p>This page is general information about business credit scores. It is not legal or financial advice, and it does not describe the status of any specific account. Score and rating descriptions are summarized from Dun &amp; Bradstreet (dnb.com). Lender, insurer, landlord and vendor practices vary.</p>
+  <p>Southwest Recovery Services, LLC, 16200 Addison Road, Suite 260, Addison, Texas 75001. This communication is from a debt collector and is an attempt to collect a commercial debt.</p>
+</div></footer>
+</body>
+</html>
