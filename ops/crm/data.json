@@ -1,45 +1,45 @@
 {
- "generated": "2026-11-10T11:20:08+00:00",
- "lead_count_actual": 16689,
+ "generated": "2026-11-10T17:20:08+00:00",
+ "lead_count_actual": 16700,
  "status": {
-  "cancelled": 5420,
+  "cancelled": 5423,
   "lost": 525,
-  "open": 7531,
+  "open": 7537,
   "pending": 63,
-  "won": 3150
+  "won": 3152
  },
  "win_rate": 34.6,
- "won": 3150,
- "lost": 5945,
- "open_value": 80712574.93,
+ "won": 3152,
+ "lost": 5948,
+ "open_value": 80636260.2,
  "avg_cycle_days": 68,
  "aging": {
-  "open": 7531,
-  "stale_60": 6083,
+  "open": 7537,
+  "stale_60": 6087,
   "stale_threshold_days": 60,
-  "never_contacted": 3152,
-  "overdue": 2494
+  "never_contacted": 3158,
+  "overdue": 2493
  },
  "rep_board": {
   "Steven Dietz": {
-   "open": 4766,
+   "open": 4770,
    "value": 51716587.019999996,
-   "overdue": 457,
+   "overdue": 456,
    "d0_30": 364,
    "d31_90": 180,
-   "d91_180": 740,
-   "d180_plus": 614,
-   "never": 2868
+   "d91_180": 736,
+   "d180_plus": 618,
+   "never": 2872
   },
   "Hunter Howard": {
-   "open": 2281,
-   "value": 18656838.530000005,
+   "open": 2283,
+   "value": 18620523.800000004,
    "overdue": 1755,
-   "d0_30": 533,
-   "d31_90": 116,
-   "d91_180": 52,
+   "d0_30": 534,
+   "d31_90": 112,
+   "d91_180": 54,
    "d180_plus": 1567,
-   "never": 13
+   "never": 16
   },
   "Bryson Stevens": {
    "open": 162,
@@ -63,7 +63,7 @@
   },
   "Brenn Morrow": {
    "open": 101,
-   "value": 7814046.01,
+   "value": 7774046.01,
    "overdue": 68,
    "d0_30": 86,
    "d31_90": 7,
@@ -75,11 +75,11 @@
    "open": 66,
    "value": 2489303.37,
    "overdue": 51,
-   "d0_30": 60,
+   "d0_30": 61,
    "d31_90": 2,
    "d91_180": 0,
    "d180_plus": 0,
-   "never": 4
+   "never": 3
   },
   "Noah Smith": {
    "open": 3,
@@ -104,10 +104,10 @@
  },
  "pipelines_live": {
   "CallRail": {
-   "open": 3890,
+   "open": 3895,
    "value": 0.0,
    "stages": {
-    "CallRail Stage": 3890
+    "CallRail Stage": 3895
    }
   },
   "AimLogic - Visited Website": {
@@ -119,12 +119,12 @@
    }
   },
   "Default Pipeline": {
-   "open": 727,
-   "value": 54146360.55,
+   "open": 728,
+   "value": 54070045.82,
    "stages": {
-    "Lead": 373,
+    "Lead": 377,
     "Pitch": 122,
-    "Contract Review": 94,
+    "Contract Review": 91,
     "Virtual Meeting Booked": 74,
     "Quote": 57,
     "Closed": 3,
@@ -242,7 +242,7 @@
    "owner": "Paid Media CFATX",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 136,
+   "days": 137,
    "never": true,
    "value": 0.0
   },
@@ -308,6 +308,17 @@
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
+   "days": 120,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Claymoore Engineering",
+   "number": "32689",
+   "url": "https://app.nutshell.com/lead/32689",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
    "days": 119,
    "never": false,
    "value": 0.0
@@ -566,6 +577,17 @@
    "value": 0.0
   },
   {
+   "name": "Investar Real Estate Services, Inc",
+   "number": "17874",
+   "url": "https://app.nutshell.com/lead/17874",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 118,
+   "never": false,
+   "value": 9024.31
+  },
+  {
    "name": "CRT Mechanical & Self Storage",
    "number": "17883",
    "url": "https://app.nutshell.com/lead/17883",
@@ -643,6 +665,17 @@
    "value": 0.0
   },
   {
+   "name": "Mission Basilica School",
+   "number": "18141",
+   "url": "https://app.nutshell.com/lead/18141",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "Amy Martin, M.D.",
    "number": "18507",
    "url": "https://app.nutshell.com/lead/18507",
@@ -654,12 +687,34 @@
    "value": 0.0
   },
   {
+   "name": "Dinamicka Development",
+   "number": "18784",
+   "url": "https://app.nutshell.com/lead/18784",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 118,
+   "never": false,
+   "value": 30000.0
+  },
+  {
    "name": "50Pros",
    "number": "20475",
    "url": "https://app.nutshell.com/lead/20475",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Realty Executives of San Antonio",
+   "number": "21761",
+   "url": "https://app.nutshell.com/lead/21761",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
    "days": 118,
    "never": false,
    "value": 0.0
@@ -709,6 +764,61 @@
    "value": 0.0
   },
   {
+   "name": "Performance Property Management",
+   "number": "21912",
+   "url": "https://app.nutshell.com/lead/21912",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "SEO Agencey",
+   "number": "22012",
+   "url": "https://app.nutshell.com/lead/22012",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "RDS Investments & Development",
+   "number": "22268",
+   "url": "https://app.nutshell.com/lead/22268",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 118,
+   "never": false,
+   "value": 195242.92
+  },
+  {
+   "name": "Relief Ambulance Service",
+   "number": "22325",
+   "url": "https://app.nutshell.com/lead/22325",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Florida Preparatory Academy - Melbourne",
+   "number": "22337",
+   "url": "https://app.nutshell.com/lead/22337",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "Nuself Bariatric and General Surgery",
    "number": "22384",
    "url": "https://app.nutshell.com/lead/22384",
@@ -742,6 +852,94 @@
    "value": 0.0
   },
   {
+   "name": "University of Tulsa",
+   "number": "22738",
+   "url": "https://app.nutshell.com/lead/22738",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 118,
+   "never": false,
+   "value": 6000.0
+  },
+  {
+   "name": "The Junkluggers of Brazos Valley",
+   "number": "22809",
+   "url": "https://app.nutshell.com/lead/22809",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Echo Residential LLC",
+   "number": "22861",
+   "url": "https://app.nutshell.com/lead/22861",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "AllPhase Real Estate",
+   "number": "23734",
+   "url": "https://app.nutshell.com/lead/23734",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "San Marcos Orthopedics",
+   "number": "23991",
+   "url": "https://app.nutshell.com/lead/23991",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Stream Realty Partners",
+   "number": "24016",
+   "url": "https://app.nutshell.com/lead/24016",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 118,
+   "never": false,
+   "value": 10000.0
+  },
+  {
+   "name": "ESC Home-Services Inc",
+   "number": "24135",
+   "url": "https://app.nutshell.com/lead/24135",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "St. Paul Square",
+   "number": "24305",
+   "url": "https://app.nutshell.com/lead/24305",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "American Apartments",
    "number": "28607",
    "url": "https://app.nutshell.com/lead/28607",
@@ -753,9 +951,31 @@
    "value": 0.0
   },
   {
+   "name": "Sarmili Demarzo",
+   "number": "28768",
+   "url": "https://app.nutshell.com/lead/28768",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "Rosebranch Dermatology",
    "number": "28817",
    "url": "https://app.nutshell.com/lead/28817",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Skyline Dental Studio",
+   "number": "28985",
+   "url": "https://app.nutshell.com/lead/28985",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
@@ -808,6 +1028,17 @@
    "value": 51000.0
   },
   {
+   "name": "Helpful Hands Handyman Services",
+   "number": "30243",
+   "url": "https://app.nutshell.com/lead/30243",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 118,
+   "never": false,
+   "value": 10000.0
+  },
+  {
    "name": "ISACA",
    "number": "30619",
    "url": "https://app.nutshell.com/lead/30619",
@@ -830,20 +1061,31 @@
    "value": 0.0
   },
   {
-   "name": "Tequesta Country Club",
-   "number": "31886",
-   "url": "https://app.nutshell.com/lead/31886",
+   "name": "Hunter Service Group",
+   "number": "31294",
+   "url": "https://app.nutshell.com/lead/31294",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
-   "stage": "Quote",
+   "stage": "Lead",
    "days": 118,
    "never": false,
    "value": 0.0
   },
   {
-   "name": "Claymoore Engineering",
-   "number": "32689",
-   "url": "https://app.nutshell.com/lead/32689",
+   "name": "Bay State Properties NY LLC",
+   "number": "31454",
+   "url": "https://app.nutshell.com/lead/31454",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 118,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Tequesta Country Club",
+   "number": "31886",
+   "url": "https://app.nutshell.com/lead/31886",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
@@ -874,20 +1116,20 @@
    "value": 0.0
   },
   {
-   "name": "Investar Real Estate Services, Inc",
-   "number": "17874",
-   "url": "https://app.nutshell.com/lead/17874",
+   "name": "Private owner of single family home",
+   "number": "33749",
+   "url": "https://app.nutshell.com/lead/33749",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
-   "days": 117,
+   "days": 118,
    "never": false,
-   "value": 9024.31
+   "value": 0.0
   },
   {
-   "name": "Mission Basilica School",
-   "number": "18141",
-   "url": "https://app.nutshell.com/lead/18141",
+   "name": "FLiiP",
+   "number": "17351",
+   "url": "https://app.nutshell.com/lead/17351",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
@@ -896,15 +1138,48 @@
    "value": 0.0
   },
   {
-   "name": "Dinamicka Development",
-   "number": "18784",
-   "url": "https://app.nutshell.com/lead/18784",
+   "name": "Accurate America",
+   "number": "17889",
+   "url": "https://app.nutshell.com/lead/17889",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Quote",
    "days": 117,
    "never": false,
-   "value": 30000.0
+   "value": 0.0
+  },
+  {
+   "name": "Kids Tech Discover Center",
+   "number": "18038",
+   "url": "https://app.nutshell.com/lead/18038",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 117,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "GlobalTeam",
+   "number": "18145",
+   "url": "https://app.nutshell.com/lead/18145",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 117,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Seagrass Cottages at Northshore",
+   "number": "20267",
+   "url": "https://app.nutshell.com/lead/20267",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 117,
+   "never": false,
+   "value": 0.0
   },
   {
    "name": "Azalea Pediatrics",
@@ -918,20 +1193,31 @@
    "value": 0.0
   },
   {
-   "name": "Realty Executives of San Antonio",
-   "number": "21761",
-   "url": "https://app.nutshell.com/lead/21761",
+   "name": "Main Street Dental",
+   "number": "22398",
+   "url": "https://app.nutshell.com/lead/22398",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
-   "stage": "Pitch",
+   "stage": "Quote",
    "days": 117,
    "never": false,
    "value": 0.0
   },
   {
-   "name": "Performance Property Management",
-   "number": "21912",
-   "url": "https://app.nutshell.com/lead/21912",
+   "name": "Revive Mental Health Solutions LLC",
+   "number": "22693",
+   "url": "https://app.nutshell.com/lead/22693",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 117,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Kory Walters",
+   "number": "24143",
+   "url": "https://app.nutshell.com/lead/24143",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
@@ -940,9 +1226,9 @@
    "value": 0.0
   },
   {
-   "name": "SEO Agencey",
-   "number": "22012",
-   "url": "https://app.nutshell.com/lead/22012",
+   "name": "Lamar St Apts LLC",
+   "number": "24374",
+   "url": "https://app.nutshell.com/lead/24374",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
@@ -951,75 +1237,9 @@
    "value": 0.0
   },
   {
-   "name": "RDS Investments & Development",
-   "number": "22268",
-   "url": "https://app.nutshell.com/lead/22268",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 117,
-   "never": false,
-   "value": 195242.92
-  },
-  {
-   "name": "Relief Ambulance Service",
-   "number": "22325",
-   "url": "https://app.nutshell.com/lead/22325",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Florida Preparatory Academy - Melbourne",
-   "number": "22337",
-   "url": "https://app.nutshell.com/lead/22337",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "University of Tulsa",
-   "number": "22738",
-   "url": "https://app.nutshell.com/lead/22738",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 117,
-   "never": false,
-   "value": 6000.0
-  },
-  {
-   "name": "The Junkluggers of Brazos Valley",
-   "number": "22809",
-   "url": "https://app.nutshell.com/lead/22809",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Echo Residential LLC",
-   "number": "22861",
-   "url": "https://app.nutshell.com/lead/22861",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "AllPhase Real Estate",
-   "number": "23734",
-   "url": "https://app.nutshell.com/lead/23734",
+   "name": "Gulf Winds International",
+   "number": "33786",
+   "url": "https://app.nutshell.com/lead/33786",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
@@ -1028,111 +1248,12 @@
    "value": 0.0
   },
   {
-   "name": "San Marcos Orthopedics",
-   "number": "23991",
-   "url": "https://app.nutshell.com/lead/23991",
+   "name": "CCI Holdings 2",
+   "number": "33986",
+   "url": "https://app.nutshell.com/lead/33986",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Stream Realty Partners",
-   "number": "24016",
-   "url": "https://app.nutshell.com/lead/24016",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 117,
-   "never": false,
-   "value": 10000.0
-  },
-  {
-   "name": "ESC Home-Services Inc",
-   "number": "24135",
-   "url": "https://app.nutshell.com/lead/24135",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "St. Paul Square",
-   "number": "24305",
-   "url": "https://app.nutshell.com/lead/24305",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Sarmili Demarzo",
-   "number": "28768",
-   "url": "https://app.nutshell.com/lead/28768",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Skyline Dental Studio",
-   "number": "28985",
-   "url": "https://app.nutshell.com/lead/28985",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Helpful Hands Handyman Services",
-   "number": "30243",
-   "url": "https://app.nutshell.com/lead/30243",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 117,
-   "never": false,
-   "value": 10000.0
-  },
-  {
-   "name": "Hunter Service Group",
-   "number": "31294",
-   "url": "https://app.nutshell.com/lead/31294",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Bay State Properties NY LLC",
-   "number": "31454",
-   "url": "https://app.nutshell.com/lead/31454",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 117,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Private owner of single family home",
-   "number": "33749",
-   "url": "https://app.nutshell.com/lead/33749",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
    "days": 117,
    "never": false,
    "value": 0.0
@@ -1141,17 +1262,6 @@
    "name": "Haroks Management Company",
    "number": "17069",
    "url": "https://app.nutshell.com/lead/17069",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 116,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "FLiiP",
-   "number": "17351",
-   "url": "https://app.nutshell.com/lead/17351",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
@@ -1171,94 +1281,6 @@
    "value": 0.0
   },
   {
-   "name": "Accurate America",
-   "number": "17889",
-   "url": "https://app.nutshell.com/lead/17889",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 116,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Kids Tech Discover Center",
-   "number": "18038",
-   "url": "https://app.nutshell.com/lead/18038",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 116,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "GlobalTeam",
-   "number": "18145",
-   "url": "https://app.nutshell.com/lead/18145",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 116,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Seagrass Cottages at Northshore",
-   "number": "20267",
-   "url": "https://app.nutshell.com/lead/20267",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 116,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Main Street Dental",
-   "number": "22398",
-   "url": "https://app.nutshell.com/lead/22398",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 116,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Revive Mental Health Solutions LLC",
-   "number": "22693",
-   "url": "https://app.nutshell.com/lead/22693",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 116,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Kory Walters",
-   "number": "24143",
-   "url": "https://app.nutshell.com/lead/24143",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 116,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Lamar St Apts LLC",
-   "number": "24374",
-   "url": "https://app.nutshell.com/lead/24374",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 116,
-   "never": false,
-   "value": 0.0
-  },
-  {
    "name": "Diamond Door Realty",
    "number": "28704",
    "url": "https://app.nutshell.com/lead/28704",
@@ -1270,24 +1292,68 @@
    "value": 0.0
   },
   {
-   "name": "Gulf Winds International",
-   "number": "33786",
-   "url": "https://app.nutshell.com/lead/33786",
+   "name": "Family Dentistry & Orthodontics",
+   "number": "20862",
+   "url": "https://app.nutshell.com/lead/20862",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 116,
+   "stage": "Pitch",
+   "days": 113,
    "never": false,
    "value": 0.0
   },
   {
-   "name": "CCI Holdings 2",
-   "number": "33986",
-   "url": "https://app.nutshell.com/lead/33986",
+   "name": "EL HR Consultants",
+   "number": "22926",
+   "url": "https://app.nutshell.com/lead/22926",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 116,
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Town of Mountain Park",
+   "number": "24608",
+   "url": "https://app.nutshell.com/lead/24608",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Insight CPA & Financial PLLC",
+   "number": "28734",
+   "url": "https://app.nutshell.com/lead/28734",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "1836 Properties",
+   "number": "29065",
+   "url": "https://app.nutshell.com/lead/29065",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Landmark Commercial & Residential Properties, LLC",
+   "number": "29083",
+   "url": "https://app.nutshell.com/lead/29083",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 113,
    "never": false,
    "value": 0.0
   },
@@ -1303,24 +1369,178 @@
    "value": 0.0
   },
   {
-   "name": "Family Dentistry & Orthodontics",
-   "number": "20862",
-   "url": "https://app.nutshell.com/lead/20862",
+   "name": "Corafone Inc.",
+   "number": "29312",
+   "url": "https://app.nutshell.com/lead/29312",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 112,
+   "days": 113,
    "never": false,
    "value": 0.0
   },
   {
-   "name": "EL HR Consultants",
-   "number": "22926",
-   "url": "https://app.nutshell.com/lead/22926",
+   "name": "Corafone Inc.",
+   "number": "29399",
+   "url": "https://app.nutshell.com/lead/29399",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 112,
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Tiesworth Family Dentistry",
+   "number": "29442",
+   "url": "https://app.nutshell.com/lead/29442",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "First Choice Nannies",
+   "number": "29595",
+   "url": "https://app.nutshell.com/lead/29595",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "City of Oakdale LA",
+   "number": "30105",
+   "url": "https://app.nutshell.com/lead/30105",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Slims Sunset Spa",
+   "number": "30180",
+   "url": "https://app.nutshell.com/lead/30180",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "LARS Properties",
+   "number": "30273",
+   "url": "https://app.nutshell.com/lead/30273",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Raise",
+   "number": "30413",
+   "url": "https://app.nutshell.com/lead/30413",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Birch Construction",
+   "number": "30455",
+   "url": "https://app.nutshell.com/lead/30455",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Barton Group",
+   "number": "30583",
+   "url": "https://app.nutshell.com/lead/30583",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 113,
+   "never": false,
+   "value": 50000.0
+  },
+  {
+   "name": "Legacy Communities LLC",
+   "number": "30602",
+   "url": "https://app.nutshell.com/lead/30602",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "City of San Luis Obispo",
+   "number": "31031",
+   "url": "https://app.nutshell.com/lead/31031",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "New England Cremation Supply Company",
+   "number": "31276",
+   "url": "https://app.nutshell.com/lead/31276",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "STEAM Academy PRO PBC",
+   "number": "32055",
+   "url": "https://app.nutshell.com/lead/32055",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 113,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Abbott Grading and Clearing Inc",
+   "number": "32119",
+   "url": "https://app.nutshell.com/lead/32119",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 113,
+   "never": false,
+   "value": 30000.0
+  },
+  {
+   "name": "Full Swing Ventures, Inc dba Smash My Trash",
+   "number": "34017",
+   "url": "https://app.nutshell.com/lead/34017",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 113,
    "never": false,
    "value": 0.0
   },
@@ -1336,232 +1556,12 @@
    "value": 0.0
   },
   {
-   "name": "Town of Mountain Park",
-   "number": "24608",
-   "url": "https://app.nutshell.com/lead/24608",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Insight CPA & Financial PLLC",
-   "number": "28734",
-   "url": "https://app.nutshell.com/lead/28734",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "1836 Properties",
-   "number": "29065",
-   "url": "https://app.nutshell.com/lead/29065",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Landmark Commercial & Residential Properties, LLC",
-   "number": "29083",
-   "url": "https://app.nutshell.com/lead/29083",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Corafone Inc.",
-   "number": "29312",
-   "url": "https://app.nutshell.com/lead/29312",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Corafone Inc.",
-   "number": "29399",
-   "url": "https://app.nutshell.com/lead/29399",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Tiesworth Family Dentistry",
-   "number": "29442",
-   "url": "https://app.nutshell.com/lead/29442",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "First Choice Nannies",
-   "number": "29595",
-   "url": "https://app.nutshell.com/lead/29595",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "City of Oakdale LA",
-   "number": "30105",
-   "url": "https://app.nutshell.com/lead/30105",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Slims Sunset Spa",
-   "number": "30180",
-   "url": "https://app.nutshell.com/lead/30180",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "LARS Properties",
-   "number": "30273",
-   "url": "https://app.nutshell.com/lead/30273",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Raise",
-   "number": "30413",
-   "url": "https://app.nutshell.com/lead/30413",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Birch Construction",
-   "number": "30455",
-   "url": "https://app.nutshell.com/lead/30455",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Barton Group",
-   "number": "30583",
-   "url": "https://app.nutshell.com/lead/30583",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 112,
-   "never": false,
-   "value": 50000.0
-  },
-  {
-   "name": "Legacy Communities LLC",
-   "number": "30602",
-   "url": "https://app.nutshell.com/lead/30602",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "City of San Luis Obispo",
-   "number": "31031",
-   "url": "https://app.nutshell.com/lead/31031",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "New England Cremation Supply Company",
-   "number": "31276",
-   "url": "https://app.nutshell.com/lead/31276",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "STEAM Academy PRO PBC",
-   "number": "32055",
-   "url": "https://app.nutshell.com/lead/32055",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Abbott Grading and Clearing Inc",
-   "number": "32119",
-   "url": "https://app.nutshell.com/lead/32119",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 112,
-   "never": false,
-   "value": 30000.0
-  },
-  {
    "name": "Innovative Alternatives Inc.",
    "number": "33379",
    "url": "https://app.nutshell.com/lead/33379",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Virtual Meeting Booked",
-   "days": 112,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Full Swing Ventures, Inc dba Smash My Trash",
-   "number": "34017",
-   "url": "https://app.nutshell.com/lead/34017",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Pitch",
    "days": 112,
    "never": false,
    "value": 0.0
@@ -1622,6 +1622,17 @@
    "value": 0.0
   },
   {
+   "name": "A-1 Inc. Exterminators & Tidewater Crawl",
+   "number": "32757",
+   "url": "https://app.nutshell.com/lead/32757",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Pitch",
+   "days": 110,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "Daniel Dyas",
    "number": "34349",
    "url": "https://app.nutshell.com/lead/34349",
@@ -1633,12 +1644,12 @@
    "value": 0.0
   },
   {
-   "name": "A-1 Inc. Exterminators & Tidewater Crawl",
-   "number": "32757",
-   "url": "https://app.nutshell.com/lead/32757",
+   "name": "Douglasville Properties",
+   "number": "21683",
+   "url": "https://app.nutshell.com/lead/21683",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
-   "stage": "Pitch",
+   "stage": "Lead",
    "days": 109,
    "never": false,
    "value": 0.0
@@ -1651,17 +1662,6 @@
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
    "days": 109,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Douglasville Properties",
-   "number": "21683",
-   "url": "https://app.nutshell.com/lead/21683",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 108,
    "never": false,
    "value": 0.0
   },
@@ -1710,6 +1710,17 @@
    "value": 0.0
   },
   {
+   "name": "Lakewood Ranch FC",
+   "number": "18034",
+   "url": "https://app.nutshell.com/lead/18034",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Virtual Meeting Booked",
+   "days": 102,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "Carment",
    "number": "34454",
    "url": "https://app.nutshell.com/lead/34454",
@@ -1717,17 +1728,6 @@
    "pipeline": "Default Pipeline",
    "stage": "Quote",
    "days": 102,
-   "never": false,
-   "value": 0.0
-  },
-  {
-   "name": "Lakewood Ranch FC",
-   "number": "18034",
-   "url": "https://app.nutshell.com/lead/18034",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Virtual Meeting Booked",
-   "days": 101,
    "never": false,
    "value": 0.0
   },
@@ -1743,6 +1743,17 @@
    "value": 0.0
   },
   {
+   "name": "UT Health East Texas EMS | Air1",
+   "number": "30765",
+   "url": "https://app.nutshell.com/lead/30765",
+   "owner": "Steven Dietz",
+   "pipeline": "Default Pipeline",
+   "stage": "Quote",
+   "days": 98,
+   "never": false,
+   "value": 0.0
+  },
+  {
    "name": "Kiranmayi Kadambari",
    "number": "34528",
    "url": "https://app.nutshell.com/lead/34528",
@@ -1754,24 +1765,13 @@
    "value": 0.0
   },
   {
-   "name": "UT Health East Texas EMS | Air1",
-   "number": "30765",
-   "url": "https://app.nutshell.com/lead/30765",
-   "owner": "Steven Dietz",
-   "pipeline": "Default Pipeline",
-   "stage": "Quote",
-   "days": 97,
-   "never": false,
-   "value": 0.0
-  },
-  {
    "name": "Commercial Investors Group",
    "number": "18770",
    "url": "https://app.nutshell.com/lead/18770",
    "owner": "Steven Dietz",
    "pipeline": "Default Pipeline",
    "stage": "Pitch",
-   "days": 96,
+   "days": 97,
    "never": false,
    "value": 0.0
   },
@@ -1787,21 +1787,21 @@
    "value": 0.0
   },
   {
-   "name": "Personal Rental",
-   "number": "34616",
-   "url": "https://app.nutshell.com/lead/34616",
-   "owner": "Bryson Stevens",
-   "pipeline": "Default Pipeline",
-   "stage": "Lead",
-   "days": 91,
-   "never": false,
-   "value": 0.0
-  },
-  {
    "name": "Tampa Bay Property Management Group Inc.",
    "number": "34637",
    "url": "https://app.nutshell.com/lead/34637",
    "owner": "Hunter Howard",
+   "pipeline": "Default Pipeline",
+   "stage": "Lead",
+   "days": 92,
+   "never": false,
+   "value": 0.0
+  },
+  {
+   "name": "Personal Rental",
+   "number": "34616",
+   "url": "https://app.nutshell.com/lead/34616",
+   "owner": "Bryson Stevens",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
    "days": 91,
@@ -1815,7 +1815,7 @@
    "owner": "Hunter Howard",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 90,
+   "days": 91,
    "never": false,
    "value": 0.0
   },
@@ -1826,14 +1826,14 @@
    "owner": "Hunter Howard",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
-   "days": 90,
+   "days": 91,
    "never": false,
    "value": 0.0
   },
   {
-   "name": "Kingsburg Media Foundation",
-   "number": "34701",
-   "url": "https://app.nutshell.com/lead/34701",
+   "name": "Kids R Kids Landstar",
+   "number": "34677",
+   "url": "https://app.nutshell.com/lead/34677",
    "owner": "Hunter Howard",
    "pipeline": "Default Pipeline",
    "stage": "Lead",
@@ -1845,27 +1845,27 @@
  "stale_scope": [
   "Default Pipeline"
  ],
- "stale_scope_total": 229,
+ "stale_scope_total": 230,
  "attribution_90d": {
   "(no source set)": {
-   "leads": 1534,
-   "won": 317,
-   "value": 40785793.5
+   "leads": 1541,
+   "won": 318,
+   "value": 40786008.5
   },
   "organic": {
-   "leads": 257,
-   "won": 43,
-   "value": 9070132.49
+   "leads": 253,
+   "won": 42,
+   "value": 8960632.49
   },
   "google": {
-   "leads": 178,
+   "leads": 176,
    "won": 36,
-   "value": 7627969.49
+   "value": 7527969.49
   },
   "chatgpt.com": {
-   "leads": 74,
-   "won": 3,
-   "value": 2549582.0
+   "leads": 71,
+   "won": 2,
+   "value": 2540082.0
   },
   "gmb": {
    "leads": 28,
@@ -1969,12 +1969,12 @@
   }
  },
  "source_coverage_90d": {
-  "leads": 1799,
-  "with_source": 265,
-  "pct": 14.7
+  "leads": 1802,
+  "with_source": 261,
+  "pct": 14.5
  },
  "new_leads_by_week": {
-  "2026-08-17": 94,
+  "2026-08-17": 84,
   "2026-08-24": 220,
   "2026-08-31": 121,
   "2026-09-07": 94,
@@ -1986,6 +1986,6 @@
   "2026-10-19": 173,
   "2026-10-26": 142,
   "2026-11-02": 158,
-  "2026-11-09": 20
+  "2026-11-09": 31
  }
 }
