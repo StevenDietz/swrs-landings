@@ -1,0 +1,30 @@
+name: pages-deploy-retry
+# GitHub's Pages deploy step sometimes times out after 10 minutes ("Timeout reached, aborting!").
+# This re-runs the failed deploy automatically, but ONLY while that run is still the newest commit on main,
+# so it can never put an older version of the site on top of a newer one.
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+permissions:
+  actions: write
+  contents: read
+jobs:
+  retry:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.run_attempt < 3 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Re-run the failed deploy if it is still the newest commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          HEAD_SHA=$(gh api "repos/$REPO/commits/main" --jq .sha)
+          if [ "$HEAD_SHA" = "$RUN_SHA" ]; then
+            echo "Failed deploy is the newest commit; re-running."
+            gh run rerun "$RUN_ID" --failed --repo "$REPO"
+          else
+            echo "A newer commit exists ($HEAD_SHA); its own deploy will publish it. Not re-running."
+          fi
